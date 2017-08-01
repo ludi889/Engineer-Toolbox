@@ -1,0 +1,55 @@
+<resources>
+    <string name="app_name">Engineer Toolbox</string>
+    <string name="main_menu">Main Menu</string>
+    <string name="enthalpy_calculator">Enthalpy Calculator</string>
+    <string name="absolute_humidity_calculator">Absolute Humidity Calculator</string>
+    <string name="saturated_air_pressure_hint">P.sat.</string>
+    <string name="air_pressure_hint">Pressure</string>
+    <string name="saturated_air_pressure">Pressure Air Saturated (kPa) =</string>
+    <string name="relative_humidity">Relative Humidity (decimal) =</string>
+    <string name="air_pressure">Air Pressure (kPa) =</string>
+    <string name="submit">submit</string>
+    <string name="result">result</string>
+    <string name="used_formula">Used formula</string>
+    <string name="back">back</string>
+    <string name="specific_heat_of_dry_air">Specific Heat of Dry Air (kJ/kg*°C) =</string>
+    <string name="heat_of_vaporization">Heat of Vaporization (kJ/kg) =</string>
+    <string name="specific_heat_of_humid_air">Specific Heat of Humid Air (kJ/kg*°C) =</string>
+    <string name="temperature">Temperature (°C) =</string>
+    <string name="moisture_content">Moisture content (kgH₂O/kgdryair)</string>
+    <string name="specific_heat_of_dry_air_hint">Sp(da)</string>
+    <string name="heat_of_vaporization_hint">∆H(vap)</string>
+    <string name="specific_heat_of_humid_air_hint">Sp(ha))</string>
+    <string name="temperature_hint">T</string>
+    <string name="moisture_content_hint">X</string>
+    <string name="enginnering_theory">Enginnering Theory</string>
+    <string name="heat_of_process_calculator">Heat of Process Calculator</string>
+    <string name="bernoullis_equation_calculator">Bernoulli\'s Equation Calculator</string>
+    <string name="specific_heat_of_substance">Specific Heat of Substance (kJ/kg*°C)</string>
+    <string name="mass_of_substance">Mass of Substance (kg)</string>
+    <string name="initial_temperature">Initial Temperature (°C) (</string>
+    <string name="final_temperature">Final Temperature (°C)</string>
+    <string name="specific_heat_hint">Sp</string>
+    <string name="mass_of_substance_hint">M</string>
+    <string name="temperature_converter">Temperature Converter</string>
+    <string name="title_activity_temperature">Temperature</string>
+    <string name="celsius_converter">Celsius Converter</string>
+    <string name="input_temperature">Input temperature here</string>
+    <string name="temperature_menu">Temperature Converter Menu</string>
+    <string name="fahrenheit_converter">Fahrenheit Converter</string>
+    <string name="kelvin_converter">Kelvin Converter</string>
+    <string name="rankine_converter">Rankine Converter</string>
+    <string name="perfect_fluids">Perfect Fluids</string>
+    <string name="actual_fluids">Actual Fluids</string>
+    <string name="bernoullis_equation_menu">Bernoullis Equation Menu</string>
+    <string name="perfect_fluids_bernoullis_equation_menu">Perfect fluids bernoullis equation menu</string>
+    <string name="by_sum_of_pressure_calculator">Calculating by sum of pressure</string>
+    <string name="by_sum_of_work_calculator">Calculating by sum of work</string>
+    <string name="by_sum_of_height_calculator">Calculating by sum of height</string>
+    <string name="celsius">Celsius</string>
+    <string name="fahrenheit">Fahrenheit</string>
+    <string name="kelvin">Kelwiny</string>
+    <string name="rankine">Rankine</string>
+
+
+</resources>

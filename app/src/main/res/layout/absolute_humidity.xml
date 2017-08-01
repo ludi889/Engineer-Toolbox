@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            style="@android:style/TextAppearance.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="@string/saturated_air_pressure"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            style="@android:style/TextAppearance.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="@string/relative_humidity"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            style="@android:style/TextAppearance.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="@string/air_pressure"
+            android:textColor="@android:color/black" />
+
+
+        <Button
+            android:id="@+id/submit_humidity_result_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="submitAbsoluteHumidityEquation"
+            android:text="@string/submit" />
+
+        <TextView
+            android:id="@+id/humidity_result"
+            style="@android:style/TextAppearance.Large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/result"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="40dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/used_formula"
+            style="@android:style/TextAppearance.Medium"/>
+        <ImageView
+            android:layout_width="179dp"
+            android:layout_height="60dp"
+            android:background="@drawable/humidity_formula"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/Saturated_Air_Pressure"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:hint="@string/saturated_air_pressure_hint"
+            android:inputType="numberDecimal"
+            android:textSize="12sp" />
+
+        <EditText
+            android:id="@+id/Relative_Humidity"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:hint="φ"
+            android:inputType="numberDecimal"
+            android:textSize="12sp" />
+
+        <EditText
+            android:id="@+id/Air_Pressure"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:hint="@string/air_pressure_hint"
+            android:inputType="numberDecimal"
+            android:textSize="12sp"/>
+
+    </LinearLayout>
+
+</LinearLayout>
+</ScrollView>

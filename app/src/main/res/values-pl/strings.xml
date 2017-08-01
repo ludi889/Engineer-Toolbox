@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Przybornik Inżyniera</string>
+    <string name="absolute_humidity_calculator">Kalkulator Wilgotności bezwzględnej</string>
+    <string name="air_pressure">Ciśnienie powietrza (kPa) =</string>
+    <string name="air_pressure_hint">Ciśnienie</string>
+    <string name="back">Cofnij</string>
+    <string name="enthalpy_calculator">Kalkulator entalpii</string>
+    <string name="heat_of_vaporization">Ciepło parowania (kJ/kg) =</string>
+    <string name="heat_of_vaporization_hint">r0°C</string>
+    <string name="main_menu">Menu Główne</string>
+    <string name="moisture_content">Wilgotność bezwzględna (kgH₂O/kgsuchegopowietrza) =</string>
+    <string name="moisture_content_hint">X</string>
+    <string name="relative_humidity">Wilgotność względna (ułamek dzięsiętny) =</string>
+    <string name="result">Wynik</string>
+    <string name="saturated_air_pressure">Ciśnienie powietrza nasyconego (kPa) =</string>
+    <string name="saturated_air_pressure_hint">Ciś. nasycone</string>
+    <string name="specific_heat_of_dry_air">Ciepło właściwe suchego powietrza (kJ/kg*°C) =</string>
+    <string name="specific_heat_of_dry_air_hint">Cp(sp)</string>
+    <string name="specific_heat_of_humid_air">Ciepło właściwe powietrza wilgotnego (kJ/kg*°C) =</string>
+    <string name="specific_heat_of_humid_air_hint">Cp(pw)</string>
+    <string name="submit">Oblicz</string>
+    <string name="temperature">Temperatura (°C) =</string>
+    <string name="temperature_hint">T</string>
+    <string name="used_formula">Użyty wzór</string>
+    <string name="actual_fluids">Płyny rzeczywiste</string>
+    <string name="bernoullis_equation_calculator">Kalkulator Równania Bernoulliego</string>
+    <string name="bernoullis_equation_menu">Menu równania Bernoulliego</string>
+    <string name="by_sum_of_height_calculator">Kalkulowanie poprzez sumę wysokości</string>
+    <string name="by_sum_of_pressure_calculator">Kalkulowanie poprzez sumę ciśnień</string>
+    <string name="by_sum_of_work_calculator">Kalkulowanie poprzez sumę pracy</string>
+    <string name="celsius">Celsiujsze</string>
+    <string name="celsius_converter">Konwerter Celsiuszy</string>
+    <string name="enginnering_theory">Teoria Inżynierska</string>
+    <string name="fahrenheit">Fahrenheit</string>
+    <string name="fahrenheit_converter">Konwerter Fahrenheitów</string>
+    <string name="final_temperature">Końcowa temperatura (°C)</string>
+    <string name="heat_of_process_calculator">Kalkulator ciepła procesu</string>
+    <string name="initial_temperature">Początkowa temperatura (°C)</string>
+    <string name="input_temperature">Wprowadź temperaturę</string>
+    <string name="kelvin">Kelviny</string>
+    <string name="kelvin_converter">Konwerter Kelwinów</string>
+    <string name="mass_of_substance">Masa substancji (kg)</string>
+    <string name="mass_of_substance_hint">M</string>
+    <string name="perfect_fluids">Płyny doskonałe</string>
+    <string name="perfect_fluids_bernoullis_equation_menu">Menu równania Bernoulliego dla płynów doskonałych</string>
+    <string name="rankine">Rankine\'y</string>
+    <string name="rankine_converter">Konwerter Rankine\'ów</string>
+    <string name="specific_heat_hint">Sp</string>
+    <string name="specific_heat_of_substance">Ciepło właściwe substancji (kJ/kg*°C)</string>
+    <string name="temperature_converter">Konwerter Temperatury</string>
+    <string name="temperature_menu">Menu Konwertera Temperatury</string>
+    <string name="title_activity_temperature">Temperatura</string>
+</resources>

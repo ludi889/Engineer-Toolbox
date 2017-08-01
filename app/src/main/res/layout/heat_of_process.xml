@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/left_column"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                style="@android:style/TextAppearance.DeviceDefault.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="@string/specific_heat_of_substance"
+                android:textColor="@android:color/black"/>
+
+            <TextView
+                style="@android:style/TextAppearance.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="@string/mass_of_substance"
+                android:textColor="@android:color/black"/>
+
+            <TextView
+                style="@android:style/TextAppearance.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="@string/initial_temperature"
+                android:textColor="@android:color/black"/>
+
+            <TextView
+                style="@android:style/TextAppearance.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="@string/final_temperature"
+                android:textColor="@android:color/black"/>
+
+            <Button
+                android:id="@+id/submit_heat_of_process_result_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="submitHeatOfProcessEquation"
+                android:text="@string/submit"/>
+
+            <TextView
+                android:id="@+id/heat_of_process_result"
+                style="@android:style/TextAppearance.Large"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/result"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="40dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/used_formula"
+                style="@android:style/TextAppearance.Medium"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/heat_of_process_formula"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="0.3">
+
+            <EditText
+                android:id="@+id/Specific_Heat_of_Substantion_heat_of_process"
+                android:layout_width="match_parent"
+                android:layout_height="33dp"
+                android:hint="@string/specific_heat_hint"
+                android:inputType="numberDecimal"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/Mass_of_substantion_heat_of_process"
+                android:layout_width="match_parent"
+                android:layout_height="33dp"
+                android:hint="@string/mass_of_substance_hint"
+                android:inputType="numberDecimal"
+                android:textSize="12sp"/>
+
+            <EditText
+                android:id="@+id/Initial_temperature_heat_of_process"
+                android:layout_width="match_parent"
+                android:layout_height="33dp"
+                android:hint="@string/temperature_hint"
+                android:inputType="numberDecimal"
+                android:textSize="12sp"/>
+
+
+            <EditText
+                android:id="@+id/Final_temeprature_heat_of_process"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/temperature_hint"
+                android:inputType="numberDecimal"
+                android:textSize="12sp"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

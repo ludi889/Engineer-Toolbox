@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/left_column"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <TextView
+                style="@android:style/TextAppearance.DeviceDefault.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="Density (kg/m3)"
+                android:textColor="@android:color/black"/>
+
+            <TextView
+                style="@android:style/TextAppearance.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="Mean fluid velocity (m/s)"
+                android:textColor="@android:color/black"/>
+
+            <TextView
+                style="@android:style/TextAppearance.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="Hydraulic Diameter (m)"
+                android:textColor="@android:color/black"/>
+
+            <TextView
+                style="@android:style/TextAppearance.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="Viscosity (Pa*s)"
+                android:textColor="@android:color/black"/>
+
+            <Button
+                android:id="@+id/submit_heat_of_process_result_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="submitReynoldsNumberEquation"
+                android:text="@string/submit"/>
+
+            <TextView
+                android:id="@+id/reynolds_number_result"
+                style="@android:style/TextAppearance.Large"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/result"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="40dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/used_formula"
+                style="@android:style/TextAppearance.Medium"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="0.3">
+
+            <EditText
+                android:id="@+id/density_reynolds_number"
+                android:layout_width="match_parent"
+                android:layout_height="33dp"
+                android:hint="ρ"
+                android:inputType="numberDecimal"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/mean_fluid_velocity_reynolds_number"
+                android:layout_width="match_parent"
+                android:layout_height="33dp"
+                android:hint="Û"
+                android:inputType="numberDecimal"
+                android:textSize="12sp"/>
+
+            <EditText
+                android:id="@+id/diameter_reynolds_number"
+                android:layout_width="match_parent"
+                android:layout_height="33dp"
+                android:hint="D"
+                android:inputType="numberDecimal"
+                android:textSize="12sp"/>
+
+
+            <EditText
+                android:id="@+id/viscosity_reynolds_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="μ"
+                android:inputType="numberDecimal"
+                android:textSize="12sp"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

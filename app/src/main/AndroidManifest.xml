@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.android.airenthalpymollier">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".EnthalpyMenuActivity"
+            android:label="@string/enthalpy_calculator" />
+        <activity
+            android:name=".AbsoluteHumidityActivity"
+            android:label="@string/absolute_humidity_calculator" />
+        <activity
+            android:name=".HeatOfProcessActivity"
+            android:label="@string/heat_of_process_calculator" />
+        <activity
+            android:name=".TemperatureConverterMenuActivity"
+            android:label="@string/temperature_menu" />
+        <activity
+            android:name=".CelsiusConverterActivity"
+            android:label="@string/celsius_converter" />
+        <activity
+            android:name=".FahrenheitConverterActivity"
+            android:label="@string/fahrenheit_converter" />
+        <activity
+            android:name=".KelvinConverterActivity"
+            android:label="@string/kelvin_converter" />
+        <activity
+            android:name=".RankineConverterActivity"
+            android:label="@string/rankine_converter" />
+        <activity
+            android:name=".BernoulieEquationMenuActivity"
+            android:label="@string/bernoullis_equation_menu" />
+        <activity
+            android:name=".PerfectFluidsBernoullisEquation"
+            android:label="Perfect Fluids Bernoullis Equation" />
+        <activity
+            android:name=".ReynoldsNumberActivity"
+            android:label="Reynolds Number Calculator" />
+        <activity
+            android:name=".ActualFluidsBernoullisEquationMenuActivity"
+            android:label="Actual Fluids" />
+        <activity
+            android:name=".DarcyWeisbachEquationActivity"
+            android:label="Darcy Weisbach Equation" />
+        <activity
+            android:name=".LocalFlowResistanceActivity"
+            android:label="Local Flow Resistance Calculator" />
+        <activity
+            android:name=".DarcyFrictionFactorActivity"
+            android:label="Darcy Frictrion Factor Calculator" />
+        <activity android:name=".HeatFlowResistanceCalculatorActivity"></activity>
+    </application>
+
+</manifest>
