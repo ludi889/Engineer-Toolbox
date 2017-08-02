@@ -1,13 +1,11 @@
 package com.example.android.airenthalpymollier;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import org.w3c.dom.Text;
 
 public class LocalFlowResistanceActivity extends AppCompatActivity {
 
@@ -19,9 +17,10 @@ public class LocalFlowResistanceActivity extends AppCompatActivity {
 
     /**
      * This method is used to calculate flow resistance equation, and show the result of it
+     *
      * @param view
      */
-    public void submitLocalFlowResistanceEquation (View view){
+    public void submitLocalFlowResistanceEquation(View view) {
         //this part of method is used to get resistance coefficient value from EditText field, and get it to double
         EditText resistanceCoefficientEditText = (EditText) findViewById(R.id.resistance_coefficent_local_flow_resistance);
         String resistanceCoefficientString = resistanceCoefficientEditText.getText().toString();
@@ -55,10 +54,9 @@ public class LocalFlowResistanceActivity extends AppCompatActivity {
         localFlowResistanceResult.setText(localFlowResistanceValue);
 
 
-
-
     }
-    private double calculateLocalFlowResistance (double resistanceCoefficient, double meanFluidVelocity, double density){
-        return resistanceCoefficient*(meanFluidVelocity*meanFluidVelocity*density/2);
+
+    private double calculateLocalFlowResistance(double resistanceCoefficient, double meanFluidVelocity, double density) {
+        return resistanceCoefficient * (meanFluidVelocity * meanFluidVelocity * density / 2);
     }
 }

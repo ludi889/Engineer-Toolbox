@@ -6,7 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -14,8 +13,6 @@ import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ViewFlipper;
-
-import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -25,7 +22,6 @@ import static com.example.android.airenthalpymollier.R.id.rough_pipe;
 import static com.example.android.airenthalpymollier.R.id.turbulent;
 
 public class DarcyFrictionFactorActivity extends AppCompatActivity {
-
 
 
     @Override
@@ -45,7 +41,7 @@ public class DarcyFrictionFactorActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 double blausiusCriteria = (0.3164 / Math.pow(turbulentFlowReynoldsNumberGetter(), 0.25));
-                String blausiusCriteriaString ="λ=" + Double.toString(blausiusCriteria);
+                String blausiusCriteriaString = "λ=" + Double.toString(blausiusCriteria);
                 darcyFrictionFactorTurbulentResult.setText(blausiusCriteriaString);
             }
         });
@@ -53,7 +49,7 @@ public class DarcyFrictionFactorActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 double generauxCriteria = (0.16 / Math.pow(turbulentFlowReynoldsNumberGetter(), 0.16));
-                String generauxCriteriaString ="λ=" + Double.toString(generauxCriteria);
+                String generauxCriteriaString = "λ=" + Double.toString(generauxCriteria);
                 darcyFrictionFactorTurbulentResult.setText(generauxCriteriaString);
             }
         });
@@ -61,7 +57,7 @@ public class DarcyFrictionFactorActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 double kooCriteria = (0.0052 + (0.5 / Math.pow(turbulentFlowReynoldsNumberGetter(), 0.32)));
-                String kooCriteriaString ="λ=" + Double.toString(kooCriteria);
+                String kooCriteriaString = "λ=" + Double.toString(kooCriteria);
                 darcyFrictionFactorTurbulentResult.setText(kooCriteriaString);
             }
         });
@@ -71,19 +67,19 @@ public class DarcyFrictionFactorActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 double highReynoldsCriteria = (0.0032 + (0.221 / Math.pow(turbulentFlowReynoldsNumberGetter(), 0.237)));
-                String highReynoldsCriteriaString ="λ=" + Double.toString(highReynoldsCriteria);
+                String highReynoldsCriteriaString = "λ=" + Double.toString(highReynoldsCriteria);
                 darcyFrictionFactorTurbulentResult.setText(highReynoldsCriteriaString);
             }
         });
-        roughPipeFactorSubmit.setOnClickListener(new View.OnClickListener(){
+        roughPipeFactorSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick (View v){
-                double roughnessCompound = (roughPipeFlowRoughnessParameterNumberGetter()/3.7);
-                double reynoldsCompound = Math.pow((6.81/roughPipeFlowReynoldsNumberGetter()), 0.9);
+            public void onClick(View v) {
+                double roughnessCompound = (roughPipeFlowRoughnessParameterNumberGetter() / 3.7);
+                double reynoldsCompound = Math.pow((6.81 / roughPipeFlowReynoldsNumberGetter()), 0.9);
                 double denominator = -2 * Math.log(roughnessCompound + reynoldsCompound);
-                double roughPipeFlowFactor = Math.pow((1/denominator), 0.5);
+                double roughPipeFlowFactor = Math.pow((1 / denominator), 0.5);
 
-                String roughPipeFlowFactorResult ="λ=" + Double.toString(roughPipeFlowFactor);
+                String roughPipeFlowFactorResult = "λ=" + Double.toString(roughPipeFlowFactor);
                 roughPipeFactorResult.setText(roughPipeFlowFactorResult);
 
 
@@ -109,7 +105,7 @@ public class DarcyFrictionFactorActivity extends AppCompatActivity {
         turbulentFlowRadioButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (turbulentFlowRadioButton.isChecked()){
+                if (turbulentFlowRadioButton.isChecked()) {
                     viewFlip.setDisplayedChild(viewFlip.indexOfChild(findViewById(turbulent)));
                 }
             }
@@ -117,14 +113,14 @@ public class DarcyFrictionFactorActivity extends AppCompatActivity {
         roughPipeRadioButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (roughPipeRadioButton.isChecked()){
+                if (roughPipeRadioButton.isChecked()) {
                     viewFlip.setDisplayedChild(viewFlip.indexOfChild(findViewById(rough_pipe)));
                 }
             }
         });
         laminarFlowRadioButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked){
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (laminarFlowRadioButton.isChecked()) {
                     viewFlip.setDisplayedChild(viewFlip.indexOfChild(findViewById(laminar)));
                 }
@@ -153,7 +149,7 @@ public class DarcyFrictionFactorActivity extends AppCompatActivity {
         startActivity(setReynoldsNumberMenuIntent);
     }
 
-    public void submitDarcyFrictionLaminarSmoothPipeEquation(View view){
+    public void submitDarcyFrictionLaminarSmoothPipeEquation(View view) {
         //this part of method is used to take resistance factor value, and parse it to double
         EditText resistanceFactorEditText = (EditText) findViewById(R.id.resistance_factor_darcy_friction_factor);
         String resistanceFactorString = resistanceFactorEditText.getText().toString();
@@ -172,7 +168,7 @@ public class DarcyFrictionFactorActivity extends AppCompatActivity {
         Double darcyFrictionFactorLaminar = calculateDarcyFrictionLaminarSmoothPipeFactor(resistanceFactor, reynoldsNumber);
         //this part of method is used to show the result of equation
 
-        String darcyFrictionFactorValueLaminar ="λ=" + darcyFrictionFactorLaminar.toString();
+        String darcyFrictionFactorValueLaminar = "λ=" + darcyFrictionFactorLaminar.toString();
         TextView darcyFrictionFactorResultLaminar = (TextView) findViewById(R.id.darcy_friction_factor_equation_laminar_result);
         darcyFrictionFactorResultLaminar.setText(darcyFrictionFactorValueLaminar);
     }
@@ -223,7 +219,8 @@ public class DarcyFrictionFactorActivity extends AppCompatActivity {
 
 
     }
-    public double roughPipeFlowReynoldsNumberGetter(){
+
+    public double roughPipeFlowReynoldsNumberGetter() {
         EditText roughPipeFlowReynoldsNumberEditText = (EditText) findViewById(R.id.reynolds_number_darcy_friction_factor_rough_pipe);
         String roughPipeFlowReynoldsNumberString = roughPipeFlowReynoldsNumberEditText.getText().toString();
         if (roughPipeFlowReynoldsNumberString.isEmpty()) {
@@ -232,7 +229,8 @@ public class DarcyFrictionFactorActivity extends AppCompatActivity {
         return Double.valueOf(roughPipeFlowReynoldsNumberString);
 
     }
-    public double roughPipeFlowRoughnessParameterNumberGetter(){
+
+    public double roughPipeFlowRoughnessParameterNumberGetter() {
         EditText roughPipeFlowRoughnessParameterEditText = (EditText) findViewById(R.id.roughness_parameter);
         String roughPipeFlowRoughnessParameterString = roughPipeFlowRoughnessParameterEditText.getText().toString();
         if (roughPipeFlowRoughnessParameterString.isEmpty()) {

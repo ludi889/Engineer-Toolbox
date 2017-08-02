@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -18,8 +19,8 @@
                 style="@android:style/TextAppearance.DeviceDefault.Small"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
                 android:text="Darcy Friction Factor"
                 android:textColor="@android:color/black"/>
 
@@ -27,8 +28,8 @@
                 style="@android:style/TextAppearance.Small"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
                 android:text="Length (m)"
                 android:textColor="@android:color/black"/>
 
@@ -36,8 +37,8 @@
                 style="@android:style/TextAppearance.Small"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
                 android:text="Hydraulic Diameter (m)"
                 android:textColor="@android:color/black"/>
 
@@ -45,8 +46,8 @@
                 style="@android:style/TextAppearance.Small"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
                 android:text="Mean fluid velocity (m/s)"
                 android:textColor="@android:color/black"/>
 
@@ -54,10 +55,11 @@
                 style="@android:style/TextAppearance.Small"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
                 android:text="Density (kg/m³)"
                 android:textColor="@android:color/black"/>
+
             <Button
                 android:id="@+id/submit_darcy_weisbach_equation"
                 android:layout_width="wrap_content"
@@ -70,17 +72,19 @@
                 style="@android:style/TextAppearance.Large"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/result"
+                android:layout_marginBottom="40dp"
                 android:layout_marginTop="40dp"
-                android:layout_marginBottom="40dp"/>
+                android:text="@string/result"/>
+
             <TextView
+                style="@android:style/TextAppearance.Medium"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/used_formula"
-                style="@android:style/TextAppearance.Medium"/>
+                android:text="@string/used_formula"/>
+
             <ImageView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"/>
 
 
         </LinearLayout>
@@ -88,8 +92,8 @@
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:layout_weight="0.3">
+            android:layout_weight="0.3"
+            android:orientation="vertical">
 
             <EditText
                 android:id="@+id/darcy_friction_factor_darcy_weisbach_equation"
@@ -97,7 +101,7 @@
                 android:layout_height="33dp"
                 android:hint="λ"
                 android:inputType="numberDecimal"
-                android:textSize="12sp" />
+                android:textSize="12sp"/>
 
             <EditText
                 android:id="@+id/length_darcy_weisbach_equation"

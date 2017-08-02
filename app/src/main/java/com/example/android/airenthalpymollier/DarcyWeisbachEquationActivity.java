@@ -1,14 +1,11 @@
 package com.example.android.airenthalpymollier;
 
-import android.renderscript.Sampler;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import static android.R.attr.value;
 
 public class DarcyWeisbachEquationActivity extends AppCompatActivity {
 
@@ -21,7 +18,7 @@ public class DarcyWeisbachEquationActivity extends AppCompatActivity {
     /**
      * This method is used to submit Darcy Weisbach Equation, and show the result of it
      */
-    public void submitDarcyWeisbachEquation (View view){
+    public void submitDarcyWeisbachEquation(View view) {
 //this part is used to get darcy friction factor value from EditText field and get it to double
         EditText darcyFrictionFactorEditText = (EditText) findViewById(R.id.darcy_friction_factor_darcy_weisbach_equation);
         String darcyFrictionFactorString = darcyFrictionFactorEditText.getText().toString();
@@ -64,7 +61,7 @@ public class DarcyWeisbachEquationActivity extends AppCompatActivity {
         }
         double density = Double.valueOf(densityString);
 
-        double darcyWeisbach = calculateDarcyWeisbach (darcyFrictionFactor, length, hydraulicDiameter, meanFluidVelocity, density);
+        double darcyWeisbach = calculateDarcyWeisbach(darcyFrictionFactor, length, hydraulicDiameter, meanFluidVelocity, density);
         //this method is used to show the result
         String darcyWeisbachValue = Double.toString(darcyWeisbach) + "Pa";
 
@@ -72,11 +69,10 @@ public class DarcyWeisbachEquationActivity extends AppCompatActivity {
         darcyWeisbachResult.setText(darcyWeisbachValue);
 
 
-
-
     }
-    private double calculateDarcyWeisbach (double darcyFrictionFactor, double length, double hydraulicDiameter, double meanFluidVelocity, double density){
-        return darcyFrictionFactor*(length/hydraulicDiameter)*(meanFluidVelocity*meanFluidVelocity *density/2);
+
+    private double calculateDarcyWeisbach(double darcyFrictionFactor, double length, double hydraulicDiameter, double meanFluidVelocity, double density) {
+        return darcyFrictionFactor * (length / hydraulicDiameter) * (meanFluidVelocity * meanFluidVelocity * density / 2);
     }
 
 }

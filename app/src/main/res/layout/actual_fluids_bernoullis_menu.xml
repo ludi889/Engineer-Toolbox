@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="center_horizontal"
-    android:orientation="vertical">
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:gravity="center_horizontal"
+              android:orientation="vertical">
 
     <TextView
         android:id="@+id/textView"
@@ -11,62 +11,70 @@
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:text="@string/bernoullis_equation_menu" />
+        android:text="@string/bernoullis_equation_menu"/>
 
     <Space
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.5" />
+        android:layout_weight="0.5"/>
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_weight="1"
+        android:onClick="setReynoldsNumberMenu"
         android:text="Reynolds number"
-        android:textAllCaps="true"
-        android:onClick="setReynoldsNumberMenu"/>
+        android:textAllCaps="true"/>
+
     <Space
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.5" />
+        android:layout_weight="0.5"/>
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_weight="1"
+        android:onClick="setDarcyFrictionFactorEquationMenu"
         android:text="Darcy friction factor"
-        android:textAllCaps="true"
-        android:onClick="setDarcyFrictionFactorEquationMenu"/>
+        android:textAllCaps="true"/>
 
 
     <Space
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.5" />
+        android:layout_weight="0.5"/>
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_weight="1"
+        android:onClick="setDarcyWeisbachEquationMenu"
         android:text="Darcy-Weisbach Equation"
-        android:textAllCaps="true"
-        android:onClick="setDarcyWeisbachEquationMenu"/>
+        android:textAllCaps="true"/>
+
     <Space
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.5" />
+        android:layout_weight="0.5"/>
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_weight="1"
+        android:onClick="setLocalFlowResistanceEquationMenu"
         android:text="Local Flow Resistance"
-        android:textAllCaps="true"
-        android:onClick="setLocalFlowResistanceEquationMenu"/>
+        android:textAllCaps="true"/>
+
     <Space
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1" />
+        android:layout_weight="1"/>
+
     <TextView
+        style="@android:style/TextAppearance.DeviceDefault.Small"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Damian Ziółkowski 2017©"
-        style="@android:style/TextAppearance.DeviceDefault.Small"/>
+        android:text="Damian Ziółkowski 2017©"/>
 
 </LinearLayout>

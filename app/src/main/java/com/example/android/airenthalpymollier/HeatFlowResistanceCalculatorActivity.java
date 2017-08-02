@@ -1,7 +1,7 @@
 package com.example.android.airenthalpymollier;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.PopupMenu;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -9,9 +9,6 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Spinner;
-import android.widget.TextView;
-
-import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
@@ -46,7 +43,7 @@ public class HeatFlowResistanceCalculatorActivity extends AppCompatActivity {
             areaEditText.setVisibility(GONE);
             heatFluxDensityEditText.setVisibility(VISIBLE);
         }
-        if (!heatFluxDensityCheckBox.isChecked()){
+        if (!heatFluxDensityCheckBox.isChecked()) {
             heatFluxEditText.setVisibility(VISIBLE);
             areaEditText.setVisibility(VISIBLE);
             heatFluxDensityEditText.setVisibility(GONE);

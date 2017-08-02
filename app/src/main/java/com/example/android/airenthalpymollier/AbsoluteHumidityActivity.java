@@ -1,7 +1,7 @@
 package com.example.android.airenthalpymollier;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -35,7 +35,7 @@ public class AbsoluteHumidityActivity extends AppCompatActivity {
         }
 
         //This part of method is taking data from Relative humidity EditText field, get it to string, and then parse to integer
-        EditText relativeHumidityEditText = (EditText) findViewById(Relative_Humidity);
+        EditText relativeHumidityEditText = (EditText) findViewById(R.id.Relative_Humidity);
         String relativeHumidityString = relativeHumidityEditText.getText().toString();
         if (relativeHumidityString.isEmpty()) {
             Toast.makeText(this, "You have to input Relative Humidity value", Toast.LENGTH_SHORT).show();
@@ -44,7 +44,7 @@ public class AbsoluteHumidityActivity extends AppCompatActivity {
         double relativeHumidity = Double.valueOf(relativeHumidityString);
 
         //This part of method is taking data from Air Pressure EditText field, get it to string, and then parse to integer
-        EditText airPressureEditText = (EditText) findViewById(Air_Pressure);
+        EditText airPressureEditText = (EditText) findViewById(R.id.Air_Pressure);
         String airPressureString = airPressureEditText.getText().toString();
         if (airPressureString.isEmpty()) {
             Toast.makeText(this, "You have to input Air Pressure value", Toast.LENGTH_SHORT).show();

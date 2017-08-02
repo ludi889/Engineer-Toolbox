@@ -1,260 +1,267 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_height="match_parent"
-    android:layout_width="match_parent">
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical">
-    <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-    <RadioButton
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Laminar FLow"
-        android:id="@+id/laminar_flow_radio_button"
-        android:layout_marginBottom="12dp"/>
+        android:orientation="vertical">
 
-    <RadioButton
-        android:id="@+id/turbulent_flow_radio_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="12dp"
-        android:text="Turbulent Flow" />
-
-    <RadioButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Rough Pipe"
-        android:id="@+id/rough_pipe_radio_button" />
-    </RadioGroup>
-
-
-    <ViewFlipper
-        android:id="@+id/ViewFlipper"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <LinearLayout
-            android:layout_width="wrap_content"
+        <RadioGroup
+            android:layout_width="match_parent"
             android:layout_height="wrap_content">
-        </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/laminar"
+            <RadioButton
+                android:id="@+id/laminar_flow_radio_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:text="Laminar FLow"/>
+
+            <RadioButton
+                android:id="@+id/turbulent_flow_radio_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:text="Turbulent Flow"/>
+
+            <RadioButton
+                android:id="@+id/rough_pipe_radio_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rough Pipe"/>
+        </RadioGroup>
+
+
+        <ViewFlipper
+            android:id="@+id/ViewFlipper"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="match_parent">
 
-            <TextView
-                style="@android:style/TextAppearance.Small"
+            <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:onClick="expandResistanceFactorValues"
-                android:text="Resistance Factor (click to check popular resistance factor values)"
-                android:textColor="@android:color/black" />
+                android:layout_height="wrap_content">
+            </LinearLayout>
 
-            <EditText
-                android:id="@+id/resistance_factor_darcy_friction_factor"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:hint="a"
-                android:inputType="numberDecimal"
-                android:textSize="12sp" />
+            <LinearLayout
+                android:id="@+id/laminar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
-            <ListView
-                android:id="@+id/resistance_factor_values"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:visibility="gone" />
+                <TextView
+                    style="@android:style/TextAppearance.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:onClick="expandResistanceFactorValues"
+                    android:text="Resistance Factor (click to check popular resistance factor values)"
+                    android:textColor="@android:color/black"/>
 
-            <TextView
-                style="@android:style/TextAppearance.Small"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:text="Reynolds Number"
-                android:textColor="@android:color/black" />
+                <EditText
+                    android:id="@+id/resistance_factor_darcy_friction_factor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="a"
+                    android:inputType="numberDecimal"
+                    android:textSize="12sp"/>
 
-            <TextView
-                style="@android:style/TextAppearance.Small"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:layout_marginTop="6dp"
-                android:onClick="setReynoldsNumberMenu"
-                android:text="(Click to calculate Reynolds Number)" />
+                <ListView
+                    android:id="@+id/resistance_factor_values"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"/>
 
-            <EditText
-                android:id="@+id/reynolds_number_darcy_friction_factor_laminar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:hint="Re"
-                android:inputType="numberDecimal"
-                android:textSize="12sp" />
+                <TextView
+                    style="@android:style/TextAppearance.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Reynolds Number"
+                    android:textColor="@android:color/black"/>
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:onClick="submitDarcyFrictionLaminarSmoothPipeEquation"
-                android:text="@string/submit"
-                android:textAllCaps="true" />
+                <TextView
+                    style="@android:style/TextAppearance.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginTop="6dp"
+                    android:onClick="setReynoldsNumberMenu"
+                    android:text="(Click to calculate Reynolds Number)"/>
 
-            <TextView
-                android:id="@+id/darcy_friction_factor_equation_laminar_result"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="40dp"
-                android:layout_marginTop="40dp"
-                android:text="@string/result"
-                android:textAppearance="@android:style/TextAppearance.Large" />
-        </LinearLayout>
+                <EditText
+                    android:id="@+id/reynolds_number_darcy_friction_factor_laminar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="Re"
+                    android:inputType="numberDecimal"
+                    android:textSize="12sp"/>
 
-        <LinearLayout
-            android:id="@+id/turbulent"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:onClick="submitDarcyFrictionLaminarSmoothPipeEquation"
+                    android:text="@string/submit"
+                    android:textAllCaps="true"/>
 
-            <TextView
-                style="@android:style/TextAppearance.Small"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:text="Reynolds Number"
-                android:textColor="@android:color/black" />
+                <TextView
+                    android:id="@+id/darcy_friction_factor_equation_laminar_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="40dp"
+                    android:layout_marginTop="40dp"
+                    android:text="@string/result"
+                    android:textAppearance="@android:style/TextAppearance.Large"/>
+            </LinearLayout>
 
-            <TextView
-                style="@android:style/TextAppearance.Small"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:layout_marginTop="6dp"
-                android:onClick="setReynoldsNumberMenu"
-                android:text="(Click to calculate Reynolds Number)" />
+            <LinearLayout
+                android:id="@+id/turbulent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
-            <EditText
-                android:id="@+id/reynolds_number_darcy_friction_factor_turbulent"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:hint="Re"
-                android:inputType="numberDecimal"
-                android:textSize="12sp" />
+                <TextView
+                    style="@android:style/TextAppearance.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Reynolds Number"
+                    android:textColor="@android:color/black"/>
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:onClick="turbulentSubmit"
-                android:text="@string/submit"
-                android:textAllCaps="true" />
+                <TextView
+                    style="@android:style/TextAppearance.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginTop="6dp"
+                    android:onClick="setReynoldsNumberMenu"
+                    android:text="(Click to calculate Reynolds Number)"/>
 
-            <TextView
-                style="@android:style/TextAppearance.Medium"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Choose Criteria" />
+                <EditText
+                    android:id="@+id/reynolds_number_darcy_friction_factor_turbulent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="Re"
+                    android:inputType="numberDecimal"
+                    android:textSize="12sp"/>
 
-            <TextView
-                android:id="@+id/blausius_criteria"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Blausius Criteria"
-                android:visibility="gone" />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:onClick="turbulentSubmit"
+                    android:text="@string/submit"
+                    android:textAllCaps="true"/>
 
-            <TextView
-                android:id="@+id/generaux_criteria"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Generaux Criteria"
-                android:visibility="gone" />
+                <TextView
+                    style="@android:style/TextAppearance.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Choose Criteria"/>
 
-            <TextView
-                android:id="@+id/koo_criteria"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Koo Criteria"
-                android:visibility="gone" />
+                <TextView
+                    android:id="@+id/blausius_criteria"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Blausius Criteria"
+                    android:visibility="gone"/>
 
-            <TextView
-                android:id="@+id/high_reynolds_criteria"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="High-Reynolds-Number Value Criteria"
-                android:visibility="gone" />
+                <TextView
+                    android:id="@+id/generaux_criteria"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Generaux Criteria"
+                    android:visibility="gone"/>
 
-            <TextView
-                android:id="@+id/darcy_friction_factor_equation_turbulent_result"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="40dp"
-                android:layout_marginTop="40dp"
-                android:text="@string/result"
-                android:textAppearance="@android:style/TextAppearance.Large" />
+                <TextView
+                    android:id="@+id/koo_criteria"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Koo Criteria"
+                    android:visibility="gone"/>
 
-        </LinearLayout>
-        <LinearLayout
-            android:id="@+id/rough_pipe"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+                <TextView
+                    android:id="@+id/high_reynolds_criteria"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="High-Reynolds-Number Value Criteria"
+                    android:visibility="gone"/>
 
-            <TextView
-                style="@android:style/TextAppearance.Small"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:text="Reynolds Number"
-                android:textColor="@android:color/black" />
+                <TextView
+                    android:id="@+id/darcy_friction_factor_equation_turbulent_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="40dp"
+                    android:layout_marginTop="40dp"
+                    android:text="@string/result"
+                    android:textAppearance="@android:style/TextAppearance.Large"/>
 
-            <TextView
-                style="@android:style/TextAppearance.Small"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:layout_marginTop="6dp"
-                android:onClick="setReynoldsNumberMenu"
-                android:text="(Click to calculate Reynolds Number)" />
+            </LinearLayout>
 
-            <EditText
-                android:id="@+id/reynolds_number_darcy_friction_factor_rough_pipe"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:hint="Re"
-                android:inputType="numberDecimal"
-                android:textSize="12sp" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Roughness Parametr"/>
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:hint="R"
-                android:inputType="numberDecimal"
-                android:textSize="12sp"
-                android:id="@+id/roughness_parameter"/>
+            <LinearLayout
+                android:id="@+id/rough_pipe"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="@string/submit"
-                android:textAllCaps="true"
-                android:id="@+id/rough_pipe_factor_submit"/>
+                <TextView
+                    style="@android:style/TextAppearance.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Reynolds Number"
+                    android:textColor="@android:color/black"/>
 
-            <TextView
-                android:id="@+id/darcy_friction_factor_equation_rough_pipe_result"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="40dp"
-                android:layout_marginTop="40dp"
-                android:text="@string/result"
-                android:textAppearance="@android:style/TextAppearance.Large" />
+                <TextView
+                    style="@android:style/TextAppearance.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginTop="6dp"
+                    android:onClick="setReynoldsNumberMenu"
+                    android:text="(Click to calculate Reynolds Number)"/>
 
-        </LinearLayout>
-    </ViewFlipper>
-</LinearLayout>
+                <EditText
+                    android:id="@+id/reynolds_number_darcy_friction_factor_rough_pipe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="Re"
+                    android:inputType="numberDecimal"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Roughness Parametr"/>
+
+                <EditText
+                    android:id="@+id/roughness_parameter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="R"
+                    android:inputType="numberDecimal"
+                    android:textSize="12sp"/>
+
+                <Button
+                    android:id="@+id/rough_pipe_factor_submit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/submit"
+                    android:textAllCaps="true"/>
+
+                <TextView
+                    android:id="@+id/darcy_friction_factor_equation_rough_pipe_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="40dp"
+                    android:layout_marginTop="40dp"
+                    android:text="@string/result"
+                    android:textAppearance="@android:style/TextAppearance.Large"/>
+
+            </LinearLayout>
+        </ViewFlipper>
+    </LinearLayout>
 </ScrollView>

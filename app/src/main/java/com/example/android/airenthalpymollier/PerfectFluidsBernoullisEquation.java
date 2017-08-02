@@ -75,22 +75,22 @@ public class PerfectFluidsBernoullisEquation extends AppCompatActivity {
         calculateBySumOfWork.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                double firstSectionDynamicWork = Math.pow(meanFluidVelocityFirstSection(), 2)/2;
-                double firstSectionStaticWork = firstSectionStaticPressure()/density();
-                double firstSectionHydrostaticWork = elevationFirst()*accelerationOfGravity();
-                double secondSectionDynamicWork = Math.pow(meanFluidVelocitySecondSection(),2)/2;
-                double secondSectionStaticWork = secondSectionStaticPressure()/density();
-                double secondSectionHydrostaticWork = elevationSecond()*accelerationOfGravity();
-                double firstSectionWork = firstSectionDynamicWork+firstSectionStaticWork+firstSectionHydrostaticWork;
-                double secondSectionWork = secondSectionDynamicWork+secondSectionStaticWork+secondSectionHydrostaticWork;
+                double firstSectionDynamicWork = Math.pow(meanFluidVelocityFirstSection(), 2) / 2;
+                double firstSectionStaticWork = firstSectionStaticPressure() / density();
+                double firstSectionHydrostaticWork = elevationFirst() * accelerationOfGravity();
+                double secondSectionDynamicWork = Math.pow(meanFluidVelocitySecondSection(), 2) / 2;
+                double secondSectionStaticWork = secondSectionStaticPressure() / density();
+                double secondSectionHydrostaticWork = elevationSecond() * accelerationOfGravity();
+                double firstSectionWork = firstSectionDynamicWork + firstSectionStaticWork + firstSectionHydrostaticWork;
+                double secondSectionWork = secondSectionDynamicWork + secondSectionStaticWork + secondSectionHydrostaticWork;
                 double resultValue = 0;
-                if (!staticPressureDifferenceCheckBox.isChecked()){
-                    resultValue = secondSectionWork-firstSectionWork;
-                    if (resultValue<0){
+                if (!staticPressureDifferenceCheckBox.isChecked()) {
+                    resultValue = secondSectionWork - firstSectionWork;
+                    if (resultValue < 0) {
                         resultValue = resultValue * -1;
                     }
                 }
-                if (staticPressureDifferenceCheckBox.isChecked()){
+                if (staticPressureDifferenceCheckBox.isChecked()) {
                     if (optionIndex == 0) {
                         resultValue = secondSectionWork - staticPressureDifference() - firstSectionHydrostaticWork;
                     }
@@ -154,14 +154,14 @@ public class PerfectFluidsBernoullisEquation extends AppCompatActivity {
         calculateBySumOfHeights.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                double firstSectionDynamicHeight = Math.pow(meanFluidVelocityFirstSection(),2)/accelerationOfGravity();
-                double firstSectionStaticHeight = firstSectionStaticPressure()/(density()*accelerationOfGravity());
+                double firstSectionDynamicHeight = Math.pow(meanFluidVelocityFirstSection(), 2) / accelerationOfGravity();
+                double firstSectionStaticHeight = firstSectionStaticPressure() / (density() * accelerationOfGravity());
                 double firstSectionHydrostaticHeight = elevationFirst();
-                double secondSectionDynamicHeight = Math.pow(meanFluidVelocitySecondSection(),2)/accelerationOfGravity();
-                double secondSectionStaticHeight = secondSectionStaticPressure()/(density()*accelerationOfGravity());
+                double secondSectionDynamicHeight = Math.pow(meanFluidVelocitySecondSection(), 2) / accelerationOfGravity();
+                double secondSectionStaticHeight = secondSectionStaticPressure() / (density() * accelerationOfGravity());
                 double secondSectionHydrostaticHeight = elevationSecond();
-                double firstSectionHeight = firstSectionDynamicHeight+firstSectionStaticHeight+firstSectionHydrostaticHeight;
-                double secondSectionHeight = secondSectionDynamicHeight+secondSectionStaticHeight+secondSectionHydrostaticHeight;
+                double firstSectionHeight = firstSectionDynamicHeight + firstSectionStaticHeight + firstSectionHydrostaticHeight;
+                double secondSectionHeight = secondSectionDynamicHeight + secondSectionStaticHeight + secondSectionHydrostaticHeight;
                 double resultValue = 0;
                 if (!staticPressureDifferenceCheckBox.isChecked()) {
                     resultValue = secondSectionHeight - firstSectionHeight;

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -14,36 +14,38 @@
             android:orientation="horizontal">
 
             <Button
+                android:id="@+id/add_heat_resistance"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:text="+"
-                android:id="@+id/add_heat_resistance"/>
+                android:text="+"/>
 
             <TextView
                 style="@android:style/TextAppearance.DeviceDefault"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Add heat flow resistance" />
+                android:text="Add heat flow resistance"/>
         </LinearLayout>
 
         <CheckBox
+            android:id="@+id/heat_flux_density_check_box"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Check if you have Heat flux density"
-            android:id="@+id/heat_flux_density_check_box"/>
+            android:text="Check if you have Heat flux density"/>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Choose what you want to calculate" />
+            android:text="Choose what you want to calculate"/>
+
         <Spinner
+            android:id="@+id/heat_flux_spinner"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/heat_flux_spinner">
+            android:layout_height="wrap_content">
         </Spinner>
 
         <Space
             android:layout_width="wrap_content"
-            android:layout_height="50dp" />
+            android:layout_height="50dp"/>
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -55,21 +57,22 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
                 android:orientation="vertical">
+
                 <EditText
+                    android:id="@+id/heat_flux_density_edittext"
+                    style="@style/TextAppearance.AppCompat.Large"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:hint="q/A"
-                    style="@style/TextAppearance.AppCompat.Large"
-                    android:visibility="gone"
-                    android:id="@+id/heat_flux_density_edittext"/>
+                    android:visibility="gone"/>
 
                 <EditText
+                    android:id="@+id/heat_flux"
                     style="@style/Base.TextAppearance.AppCompat.Large"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:hint="q"
-                    android:inputType="numberDecimal"
-                    android:id="@+id/heat_flux"/>
+                    android:inputType="numberDecimal"/>
 
                 <RelativeLayout
                     android:layout_width="wrap_content"
@@ -81,7 +84,7 @@
                         android:layout_width="24dp"
                         android:layout_height="3dp"
                         android:layout_centerVertical="true"
-                        android:background="#000000" />
+                        android:background="#000000"/>
 
                     <TextView
                         style="@style/TextAppearance.AppCompat.Large"
@@ -89,16 +92,16 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="16sp"
                         android:layout_toRightOf="@id/dupa"
-                        android:text="=" />
+                        android:text="="/>
                 </RelativeLayout>
 
                 <EditText
+                    android:id="@+id/area"
                     style="@style/Base.TextAppearance.AppCompat.Large"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:hint="A"
-                    android:inputType="numberDecimal"
-                    android:id="@+id/area"/>
+                    android:inputType="numberDecimal"/>
             </LinearLayout>
 
             <LinearLayout
@@ -111,26 +114,28 @@
                     style="@style/Base.TextAppearance.AppCompat.Large"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:hint="ΔT" />
+                    android:hint="ΔT"/>
 
                 <View
                     android:layout_width="40dp"
                     android:layout_height="3dp"
-                    android:background="#000000"
-                    android:layout_marginTop="10dp"/>
-<LinearLayout
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:id="@+id/resistance_layout">
-                <EditText
+                    android:layout_marginTop="10dp"
+                    android:background="#000000"/>
+
+                <LinearLayout
+                    android:id="@+id/resistance_layout"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:hint="R"
-                    style="@style/TextAppearance.AppCompat.Large"
-                    android:layout_marginLeft="10sp"
-                    android:layout_marginTop="10dp"/>
-</LinearLayout>
+                    android:orientation="horizontal">
+
+                    <EditText
+                        style="@style/TextAppearance.AppCompat.Large"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10sp"
+                        android:layout_marginTop="10dp"
+                        android:hint="R"/>
+                </LinearLayout>
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

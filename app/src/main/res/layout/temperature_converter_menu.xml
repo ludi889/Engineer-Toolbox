@@ -1,75 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="center_horizontal"
-    android:orientation="vertical">
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_marginLeft="16dp"
+              android:layout_marginStart="16dp"
+              android:layout_marginTop="16dp"
+              android:orientation="vertical">
 
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1" />
-    <Button
+    <Spinner
+        android:id="@+id/input_temperature_spinner_converter"
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:onClick="setCelsiusConverterMenu"
-        android:text="@string/celsius"
-        android:textAllCaps="true" />
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.5" />
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:onClick="setFahrenheitConverterMenu"
-        android:text="@string/fahrenheit"
-        android:textAllCaps="true" />
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.5" />
+        android:layout_height="wrap_content">
+    </Spinner>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:onClick="setKelvinConverterMenu"
-        android:text="@string/kelvin"
-        android:textAllCaps="true" />
-
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.5" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:onClick="setRankineConverterMenu"
-        android:text="@string/rankine"
-        android:textAllCaps="true" />
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.5" />
-
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.5" />
-
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1" />
-    <TextView
+    <EditText
+        android:id="@+id/input_temperature_converter_Et"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Damian Ziółkowski 2017©"
-        style="@android:style/TextAppearance.DeviceDefault.Small"/>
+        android:hint="Input Temperature"
+        android:inputType="numberDecimal"/>
+
+    <Spinner
+        android:id="@+id/output_temperature_spinner_converter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp">
+    </Spinner>
+
+    <TextView
+        android:id="@+id/output_temperature_converter_tV"
+        style="@android:style/TextAppearance.Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Output Temperature"/>
+
+    <Button
+        android:id="@+id/submit_temperature_conversion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/submit"/>
 
 </LinearLayout>

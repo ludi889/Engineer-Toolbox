@@ -50,6 +50,13 @@
     <string name="fahrenheit">Fahrenheit</string>
     <string name="kelvin">Kelwiny</string>
     <string name="rankine">Rankine</string>
+    <string name="heat_flow_resistance_calculator">Heat Flow resistance calculator</string>
+    <string name="save">Save</string>
+    <string name="info_button">Info</string>
+    <string name="motto_info">If you want to learn something, teach something!</string>
+    <string name="linkedin_account_info">LinkedIn account:</string>
+    <string name="author_info">Damian Ziółkowski, Student of Food And Nutrition Engineering at Poznań University of Life Sciences</string>
+    <string name="author_info_label">Author info</string>
 
 
 </resources>

@@ -1,205 +1,212 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Choose what do you want to calculate"/>
-            <Spinner
-                android:id="@+id/calculations_spinner"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+
+        <Spinner
+            android:id="@+id/calculations_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
         <CheckBox
             android:id="@+id/static_pressure_difference_checkbox"
             style="@android:style/TextAppearance.Small"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Check if you have static pressure difference"/>
-            <TextView
-                android:id="@+id/first_section_velocity"
-                style="@android:style/TextAppearance.DeviceDefault.Small"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="First section - Mean fluid velocity (m/s):"
-                android:textColor="@android:color/black" />
 
-            <EditText
-                android:id="@+id/mean_fluid_velocity_first_section_perfect_fluids_by_sum_of_work"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Û"
-                android:inputType="numberDecimal"
-                android:textSize="12sp" />
+        <TextView
+            android:id="@+id/first_section_velocity"
+            style="@android:style/TextAppearance.DeviceDefault.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="First section - Mean fluid velocity (m/s):"
+            android:textColor="@android:color/black"/>
 
-            <TextView
-                android:id="@+id/first_section_elevation"
-                style="@android:style/TextAppearance.Small"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="First section - Elevation above a refrence plane (m)"
-                android:textColor="@android:color/black" />
+        <EditText
+            android:id="@+id/mean_fluid_velocity_first_section_perfect_fluids_by_sum_of_work"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Û"
+            android:inputType="numberDecimal"
+            android:textSize="12sp"/>
 
-            <EditText
-                android:id="@+id/elevation_first_section_perfect_fluids_by_sum_of_work"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="z"
-                android:inputType="numberDecimal"
-                android:textSize="12sp" />
-<TextView
-    android:id="@+id/static_pressure_difference_textView"
-    style="@android:style/TextAppearance.Small"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Static parametr difference"
-    android:textColor="@android:color/black"
-    android:visibility="gone"/>
+        <TextView
+            android:id="@+id/first_section_elevation"
+            style="@android:style/TextAppearance.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="First section - Elevation above a refrence plane (m)"
+            android:textColor="@android:color/black"/>
+
+        <EditText
+            android:id="@+id/elevation_first_section_perfect_fluids_by_sum_of_work"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="z"
+            android:inputType="numberDecimal"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:id="@+id/static_pressure_difference_textView"
+            style="@android:style/TextAppearance.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Static parametr difference"
+            android:textColor="@android:color/black"
+            android:visibility="gone"/>
+
         <EditText
             android:id="@+id/static_pressure_difference_edittext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="ΔPs"
             android:inputType="numberDecimal"
-            android:visibility="gone"
+            android:textSize="12sp"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/first_section_static_pressure"
+            style="@android:style/TextAppearance.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="First section - Static pressure (Pa)"
+            android:textColor="@android:color/black"
+            android:visibility="visible"/>
+
+        <EditText
+            android:id="@+id/static_pressure_first_section_perfect_fluids_by_sum_of_work"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ps"
+            android:inputType="numberDecimal"
+            android:textSize="12sp"
+            android:visibility="visible"/>
+
+        <TextView
+            android:id="@+id/second_section_velocity"
+            style="@android:style/TextAppearance.DeviceDefault.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Second section - Mean fluid velocity (m/s):"
+            android:textColor="@android:color/black"/>
+
+        <EditText
+            android:id="@+id/mean_fluid_velocity_second_section_perfect_fluids_by_sum_of_work"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Û"
+            android:inputType="numberDecimal"
             android:textSize="12sp"/>
-            <TextView
-                android:id="@+id/first_section_static_pressure"
-                style="@android:style/TextAppearance.Small"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="First section - Static pressure (Pa)"
-                android:textColor="@android:color/black"
-                android:visibility="visible"/>
 
-            <EditText
-                android:id="@+id/static_pressure_first_section_perfect_fluids_by_sum_of_work"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Ps"
-                android:inputType="numberDecimal"
-                android:textSize="12sp"
-                android:visibility="visible"/>
+        <TextView
+            android:id="@+id/second_section_elevation"
+            style="@android:style/TextAppearance.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Second section - Elevation above a refrence plane (m)"
+            android:textColor="@android:color/black"/>
 
-            <TextView
-                android:id="@+id/second_section_velocity"
-                style="@android:style/TextAppearance.DeviceDefault.Small"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Second section - Mean fluid velocity (m/s):"
-                android:textColor="@android:color/black" />
-
-            <EditText
-                android:id="@+id/mean_fluid_velocity_second_section_perfect_fluids_by_sum_of_work"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Û"
-                android:inputType="numberDecimal"
-                android:textSize="12sp" />
-
-            <TextView
-                android:id="@+id/second_section_elevation"
-                style="@android:style/TextAppearance.Small"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Second section - Elevation above a refrence plane (m)"
-                android:textColor="@android:color/black" />
-
-            <EditText
-                android:id="@+id/elevation_second_section_perfect_fluids_by_sum_of_work"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="z"
-                android:inputType="numberDecimal"
-                android:textSize="12sp" />
+        <EditText
+            android:id="@+id/elevation_second_section_perfect_fluids_by_sum_of_work"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="z"
+            android:inputType="numberDecimal"
+            android:textSize="12sp"/>
 
 
-            <TextView
-                android:id="@+id/second_section_static_pressure"
-                style="@android:style/TextAppearance.Small"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Second section - Static pressure (Pa)"
-                android:textColor="@android:color/black"
-                android:visibility="visible"/>
+        <TextView
+            android:id="@+id/second_section_static_pressure"
+            style="@android:style/TextAppearance.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Second section - Static pressure (Pa)"
+            android:textColor="@android:color/black"
+            android:visibility="visible"/>
 
-            <EditText
-                android:id="@+id/static_pressure_second_section_perfect_fluids_by_sum_of_work"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Ps"
-                android:inputType="numberDecimal"
-                android:textSize="12sp"
-                android:visibility="visible"/>
+        <EditText
+            android:id="@+id/static_pressure_second_section_perfect_fluids_by_sum_of_work"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ps"
+            android:inputType="numberDecimal"
+            android:textSize="12sp"
+            android:visibility="visible"/>
 
-            <TextView
-                style="@android:style/TextAppearance.Small"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Density (kg/m³)"
-                android:textColor="@android:color/black" />
+        <TextView
+            style="@android:style/TextAppearance.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Density (kg/m³)"
+            android:textColor="@android:color/black"/>
 
-            <EditText
-                android:id="@+id/density_perfect_fluids_by_sum_of_work"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="ρ"
-                android:inputType="numberDecimal"
-                android:textSize="12sp" />
-
-
-            <TextView
-                style="@android:style/TextAppearance.Small"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Acceleration of gravity (m/s2)"
-                android:textColor="@android:color/black" />
-
-            <EditText
-                android:id="@+id/acceleration_of_gravity_perfect_fluids_by_sum_of_work"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="g"
-                android:inputType="numberDecimal"
-                android:text="9.81"
-                android:textSize="12sp" />
-
-            <Button
-                android:id="@+id/submit_perfect_fluids_bernoullis_equation_by_sum_of_work"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:text="Calculate By Sum Of work" />
-
-            <Button
-                android:id="@+id/submit_perfect_fluids_bernoullis_equation_by_sum_of_pressure"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="Calculate By Sum Of Pressure" />
-
-            <Button
-                android:id="@+id/submit_perfect_fluids_bernoullis_equation_by_sum_of_heights"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="Calculate By Sum Of Heights" />
+        <EditText
+            android:id="@+id/density_perfect_fluids_by_sum_of_work"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="ρ"
+            android:inputType="numberDecimal"
+            android:textSize="12sp"/>
 
 
-            <TextView
-                android:id="@+id/perfect_fluids_bernoullis_equation_result"
-                style="@android:style/TextAppearance.Large"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
-                android:layout_marginTop="20dp"
-                android:text="@string/result" />
+        <TextView
+            style="@android:style/TextAppearance.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Acceleration of gravity (m/s2)"
+            android:textColor="@android:color/black"/>
+
+        <EditText
+            android:id="@+id/acceleration_of_gravity_perfect_fluids_by_sum_of_work"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="g"
+            android:inputType="numberDecimal"
+            android:text="9.81"
+            android:textSize="12sp"/>
+
+        <Button
+            android:id="@+id/submit_perfect_fluids_bernoullis_equation_by_sum_of_work"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Calculate By Sum Of work"/>
+
+        <Button
+            android:id="@+id/submit_perfect_fluids_bernoullis_equation_by_sum_of_pressure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Calculate By Sum Of Pressure"/>
+
+        <Button
+            android:id="@+id/submit_perfect_fluids_bernoullis_equation_by_sum_of_heights"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Calculate By Sum Of Heights"/>
+
+
+        <TextView
+            android:id="@+id/perfect_fluids_bernoullis_equation_result"
+            style="@android:style/TextAppearance.Large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/result"/>
 
     </LinearLayout>
 

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- These are the options displayed in the temperature converter Spinner -->
+    <string-array name="array_temperature_options">
+        <item>@string/celsius</item>
+        <item>@string/fahrenheit</item>
+        <item>@string/kelvin</item>
+        <item>@string/rankine</item>
+    </string-array>
+</resources>

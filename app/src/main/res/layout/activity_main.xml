@@ -1,100 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="center_horizontal"
-    android:orientation="vertical">
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:gravity="center_horizontal"
+              android:orientation="vertical">
 
     <Space
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1" />
+        android:layout_weight="1"/>
+
     <Button
+        android:id="@+id/engineering_theory_button"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:onClick="uploadReturnMessage"
         android:text="@string/enginnering_theory"
-        android:textAllCaps="true" />
+        android:textAllCaps="true"/>
+
     <Space
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.5" />
+        android:layout_weight="0.5"/>
+
     <Button
+        android:id="@+id/temperature_converter_button"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:onClick="setTemperatureConverterMenu"
         android:text="@string/temperature_converter"
-        android:textAllCaps="true" />
+        android:textAllCaps="true"/>
+
     <Space
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.5" />
+        android:layout_weight="0.5"/>
 
     <Button
+        android:id="@+id/enthalpy_calculator_button"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:onClick="setEnthalpyMenu"
         android:text="@string/enthalpy_calculator"
-        android:textAllCaps="true" />
+        android:textAllCaps="true"/>
 
     <Space
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.5" />
+        android:layout_weight="0.5"/>
 
     <Button
+        android:id="@+id/heat_of_process_calculator_button"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:onClick="setHeatOfProcessMenu"
         android:text="@string/heat_of_process_calculator"
-        android:textAllCaps="true" />
+        android:textAllCaps="true"/>
+
     <Space
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.5" />
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:onClick="setHeatFlowResistanceMenu"
-        android:text="Heat Flow resistance calculator"
-        android:textAllCaps="true" />
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.5" />
+        android:layout_weight="0.5"/>
 
     <Button
+        android:id="@+id/heat_flow_resistance_calculator_button"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:onClick="setBernoullieEquationMenu"
+        android:text="@string/heat_flow_resistance_calculator"
+        android:textAllCaps="true"/>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"/>
+
+    <Button
+        android:id="@+id/bernoullis_equation_calculator_button"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:text="@string/bernoullis_equation_calculator"
-        android:textAllCaps="true" />
+        android:textAllCaps="true"/>
+
     <Space
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.5" />
+        android:layout_weight="0.5"/>
+
     <Button
+        android:id="@+id/absolute_humidity_calculator_button"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:onClick="setAbsoluteHumitidtyMenu"
         android:text="@string/absolute_humidity_calculator"
-        android:textAllCaps="true" />
-
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Damian Ziółkowski 2017©"
-        style="@android:style/TextAppearance.DeviceDefault.Small"/>
-
+        android:textAllCaps="true"/>
 </LinearLayout>
