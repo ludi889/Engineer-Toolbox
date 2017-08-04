@@ -19,6 +19,7 @@
         android:layout_weight="0.5"/>
 
     <Button
+        android:id="@+id/set_reynolds_number_menu"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_weight="1"
@@ -32,6 +33,7 @@
         android:layout_weight="0.5"/>
 
     <Button
+        android:id="@+id/set_darcy_friction_factor_menu"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_weight="1"
@@ -46,6 +48,7 @@
         android:layout_weight="0.5"/>
 
     <Button
+        android:id="@+id/set_darcy_weisbach_equation_menu"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_weight="1"
@@ -59,6 +62,7 @@
         android:layout_weight="0.5"/>
 
     <Button
+        android:id="@+id/set_local_flow_resistance_menu"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_weight="1"
@@ -70,11 +74,5 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"/>
-
-    <TextView
-        style="@android:style/TextAppearance.DeviceDefault.Small"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Damian Ziółkowski 2017©"/>
 
 </LinearLayout>

@@ -39,7 +39,7 @@
 
 
             <Button
-                android:id="@+id/submit_humidity_result_button"
+                android:id="@+id/submit_humidity_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="submitAbsoluteHumidityEquation"
@@ -74,7 +74,7 @@
             android:orientation="vertical">
 
             <EditText
-                android:id="@+id/Saturated_Air_Pressure"
+                android:id="@+id/saturated_air_pressure"
                 android:layout_width="match_parent"
                 android:layout_height="32dp"
                 android:hint="@string/saturated_air_pressure_hint"
@@ -82,7 +82,7 @@
                 android:textSize="12sp"/>
 
             <EditText
-                android:id="@+id/Relative_Humidity"
+                android:id="@+id/relative_humidity"
                 android:layout_width="match_parent"
                 android:layout_height="32dp"
                 android:hint="φ"
@@ -90,7 +90,7 @@
                 android:textSize="12sp"/>
 
             <EditText
-                android:id="@+id/Air_Pressure"
+                android:id="@+id/air_pressure"
                 android:layout_width="match_parent"
                 android:layout_height="32dp"
                 android:hint="@string/air_pressure_hint"

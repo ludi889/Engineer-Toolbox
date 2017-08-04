@@ -61,7 +61,7 @@
 
                 <EditText
                     android:id="@+id/resistance_factor_darcy_friction_factor"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="a"
                     android:inputType="numberDecimal"
@@ -92,17 +92,17 @@
 
                 <EditText
                     android:id="@+id/reynolds_number_darcy_friction_factor_laminar"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Re"
                     android:inputType="numberDecimal"
                     android:textSize="12sp"/>
 
                 <Button
+                    android:id="@+id/submit_darcy_friction_factor_laminar_flow"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
-                    android:onClick="submitDarcyFrictionLaminarSmoothPipeEquation"
                     android:text="@string/submit"
                     android:textAllCaps="true"/>
 
@@ -141,17 +141,17 @@
 
                 <EditText
                     android:id="@+id/reynolds_number_darcy_friction_factor_turbulent"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Re"
                     android:inputType="numberDecimal"
                     android:textSize="12sp"/>
 
                 <Button
+                    android:id="@+id/submit_darcy_friction_factor_turbulent_flow"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
-                    android:onClick="turbulentSubmit"
                     android:text="@string/submit"
                     android:textAllCaps="true"/>
 
@@ -225,7 +225,7 @@
 
                 <EditText
                     android:id="@+id/reynolds_number_darcy_friction_factor_rough_pipe"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Re"
                     android:inputType="numberDecimal"
@@ -238,7 +238,7 @@
 
                 <EditText
                     android:id="@+id/roughness_parameter"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="R"
                     android:inputType="numberDecimal"

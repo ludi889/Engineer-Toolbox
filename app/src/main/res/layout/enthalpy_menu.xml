@@ -6,7 +6,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <LinearLayout
             android:id="@+id/left_column"
@@ -61,10 +61,9 @@
                 android:textColor="@android:color/black"/>
 
             <Button
-                android:id="@+id/submit_enhalpy_result_button"
+                android:id="@+id/submit_enthalpy_calculation_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:onClick="submitEnthalpyEquation"
                 android:text="@string/submit"/>
 
             <TextView

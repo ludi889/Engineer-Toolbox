@@ -3,66 +3,68 @@ package com.example.android.airenthalpymollier;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class HeatOfProcessActivity extends AppCompatActivity {
+public class HeatOfProcessActivity extends AppCompatActivity implements View.OnClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.heat_of_process);
-    }
+        setContentView(R.layout.heat_of_process_calculator);
 
-    public void submitHeatOfProcessEquation(View view) {
-// This part of method takes value of specific Heat of Substance, and parse it to double
-        EditText specificHeatOfSubstanceHeatOfProcessEditText = (EditText) findViewById(R.id.Specific_Heat_of_Substantion_heat_of_process);
-        String specificHeatOfSubstanceHeatOfProcessString = specificHeatOfSubstanceHeatOfProcessEditText.getText().toString();
-        if (specificHeatOfSubstanceHeatOfProcessString.isEmpty()) {
-            Toast.makeText(this, "You have to input Specific Heat of Substance value", Toast.LENGTH_SHORT).show();
-        }
-        double specificHeatOfSubstanceHeatOfProcess = Double.valueOf(specificHeatOfSubstanceHeatOfProcessString);
-// This part of method takes value of mass of Substance, and parse it to double
-        if (specificHeatOfSubstanceHeatOfProcess == 0) {
-            Toast.makeText(this, "Specific Heat of Substance cannot be 0", Toast.LENGTH_SHORT).show();
-        }
-        EditText massOfSubstanceHeatOfProcessEditText = (EditText) findViewById(R.id.Mass_of_substantion_heat_of_process);
-        String massOfSubstanceHeatOfProcessString = massOfSubstanceHeatOfProcessEditText.getText().toString();
-        if (massOfSubstanceHeatOfProcessString.isEmpty()) {
-            Toast.makeText(this, "You have to input Mass of Substance value", Toast.LENGTH_SHORT).show();
-        }
-        double massOfSubstanceHeatOfProcess = Double.valueOf(massOfSubstanceHeatOfProcessString);
-        //This part of method takes value of initial temperature and parse it to double
-        EditText initialTemperatureHeatOfProcessEditText = (EditText) findViewById(R.id.Initial_temperature_heat_of_process);
-        String initialTemperatureHeatOfProcessString = initialTemperatureHeatOfProcessEditText.getText().toString();
-        if (initialTemperatureHeatOfProcessString.isEmpty()) {
-            Toast.makeText(this, "You have to input Initial Temperature value", Toast.LENGTH_SHORT).show();
-        }
-        double initialTemperatureHeatOfProcess = Double.valueOf(initialTemperatureHeatOfProcessString);
-//This part of method takes value of final temperature and parse it to double
-        EditText finalTemperatureHeatOfProcessEditText = (EditText) findViewById(R.id.Final_temeprature_heat_of_process);
-        String finalTemperatureHeatOfProcessString = finalTemperatureHeatOfProcessEditText.getText().toString();
-        if (finalTemperatureHeatOfProcessString.isEmpty()) {
-            Toast.makeText(this, "You have to input Final Temperature value", Toast.LENGTH_SHORT).show();
-        }
-        double finalTemperatureHeatOfProcess = Double.valueOf(finalTemperatureHeatOfProcessString);
-
-
-//This part of method calculate the heat of process
-        double HeatOfProcess = calculateHeatOfProcess(specificHeatOfSubstanceHeatOfProcess, massOfSubstanceHeatOfProcess, initialTemperatureHeatOfProcess, finalTemperatureHeatOfProcess);
-        String heatOfProcessValue = Double.toString(HeatOfProcess) + "kJ/kg";
-        //This part of method shows the result
-        TextView heatOfProcessResult = (TextView) findViewById(R.id.heat_of_process_result);
-        heatOfProcessResult.setText(heatOfProcessValue);
-
+        Button submitHeatOfProcessButton = (Button) findViewById(R.id.submit_heat_of_process_result_button);
+        submitHeatOfProcessButton.setOnClickListener(this);
     }
 
     /**
      * This method is used to calculate HeatOfProcess and return it to submitHeatOfProcess Method
      */
-    public double calculateHeatOfProcess(double specificHeatOfSubstanceHeatOfProcess, double massOfSubstanceHeatOfProcess, double initialTemperatureHeatOfProcess, double finalTemperatureHeatOfProcess) {
-        return specificHeatOfSubstanceHeatOfProcess * massOfSubstanceHeatOfProcess * (finalTemperatureHeatOfProcess - initialTemperatureHeatOfProcess);
+    public double calculateHeatOfProcess(double specificHeatOfSubstance, double massOfSubstance, double initialTemperature, double finalTemperature) {
+        return specificHeatOfSubstance * massOfSubstance * (finalTemperature - initialTemperature);
     }
 
+    @Override
+    public void onClick(View v) {
+
+// This part of method takes value of specific Heat of Substance, and parse it to double
+        EditText specificHeatOfSubstanceEditText = (EditText) findViewById(R.id.specific_heat_of_substance_heat_of_process);
+        if (specificHeatOfSubstanceEditText.getText().toString().trim().length() == 0) {
+            Toast.makeText(this, "You have to input Specific Heat of Substance value", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        double specificHeatOfSubstance = Double.valueOf(specificHeatOfSubstanceEditText.getText().toString().trim());
+        // This part of method takes value of mass of Substance, and parse it to double
+        EditText massOfSubstanceEditText = (EditText) findViewById(R.id.mass_of_substance_heat_of_process);
+        if (massOfSubstanceEditText.getText().toString().trim().length() == 0) {
+            Toast.makeText(this, "You have to input Mass of Substance value", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        double massOfSubstance = Double.valueOf(massOfSubstanceEditText.getText().toString().trim());
+        //This part of method takes value of initial temperature and parse it to double
+        EditText initialTemperatureEditText = (EditText) findViewById(R.id.initial_temperature_heat_of_process);
+        if (initialTemperatureEditText.getText().toString().trim().length() == 0) {
+            Toast.makeText(this, "You have to input Initial Temperature value", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        Double initialTemperature = Double.valueOf(initialTemperatureEditText.getText().toString().trim());
+//This part of method takes value of final temperature and parse it to double
+        EditText finalTemperatureEditText = (EditText) findViewById(R.id.final_temperature_heat_of_process);
+        if (finalTemperatureEditText.getText().toString().trim().length() == 0) {
+            Toast.makeText(this, "You have to input Final Temperature value", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        double finalTemperature = Double.valueOf(finalTemperatureEditText.getText().toString().trim());
+
+
+//This part of method calculate the heat of process
+        String heatOfProcessValue = Double.toString(calculateHeatOfProcess(specificHeatOfSubstance, massOfSubstance, initialTemperature, finalTemperature)) + "kJ";
+        //This part of method shows the result
+        TextView heatOfProcessResult = (TextView) findViewById(R.id.heat_of_process_result);
+        heatOfProcessResult.setText(heatOfProcessValue);
+
+
+    }
 }
