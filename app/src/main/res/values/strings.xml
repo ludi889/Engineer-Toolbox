@@ -57,6 +57,13 @@
     <string name="linkedin_account_info">LinkedIn account:</string>
     <string name="author_info">Damian Ziółkowski, Student of Food And Nutrition Engineering at Poznań University of Life Sciences</string>
     <string name="author_info_label">Author info</string>
+    <string name="first_section_dynamic_value">First section dynamic value</string>
+    <string name="first_section_static_value">First section static value</string>
+    <string name="first_section_hydrostatic_value">First section hydrostatic value</string>
+    <string name="second_section_dynamic_value">Second section dynamic value</string>
+    <string name="second_section_static_value">Second section static value</string>
+    <string name="second_section_hydrostatic_value">Second section hydrostatic value</string>
+    <string name="static_values_difference">Static values difference</string>
 
 
 </resources>

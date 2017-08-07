@@ -7,4 +7,13 @@
         <item>@string/kelvin</item>
         <item>@string/rankine</item>
     </string-array>
+    <!-- These are the options displayed in the Perfect fluids bernoullis equation Spinner to select options -->
+    <string-array name="array_perfect_fluids_bernoullis_options">
+        <item>@string/first_section_dynamic_value</item>
+        <item>@string/first_section_static_value</item>
+        <item>@string/first_section_hydrostatic_value</item>
+        <item>@string/second_section_dynamic_value</item>
+        <item>@string/second_section_static_value</item>
+        <item>@string/second_section_hydrostatic_value</item>
+    </string-array>
 </resources>

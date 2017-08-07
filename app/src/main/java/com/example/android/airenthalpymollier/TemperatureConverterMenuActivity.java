@@ -12,19 +12,22 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 public class TemperatureConverterMenuActivity extends AppCompatActivity implements View.OnClickListener {
-    private Spinner mInputSpinner;
-    private Spinner mOutputSpinner;
-    private EditText mInputTemperatureEditText;
-    private TextView mOutputTemperatureTextView;
-    /**
+    /** Setting static int's for operating on them
      * 0 - Celsius
      * 1 - Fahrenheit
      * 2 - Kelvin
      * 3 - Rankine
      */
+    private static int CELSIUS = 0;
+    private static int FAHRENHEIT = 1;
+    private static int KELVIN = 2;
+    private static int RANKINE = 3;
+    private Spinner mInputSpinner;
+    private Spinner mOutputSpinner;
+    private EditText mInputTemperatureEditText;
+    private TextView mOutputTemperatureTextView;
     private int mInputTemperatureKind;
     private int mOutputTemperatureKind;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,19 +68,19 @@ public class TemperatureConverterMenuActivity extends AppCompatActivity implemen
                 String selection = (String) parent.getItemAtPosition(position);
                 if (!TextUtils.isEmpty(selection)) {
                     if (selection.equals(getString(R.string.celsius))) {
-                        mInputTemperatureKind = 0; //celsius
+                        mInputTemperatureKind = CELSIUS; //celsius
                         //todo placeholder for hiding celsius kind in second spinner
                     }
                     if (selection.equals(getString(R.string.fahrenheit))) {
-                        mInputTemperatureKind = 1; //fahrenheit
+                        mInputTemperatureKind = FAHRENHEIT; //fahrenheit
                         //todo placeholder for hiding fahrenheit kind in second spinner
                     }
                     if (selection.equals(getString(R.string.kelvin))) {
-                        mInputTemperatureKind = 2; //kelvin
+                        mInputTemperatureKind = KELVIN; //kelvin
                         //todo placeholder for hiding kelvin kind in second spinner
                     }
                     if (selection.equals(getString(R.string.rankine))) {
-                        mInputTemperatureKind = 3; //rankine
+                        mInputTemperatureKind = RANKINE; //rankine
                         //todo placeholder for hiding rankine kind in second spinner
                     }
 
@@ -87,7 +90,7 @@ public class TemperatureConverterMenuActivity extends AppCompatActivity implemen
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
-                mInputTemperatureKind = 0;
+                mInputTemperatureKind = CELSIUS;
             }
         });
         //Output spinner listeners
@@ -97,16 +100,16 @@ public class TemperatureConverterMenuActivity extends AppCompatActivity implemen
                 String selection = (String) parent.getItemAtPosition(position);
                 if (!TextUtils.isEmpty(selection)) {
                     if (selection.equals(getString(R.string.celsius))) {
-                        mOutputTemperatureKind = 0; //celsius
+                        mOutputTemperatureKind = CELSIUS; //celsius
                     }
                     if (selection.equals(getString(R.string.fahrenheit))) {
-                        mOutputTemperatureKind = 1;  //fahrenheit
+                        mOutputTemperatureKind = FAHRENHEIT;  //fahrenheit
                     }
                     if (selection.equals(getString(R.string.kelvin))) {
-                        mOutputTemperatureKind = 2; //kelvin
+                        mOutputTemperatureKind = KELVIN; //kelvin
                     }
                     if (selection.equals(getString(R.string.rankine))) {
-                        mOutputTemperatureKind = 3; //rankine
+                        mOutputTemperatureKind = RANKINE; //rankine
                     }
 
 
@@ -115,7 +118,7 @@ public class TemperatureConverterMenuActivity extends AppCompatActivity implemen
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
-                mOutputTemperatureKind = 0;
+                mOutputTemperatureKind = CELSIUS;
             }
         });
 
@@ -128,76 +131,76 @@ public class TemperatureConverterMenuActivity extends AppCompatActivity implemen
         Double inputTemperature = Double.valueOf(mInputTemperatureEditText.getText().toString());
         Double outputTemperature = null;
         //Celsius to ? conversion
-        if (mInputTemperatureKind == 0 & mOutputTemperatureKind == 0) {
+        if (mInputTemperatureKind == CELSIUS & mOutputTemperatureKind == CELSIUS) {
             //celsius to celsius
             outputTemperature = inputTemperature;
             // TODO: 2017-08-02 after implementing hide second spinner same option, this can be deleted
         }
-        if (mInputTemperatureKind == 0 & mOutputTemperatureKind == 1) {
+        if (mInputTemperatureKind == CELSIUS & mOutputTemperatureKind == FAHRENHEIT) {
             //celsius to fahrenheit
             outputTemperature = (inputTemperature * 1.8) + 32;
         }
-        if (mInputTemperatureKind == 0 & mOutputTemperatureKind == 2) {
+        if (mInputTemperatureKind == CELSIUS & mOutputTemperatureKind == KELVIN) {
             //celsius to kelvin
             outputTemperature = inputTemperature + +273.15;
         }
-        if (mInputTemperatureKind == 0 & mOutputTemperatureKind == 3) {
+        if (mInputTemperatureKind == CELSIUS & mOutputTemperatureKind == RANKINE) {
             //celsius to rankine
             outputTemperature = (inputTemperature + 273.15) * 1.8;
         }
         //Fahrenheit to ? conversion
-        if (mInputTemperatureKind == 1 & mOutputTemperatureKind == 0) {
+        if (mInputTemperatureKind == FAHRENHEIT & mOutputTemperatureKind == CELSIUS) {
             //fahrenheit to celsius
             outputTemperature = (inputTemperature - 32) * 0.5556;
         }
-        if (mInputTemperatureKind == 1 & mOutputTemperatureKind == 1) {
+        if (mInputTemperatureKind == FAHRENHEIT & mOutputTemperatureKind == FAHRENHEIT) {
             //fahrenheit to celsius
             outputTemperature = inputTemperature;
             // TODO: 2017-08-02 after implementing hide second spinner same option, this can be deleted
         }
-        if (mInputTemperatureKind == 1 & mOutputTemperatureKind == 2) {
+        if (mInputTemperatureKind == FAHRENHEIT & mOutputTemperatureKind == KELVIN) {
             //fahrenheit to kelvin
             outputTemperature = (inputTemperature + 459.67) * 0.5556;
         }
-        if (mInputTemperatureKind == 1 & mOutputTemperatureKind == 3) {
+        if (mInputTemperatureKind == FAHRENHEIT & mOutputTemperatureKind == RANKINE) {
             //fahrenheit to rankine
             outputTemperature = inputTemperature + 459.67;
         }
         //Kelvin to ? conversion
-        if (mInputTemperatureKind == 2 & mOutputTemperatureKind == 0) {
+        if (mInputTemperatureKind == KELVIN & mOutputTemperatureKind == CELSIUS) {
             //kelvin to celsius
             outputTemperature = inputTemperature - 273.15;
         }
-        if (mInputTemperatureKind == 2 & mOutputTemperatureKind == 1) {
+        if (mInputTemperatureKind == KELVIN & mOutputTemperatureKind == FAHRENHEIT) {
             //kelvin to fahrenheit
             outputTemperature = inputTemperature * 1.8 - 459.67;
         }
-        if (mInputTemperatureKind == 2 & mOutputTemperatureKind == 2) {
+        if (mInputTemperatureKind == KELVIN & mOutputTemperatureKind == KELVIN) {
             //kelvin to kelvin
             outputTemperature = inputTemperature;
             // TODO: 2017-08-02 after implementing hide second spinner same option, this can be deleted
         }
-        if (mInputTemperatureKind == 2 & mOutputTemperatureKind == 3) {
+        if (mInputTemperatureKind == KELVIN & mOutputTemperatureKind == RANKINE) {
             //kelvin to rankine
             outputTemperature = inputTemperature * 1.8;
         }
         //Rankine to ? conversion
-        if (mInputTemperatureKind == 3 & mOutputTemperatureKind == 0) {
+        if (mInputTemperatureKind == RANKINE & mOutputTemperatureKind == CELSIUS) {
             //rankine to celsius
             outputTemperature = (inputTemperature - 491.67) * 0.5556;
         }
-        if (mInputTemperatureKind == 3 & mOutputTemperatureKind == 1) {
+        if (mInputTemperatureKind == RANKINE & mOutputTemperatureKind == FAHRENHEIT) {
             //rankine to fahrenheit
             outputTemperature = inputTemperature - 459.67;
         }
-        if (mInputTemperatureKind == 3 & mOutputTemperatureKind == 2) {
+        if (mInputTemperatureKind == RANKINE & mOutputTemperatureKind == KELVIN) {
             //rankine to kelvin
             outputTemperature = inputTemperature * 0.5556;
         }
-        if (mInputTemperatureKind == 3 & mOutputTemperatureKind == 3) {
+        if (mInputTemperatureKind == RANKINE & mOutputTemperatureKind == RANKINE) {
             //rankine to kelvin
             outputTemperature = inputTemperature;
-            // TODO: 2017-08-02 after implementing hide second spinner same option, this can be deleted
+            // TODO: KELVIN0-FAHRENHEIT7-08-02 after implementing hide second spinner same option, this can be deleted
         }
         if (outputTemperature == null) {
             return;

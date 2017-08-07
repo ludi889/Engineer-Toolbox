@@ -5,6 +5,7 @@
             android:layout_height="match_parent">
 
     <LinearLayout
+        android:id="@+id/linear_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
@@ -15,16 +16,9 @@
             android:text="Choose what do you want to calculate"/>
 
         <Spinner
-            android:id="@+id/calculations_spinner"
+            android:id="@+id/perfect_fluids_spinner"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
-
-        <CheckBox
-            android:id="@+id/static_pressure_difference_checkbox"
-            style="@android:style/TextAppearance.Small"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Check if you have static pressure difference"/>
 
         <TextView
             android:id="@+id/first_section_velocity"
@@ -35,7 +29,7 @@
             android:textColor="@android:color/black"/>
 
         <EditText
-            android:id="@+id/mean_fluid_velocity_first_section_perfect_fluids_by_sum_of_work"
+            android:id="@+id/mean_fluid_velocity_first_section_perfect_fluids"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Û"
@@ -51,7 +45,7 @@
             android:textColor="@android:color/black"/>
 
         <EditText
-            android:id="@+id/elevation_first_section_perfect_fluids_by_sum_of_work"
+            android:id="@+id/elevation_first_section_perfect_fluids"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="z"
@@ -59,34 +53,16 @@
             android:textSize="12sp"/>
 
         <TextView
-            android:id="@+id/static_pressure_difference_textView"
+            android:id="@+id/first_section_static_value"
             style="@android:style/TextAppearance.Small"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Static parametr difference"
-            android:textColor="@android:color/black"
-            android:visibility="gone"/>
-
-        <EditText
-            android:id="@+id/static_pressure_difference_edittext"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="ΔPs"
-            android:inputType="numberDecimal"
-            android:textSize="12sp"
-            android:visibility="gone"/>
-
-        <TextView
-            android:id="@+id/first_section_static_pressure"
-            style="@android:style/TextAppearance.Small"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="First section - Static pressure (Pa)"
+            android:text="First section - Static value (Pa)"
             android:textColor="@android:color/black"
             android:visibility="visible"/>
 
         <EditText
-            android:id="@+id/static_pressure_first_section_perfect_fluids_by_sum_of_work"
+            android:id="@+id/static_value_first_section_perfect_fluids"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Ps"
@@ -103,7 +79,7 @@
             android:textColor="@android:color/black"/>
 
         <EditText
-            android:id="@+id/mean_fluid_velocity_second_section_perfect_fluids_by_sum_of_work"
+            android:id="@+id/mean_fluid_velocity_second_section_perfect_fluids"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Û"
@@ -119,7 +95,7 @@
             android:textColor="@android:color/black"/>
 
         <EditText
-            android:id="@+id/elevation_second_section_perfect_fluids_by_sum_of_work"
+            android:id="@+id/elevation_second_section_perfect_fluids"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="z"
@@ -128,16 +104,16 @@
 
 
         <TextView
-            android:id="@+id/second_section_static_pressure"
+            android:id="@+id/second_section_static_value"
             style="@android:style/TextAppearance.Small"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Second section - Static pressure (Pa)"
+            android:text="Second section - Static value (Pa)"
             android:textColor="@android:color/black"
             android:visibility="visible"/>
 
         <EditText
-            android:id="@+id/static_pressure_second_section_perfect_fluids_by_sum_of_work"
+            android:id="@+id/static_value_second_section_perfect_fluids"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Ps"
@@ -153,7 +129,7 @@
             android:textColor="@android:color/black"/>
 
         <EditText
-            android:id="@+id/density_perfect_fluids_by_sum_of_work"
+            android:id="@+id/density_perfect_fluids"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="ρ"
@@ -169,7 +145,7 @@
             android:textColor="@android:color/black"/>
 
         <EditText
-            android:id="@+id/acceleration_of_gravity_perfect_fluids_by_sum_of_work"
+            android:id="@+id/acceleration_of_gravity_perfect_fluids"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="g"
