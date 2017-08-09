@@ -16,4 +16,15 @@
         <item>@string/second_section_static_value</item>
         <item>@string/second_section_hydrostatic_value</item>
     </string-array>
+    <string-array name="array_heat_flow_resistance_option">
+        <item>@string/heat_flux</item>
+        <item>@string/area</item>
+        <item>@string/temperature_difference</item>
+        <item>@string/heat_flow_resistance</item>
+        <item>@string/heat_flow_density</item>
+    </string-array>
+    <string-array name="array_add_heat_flow_resistance_option">
+        <item>@string/conductivity_resistance</item>
+        <item>@string/heat_transfer_resistance</item>
+    </string-array>
 </resources>

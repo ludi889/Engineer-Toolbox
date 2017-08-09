@@ -38,7 +38,7 @@
             android:text="Choose what you want to calculate"/>
 
         <Spinner
-            android:id="@+id/heat_flux_spinner"
+            android:id="@+id/heat_flow_resistance_option_spinner"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
         </Spinner>
@@ -48,6 +48,7 @@
             android:layout_height="50dp"/>
 
         <LinearLayout
+            android:id="@+id/heat_flow_resistance_hidelinearlayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
@@ -63,15 +64,16 @@
                     style="@style/TextAppearance.AppCompat.Large"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:hint="q/A"
+                    android:hint="q/A (W/m²)"
+                    android:inputType="numberDecimal"
                     android:visibility="gone"/>
 
                 <EditText
-                    android:id="@+id/heat_flux"
+                    android:id="@+id/heat_flux_edittext"
                     style="@style/Base.TextAppearance.AppCompat.Large"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:hint="q"
+                    android:hint="q (W)"
                     android:inputType="numberDecimal"/>
 
                 <RelativeLayout
@@ -80,7 +82,7 @@
                     android:orientation="horizontal">
 
                     <View
-                        android:id="@+id/dupa"
+                        android:id="@+id/view"
                         android:layout_width="24dp"
                         android:layout_height="3dp"
                         android:layout_centerVertical="true"
@@ -91,16 +93,16 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="16sp"
-                        android:layout_toRightOf="@id/dupa"
+                        android:layout_toRightOf="@id/view"
                         android:text="="/>
                 </RelativeLayout>
 
                 <EditText
-                    android:id="@+id/area"
+                    android:id="@+id/area_edittext"
                     style="@style/Base.TextAppearance.AppCompat.Large"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:hint="A"
+                    android:hint="A (m²)"
                     android:inputType="numberDecimal"/>
             </LinearLayout>
 
@@ -111,10 +113,12 @@
                 android:orientation="vertical">
 
                 <EditText
+                    android:id="@+id/temperature_difference_edittext"
                     style="@style/Base.TextAppearance.AppCompat.Large"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:hint="ΔT"/>
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="ΔT (°C)"
+                    android:inputType="numberDecimal"/>
 
                 <View
                     android:layout_width="40dp"
@@ -122,22 +126,30 @@
                     android:layout_marginTop="10dp"
                     android:background="#000000"/>
 
-                <LinearLayout
-                    android:id="@+id/resistance_layout"
+                <EditText
+                    android:id="@+id/heat_resistance_edittext"
+                    style="@style/TextAppearance.AppCompat.Large"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <EditText
-                        style="@style/TextAppearance.AppCompat.Large"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="10sp"
-                        android:layout_marginTop="10dp"
-                        android:hint="R"/>
-                </LinearLayout>
+                    android:layout_marginLeft="10sp"
+                    android:layout_marginTop="10dp"
+                    android:hint="R"
+                    android:inputType="numberDecimal"/>
             </LinearLayout>
         </LinearLayout>
+
+        <Button
+            android:id="@+id/heat_flow_resistance_submit_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Submit"/>
+
+        <TextView
+            android:id="@+id/heat_flow_resistance_result_textview"
+            style="@android:style/TextAppearance.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
     </LinearLayout>
 </ScrollView>
 

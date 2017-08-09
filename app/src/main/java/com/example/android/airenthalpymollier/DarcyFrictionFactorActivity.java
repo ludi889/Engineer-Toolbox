@@ -103,7 +103,9 @@ public class DarcyFrictionFactorActivity extends AppCompatActivity implements Vi
     }
 
 
-    /**this method is used to expand list of factor values on click of corresponding textView*/
+    /**
+     * this method is used to expand list of factor values on click of corresponding textView
+     */
     public void expandResistanceFactorValues(View view) {
         ListView resistanceFactorValues = (ListView) findViewById(R.id.resistance_factor_values);
         if (resistanceFactorValues.getVisibility() == View.GONE) {
@@ -114,7 +116,9 @@ public class DarcyFrictionFactorActivity extends AppCompatActivity implements Vi
 
     }
 
-    /**this method is used to set content to reynolds number calculator*/
+    /**
+     * this method is used to set content to reynolds number calculator
+     */
     public void setReynoldsNumberMenu(View view) {
         Intent setReynoldsNumberMenuIntent = new Intent(this, ReynoldsNumberActivity.class);
         startActivity(setReynoldsNumberMenuIntent);

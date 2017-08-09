@@ -12,7 +12,8 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 public class TemperatureConverterMenuActivity extends AppCompatActivity implements View.OnClickListener {
-    /** Setting static int's for operating on them
+    /**
+     * Setting static int's for operating on them
      * 0 - Celsius
      * 1 - Fahrenheit
      * 2 - Kelvin

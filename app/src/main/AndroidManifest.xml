@@ -54,6 +54,9 @@
         <activity
             android:name=".InfoMenuActivity"
             android:label="Info"/>
+        <activity
+            android:name=".AddHeatFlowResistanceMenuActivity"
+            android:label="Add Heat Flow Resistance"/>
 
     </application>
 

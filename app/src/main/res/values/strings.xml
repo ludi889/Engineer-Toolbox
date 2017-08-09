@@ -64,6 +64,13 @@
     <string name="second_section_static_value">Second section static value</string>
     <string name="second_section_hydrostatic_value">Second section hydrostatic value</string>
     <string name="static_values_difference">Static values difference</string>
+    <string name="heat_flux">Heat Flux</string>
+    <string name="area">Area</string>
+    <string name="temperature_difference">Temperature difference</string>
+    <string name="heat_flow_resistance">Heat flow resistance</string>
+    <string name="heat_flow_density">Heat flow density</string>
+    <string name="conductivity_resistance">Conductivity Resistance</string>
+    <string name="heat_transfer_resistance">Heat Transfer Resistance</string>
 
 
 </resources>
