@@ -23,19 +23,25 @@
                 style="@android:style/TextAppearance.DeviceDefault"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Add heat flow resistance"/>
+                android:text="@string/add_heat_flow_resistance"/>
         </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/heat_flow_resistance_calculator_warning"
+            android:textColor="@android:color/holo_red_dark"/>
 
         <CheckBox
             android:id="@+id/heat_flux_density_check_box"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Check if you have Heat flux density"/>
+            android:text="@string/heat_flux_denisty_check"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Choose what you want to calculate"/>
+            android:text="@string/choose_calculation"/>
 
         <Spinner
             android:id="@+id/heat_flow_resistance_option_spinner"
@@ -64,7 +70,7 @@
                     style="@style/TextAppearance.AppCompat.Large"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:hint="q/A (W/m²)"
+                    android:hint="@string/heat_flux_density_hint"
                     android:inputType="numberDecimal"
                     android:visibility="gone"/>
 
@@ -73,7 +79,7 @@
                     style="@style/Base.TextAppearance.AppCompat.Large"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:hint="q (W)"
+                    android:hint="@string/heat_flux_hint"
                     android:inputType="numberDecimal"/>
 
                 <RelativeLayout
@@ -102,7 +108,7 @@
                     style="@style/Base.TextAppearance.AppCompat.Large"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:hint="A (m²)"
+                    android:hint="@string/area_hint"
                     android:inputType="numberDecimal"/>
             </LinearLayout>
 
@@ -117,7 +123,7 @@
                     style="@style/Base.TextAppearance.AppCompat.Large"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:hint="ΔT (°C)"
+                    android:hint="@string/delta_temperature_hint"
                     android:inputType="numberDecimal"/>
 
                 <View
@@ -133,7 +139,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10sp"
                     android:layout_marginTop="10dp"
-                    android:hint="R"
+                    android:hint="@string/resistance_short_hint"
                     android:inputType="numberDecimal"/>
             </LinearLayout>
         </LinearLayout>
@@ -143,7 +149,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
-            android:text="Submit"/>
+            android:text="@string/submit"/>
 
         <TextView
             android:id="@+id/heat_flow_resistance_result_textview"

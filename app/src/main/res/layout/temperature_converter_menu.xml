@@ -17,7 +17,7 @@
         android:id="@+id/input_temperature_converter_Et"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="Input Temperature"
+        android:hint="@string/input_temperature_hint"
         android:inputType="numberDecimal"/>
 
     <Spinner
@@ -32,7 +32,7 @@
         style="@android:style/TextAppearance.Medium"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="Output Temperature"/>
+        android:hint="@string/output_temperature"/>
 
     <Button
         android:id="@+id/submit_temperature_conversion"

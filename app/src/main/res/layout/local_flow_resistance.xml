@@ -22,7 +22,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
                 android:layout_marginTop="8dp"
-                android:text="Resistance Coefficient"
+                android:text="@string/resistance_coefficient"
                 android:textColor="@android:color/black"/>
 
             <TextView
@@ -31,7 +31,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
                 android:layout_marginTop="8dp"
-                android:text="Mean fluid velocity (m/s)"
+                android:text="@string/mean_fluid_velocity"
                 android:textColor="@android:color/black"/>
 
             <TextView
@@ -40,14 +40,13 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
                 android:layout_marginTop="8dp"
-                android:text="Density (kg/m3)"
+                android:text="@string/density"
                 android:textColor="@android:color/black"/>
 
             <Button
                 android:id="@+id/submit_local_flow_resistance_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:onClick="submitLocalFlowResistanceEquation"
                 android:text="@string/submit"/>
 
             <TextView
@@ -56,14 +55,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="40dp"
-                android:layout_marginTop="40dp"
-                android:text="@string/result"/>
-
-            <TextView
-                style="@android:style/TextAppearance.Medium"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/used_formula"/>
+                android:layout_marginTop="40dp"/>
 
 
         </LinearLayout>

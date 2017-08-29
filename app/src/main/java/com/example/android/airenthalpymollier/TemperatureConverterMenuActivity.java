@@ -36,11 +36,11 @@ public class TemperatureConverterMenuActivity extends AppCompatActivity implemen
         setContentView(R.layout.temperature_converter_menu);
 
         //Setting fields
-        mInputSpinner = (Spinner) findViewById(R.id.input_temperature_spinner_converter);
-        mOutputSpinner = (Spinner) findViewById(R.id.output_temperature_spinner_converter);
-        mInputTemperatureEditText = (EditText) findViewById(R.id.input_temperature_converter_Et);
-        mOutputTemperatureTextView = (TextView) findViewById(R.id.output_temperature_converter_tV);
-        Button submitTemperatureConvert = (Button) findViewById(R.id.submit_temperature_conversion);
+        mInputSpinner = findViewById(R.id.input_temperature_spinner_converter);
+        mOutputSpinner = findViewById(R.id.output_temperature_spinner_converter);
+        mInputTemperatureEditText = findViewById(R.id.input_temperature_converter_Et);
+        mOutputTemperatureTextView = findViewById(R.id.output_temperature_converter_tV);
+        Button submitTemperatureConvert = findViewById(R.id.submit_temperature_conversion);
         //Initialization of spinners
         setupSpinners();
         //Setting listener

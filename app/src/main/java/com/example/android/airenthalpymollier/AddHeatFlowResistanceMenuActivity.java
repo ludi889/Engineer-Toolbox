@@ -30,11 +30,11 @@ public class AddHeatFlowResistanceMenuActivity extends AppCompatActivity impleme
         super.onCreate(savedInstanceState);
         setContentView(R.layout.add_heat_flow_ressistance_menu);
         //setting fields
-        addHeatResistanceOptionSpinner = (Spinner) findViewById(R.id.add_resistance_option_spinner);
-        insertResistanceButton = (Button) findViewById(R.id.insert_thermal_resistance_button);
-        materialThicknessEditText = (EditText) findViewById(R.id.material_thickness);
-        materialThermalConductivityEditText = (EditText) findViewById(R.id.material_thermal_conductivity);
-        materialHeatTransferCoefficientEditText = (EditText) findViewById(R.id.material_heat_transfer_coefficient);
+        addHeatResistanceOptionSpinner = findViewById(R.id.add_resistance_option_spinner);
+        insertResistanceButton = findViewById(R.id.insert_thermal_resistance_button);
+        materialThicknessEditText = findViewById(R.id.material_thickness);
+        materialThermalConductivityEditText = findViewById(R.id.material_thermal_conductivity);
+        materialHeatTransferCoefficientEditText = findViewById(R.id.material_heat_transfer_coefficient);
         //setting listeners
         insertResistanceButton.setOnClickListener(this);
 //setting spinner
@@ -133,9 +133,9 @@ public class AddHeatFlowResistanceMenuActivity extends AppCompatActivity impleme
             } else
                 addResistance = 1 / materialHeatTransferCoefficient();
         }
-        bundle.putDouble("addResistance", addResistance);
+        bundle.putDouble(getString(R.string.add_resistance_key), addResistance);
         i.putExtras(bundle);
-        if (bundle.containsKey("addResistance")) {
+        if (bundle.containsKey(getString(R.string.add_resistance_key))) {
             startActivity(i);
         }
 

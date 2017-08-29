@@ -16,13 +16,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
 //setting buttons
-        final Button setEngineeringTheoryButton = (Button) findViewById(R.id.engineering_theory_button);
-        final Button setTemperatureConverterButton = (Button) findViewById(R.id.temperature_converter_button);
-        final Button setEnthalpyCalculatorButton = (Button) findViewById(R.id.enthalpy_calculator_button);
-        final Button setHeatOfProcessCalculatorButton = (Button) findViewById(R.id.heat_of_process_calculator_button);
-        final Button setHeatFlowRessistanceCalculatorButton = (Button) findViewById(R.id.heat_flow_resistance_calculator_button);
-        final Button setBernoullisEquationButton = (Button) findViewById(R.id.bernoullis_equation_calculator_button);
-        final Button setAbsoluteHumidityCalculatorButton = (Button) findViewById(R.id.absolute_humidity_calculator_button);
+        final Button setEngineeringTheoryButton = findViewById(R.id.engineering_theory_button);
+        final Button setTemperatureConverterButton = findViewById(R.id.temperature_converter_button);
+        final Button setEnthalpyCalculatorButton = findViewById(R.id.enthalpy_calculator_button);
+        final Button setHeatOfProcessCalculatorButton = findViewById(R.id.heat_of_process_calculator_button);
+        final Button setHeatFlowRessistanceCalculatorButton = findViewById(R.id.heat_flow_resistance_calculator_button);
+        final Button setBernoullisEquationButton = findViewById(R.id.bernoullis_equation_calculator_button);
+        final Button setAbsoluteHumidityCalculatorButton = findViewById(R.id.absolute_humidity_calculator_button);
 
         //setting listeners on buttons
         setEngineeringTheoryButton.setOnClickListener(this);
@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
      * This method is used, when user want to acces option, which wasn't implemented yet
      */
     public void uploadReturnMessage(View view) {
-        Toast.makeText(this, "This function was not implemented yet", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, R.string.implement_toast, Toast.LENGTH_SHORT).show();
     }
 
     /**

@@ -11,10 +11,10 @@
         android:background="@drawable/authorimageicon"/>
 
     <TextView
-        style="@android:style/TextAppearance.Medium"
+        style="@android:style/TextAppearance.Large"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center"
+        android:layout_gravity="center_horizontal"
         android:text="@string/motto_info"/>
 
     <LinearLayout
@@ -32,7 +32,7 @@
             android:text="@string/author_info_label"/>
 
         <TextView
-            style="@android:style/TextAppearance.Small"
+            style="@android:style/TextAppearance.Medium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/author_info"/>

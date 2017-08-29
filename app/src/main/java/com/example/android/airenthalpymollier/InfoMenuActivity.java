@@ -12,12 +12,15 @@ import android.widget.TextView;
  */
 
 public class InfoMenuActivity extends AppCompatActivity implements View.OnClickListener {
+    private static final String HTTPS_GITHUB = "https://github.com/ludi889/Enginner-Toolbox";
+    private static final String HTTPS_LINKEDIN = "https://www.linkedin.com/in/damian-zi%C3%B3%C5%82kowski-41ab38141/";
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.info_menu);
 //setting textViews
-        TextView linkedinUrl = (TextView) findViewById(R.id.linkedin_account_link);
-        TextView githubUrl = (TextView) findViewById(R.id.github_account_link);
+        TextView linkedinUrl = findViewById(R.id.linkedin_account_link);
+        TextView githubUrl = findViewById(R.id.github_account_link);
         //setting listeners
         linkedinUrl.setOnClickListener(this);
         githubUrl.setOnClickListener(this);
@@ -29,10 +32,10 @@ public class InfoMenuActivity extends AppCompatActivity implements View.OnClickL
         Uri uri = null;
         switch (v.getId()) {
             case R.id.linkedin_account_link:
-                uri = Uri.parse("https://www.linkedin.com/in/damian-zi%C3%B3%C5%82kowski-41ab38141/");
+                uri = Uri.parse(HTTPS_LINKEDIN);
                 break;
             case R.id.github_account_link:
-                uri = Uri.parse("https://github.com/ludi889/Enginner-Toolbox");
+                uri = Uri.parse(HTTPS_GITHUB);
                 break;
         }
         Intent intent = new Intent(Intent.ACTION_VIEW, uri);

@@ -13,7 +13,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Choose what do you want to calculate"/>
+            android:text="@string/choose_calculation"/>
 
         <Spinner
             android:id="@+id/perfect_fluids_spinner"
@@ -25,7 +25,7 @@
             style="@android:style/TextAppearance.DeviceDefault.Small"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="First section - Mean fluid velocity (m/s):"
+            android:text="@string/first_section_mean_fluid_velocity"
             android:textColor="@android:color/black"/>
 
         <EditText
@@ -41,7 +41,7 @@
             style="@android:style/TextAppearance.Small"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="First section - Elevation above a refrence plane (m)"
+            android:text="@string/first_section_elevation"
             android:textColor="@android:color/black"/>
 
         <EditText
@@ -57,7 +57,7 @@
             style="@android:style/TextAppearance.Small"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="First section - Static value (Pa)"
+            android:text="@string/first_section_static_value"
             android:textColor="@android:color/black"
             android:visibility="visible"/>
 
@@ -75,7 +75,7 @@
             style="@android:style/TextAppearance.DeviceDefault.Small"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Second section - Mean fluid velocity (m/s):"
+            android:text="@string/second_section_mean_fluid_velocity"
             android:textColor="@android:color/black"/>
 
         <EditText
@@ -91,7 +91,7 @@
             style="@android:style/TextAppearance.Small"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Second section - Elevation above a refrence plane (m)"
+            android:text="@string/second_section_elevation"
             android:textColor="@android:color/black"/>
 
         <EditText
@@ -108,7 +108,7 @@
             style="@android:style/TextAppearance.Small"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Second section - Static value (Pa)"
+            android:text="@string/second_section_static_value"
             android:textColor="@android:color/black"
             android:visibility="visible"/>
 
@@ -125,7 +125,7 @@
             style="@android:style/TextAppearance.Small"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Density (kg/m³)"
+            android:text="@string/density"
             android:textColor="@android:color/black"/>
 
         <EditText
@@ -141,7 +141,7 @@
             style="@android:style/TextAppearance.Small"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Acceleration of gravity (m/s2)"
+            android:text="@string/acceleration_of_gravity"
             android:textColor="@android:color/black"/>
 
         <EditText
@@ -158,31 +158,30 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="Calculate By Sum Of work"/>
+            android:text="@string/by_sum_of_work_calculator"/>
 
         <Button
             android:id="@+id/submit_perfect_fluids_bernoullis_equation_by_sum_of_pressure"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="Calculate By Sum Of Pressure"/>
+            android:text="@string/by_sum_of_pressure_calculator"/>
 
         <Button
             android:id="@+id/submit_perfect_fluids_bernoullis_equation_by_sum_of_heights"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="Calculate By Sum Of Heights"/>
+            android:text="@string/by_sum_of_height_calculator"/>
 
 
         <TextView
             android:id="@+id/perfect_fluids_bernoullis_equation_result"
             style="@android:style/TextAppearance.Large"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_marginBottom="20dp"
-            android:layout_marginTop="20dp"
-            android:text="@string/result"/>
+            android:layout_marginTop="20dp"/>
 
     </LinearLayout>
 

@@ -1,69 +1,87 @@
 <resources>
+    <!-- General purpose Strings. Strings which can be used across every menu in application (utility wording, popular units, suffixes, hints etc.) -->
     <string name="app_name">Engineer Toolbox</string>
     <string name="main_menu">Main Menu</string>
-    <string name="enthalpy_calculator">Enthalpy Calculator</string>
-    <string name="absolute_humidity_calculator">Absolute Humidity Calculator</string>
-    <string name="saturated_air_pressure_hint">P.sat.</string>
-    <string name="air_pressure_hint">Pressure</string>
-    <string name="saturated_air_pressure">Pressure Air Saturated (kPa) =</string>
-    <string name="relative_humidity">Relative Humidity (decimal) =</string>
-    <string name="air_pressure">Air Pressure (kPa) =</string>
     <string name="submit">submit</string>
     <string name="result">result</string>
     <string name="used_formula">Used formula</string>
-    <string name="back">back</string>
-    <string name="specific_heat_of_dry_air">Specific Heat of Dry Air (kJ/kg*°C) =</string>
-    <string name="heat_of_vaporization">Heat of Vaporization (kJ/kg) =</string>
-    <string name="specific_heat_of_humid_air">Specific Heat of Humid Air (kJ/kg*°C) =</string>
+    <string name="back">Back</string>
+    <string name="save">Save</string>
+    <string name="info_button">Info</string>
+    <!-- suffixes-->
+    <string name="temperature_celsius_suffix" translatable="false">(°C)</string>
+    <string name="mass_kilogram_suffix" translatable="false">(kg)</string>
+    <string name="pressure_kilopascal_suffix" translatable="false">(kPa)</string>
+    <string name="decimal_suffix">(decimal)</string>
+    <string name="kilojoules_kilograms_suffix" translatable="false">kJ/kg</string>
+    <string name="value_is_suffix"> value is </string>
+    <string name="lambda_suffix" translatable="false">λ=</string>
+    <string name="pascal_suffix" translatable="false">Pa</string>
+    <string name="kilojoules_suffix" translatable="false">kJ</string>
+    <string name="metres_suffix" translatable="false">m</string>
+    <string name="is_suffix"> is </string>
+    <!-- in calculator menu units-->
     <string name="temperature">Temperature (°C) =</string>
-    <string name="moisture_content">Moisture content (kgH₂O/kgdryair)</string>
-    <string name="specific_heat_of_dry_air_hint">Sp(da)</string>
-    <string name="heat_of_vaporization_hint">∆H(vap)</string>
-    <string name="specific_heat_of_humid_air_hint">Sp(ha))</string>
+    <string name="celsius">Celsius</string>
+    <string name="specific_heat_of_substance">Specific Heat of Substance (kJ/kg*°C) =</string>
+    <string name="mass_of_substance">Mass of Substance (kg) =</string>
+    <string name="initial_temperature">Initial Temperature (°C) =</string>
+    <string name="final_temperature">Final Temperature (°C) =</string>
+    <string name="mean_fluid_velocity">Mean fluid velocity (m/s)</string>
+    <string name="hydraulic_diameter">Hydraulic Diameter (m)</string>
+    <string name="length">Length (m)</string>
+    <string name="viscosity">Viscosity (Pa*s)</string>
+    <!-- hints-->
     <string name="temperature_hint">T</string>
-    <string name="moisture_content_hint">X</string>
+    <string name="mass_of_substance_hint">m</string>
+    <string name="input_temperature_hint">Input temperature</string>
+    <string name="specific_heat_hint">Sp</string>
+    <string name="pressure_hint">Pressure</string>
+    <string name="reynolds_number_hint" translatable="false">Re</string>
+    <!-- other-->
+    <string name="reynolds_number">Reynolds number</string>
+    <string name="darcy_friction_factor">Darcy friction factor</string>
+    <!-- End of general purpose Strings-->
+    <!-- Menu Strings -->
+    <string name="enthalpy_calculator">Enthalpy Calculator</string>
+    <string name="absolute_humidity_calculator">Absolute Humidity Calculator</string>
     <string name="enginnering_theory">Enginnering Theory</string>
     <string name="heat_of_process_calculator">Heat of Process Calculator</string>
     <string name="bernoullis_equation_calculator">Bernoulli\'s Equation Calculator</string>
-    <string name="specific_heat_of_substance">Specific Heat of Substance (kJ/kg*°C)</string>
-    <string name="mass_of_substance">Mass of Substance (kg)</string>
-    <string name="initial_temperature">Initial Temperature (°C) (</string>
-    <string name="final_temperature">Final Temperature (°C)</string>
-    <string name="specific_heat_hint">Sp</string>
-    <string name="mass_of_substance_hint">M</string>
     <string name="temperature_converter">Temperature Converter</string>
-    <string name="title_activity_temperature">Temperature</string>
-    <string name="celsius_converter">Celsius Converter</string>
-    <string name="input_temperature">Input temperature here</string>
     <string name="temperature_menu">Temperature Converter Menu</string>
-    <string name="fahrenheit_converter">Fahrenheit Converter</string>
-    <string name="kelvin_converter">Kelvin Converter</string>
-    <string name="rankine_converter">Rankine Converter</string>
-    <string name="perfect_fluids">Perfect Fluids</string>
-    <string name="actual_fluids">Actual Fluids</string>
     <string name="bernoullis_equation_menu">Bernoullis Equation Menu</string>
     <string name="perfect_fluids_bernoullis_equation_menu">Perfect fluids bernoullis equation menu</string>
-    <string name="by_sum_of_pressure_calculator">Calculating by sum of pressure</string>
-    <string name="by_sum_of_work_calculator">Calculating by sum of work</string>
-    <string name="by_sum_of_height_calculator">Calculating by sum of height</string>
-    <string name="celsius">Celsius</string>
-    <string name="fahrenheit">Fahrenheit</string>
-    <string name="kelvin">Kelwiny</string>
-    <string name="rankine">Rankine</string>
     <string name="heat_flow_resistance_calculator">Heat Flow resistance calculator</string>
-    <string name="save">Save</string>
-    <string name="info_button">Info</string>
-    <string name="motto_info">If you want to learn something, teach something!</string>
+    <string name="perfect_fluids">Perfect Fluids</string>
+    <string name="actual_fluids">Actual Fluids</string>
+    <string name="darcy_weisbach_equation">Darcy-Weisbach Equation</string>
+    <string name="local_flow_resistance">Local Flow Resistance</string>
+    <!-- Enthalpy calculator strings-->
+    <string name="specific_heat_of_dry_air">Specific Heat of Dry Air (kJ/kg*°C) =</string>
+    <string name="heat_of_vaporization">Heat of Vaporization (kJ/kg) =</string>
+    <string name="specific_heat_of_humid_air">Specific Heat of Humid Air (kJ/kg*°C) =</string>
+    <string name="moisture_content">Moisture content (kg H₂O/kg dry air) =</string>
+    <string name="specific_heat_of_dry_air_hint">Sp(da)</string>
+    <string name="heat_of_vaporization_hint">∆H(vap)</string>
+    <string name="specific_heat_of_humid_air_hint">Sp(ha)</string>
+    <string name="moisture_content_hint">X</string>
+    <!-- Temperature converter strings-->
+    <string name="fahrenheit">Fahrenheit</string>
+    <string name="kelvin">Kelvin</string>
+    <string name="rankine">Rankine</string>
+    <!--Info menu strings-->
+    <string name="motto_info" translatable="false">Each one, teach one</string>
     <string name="linkedin_account_info">LinkedIn account:</string>
-    <string name="author_info">Damian Ziółkowski, Student of Food And Nutrition Engineering at Poznań University of Life Sciences</string>
+    <string name="author_info" translatable="false">Damian Ziółkowski, Student of Food And Nutrition Engineering at Poznań University of Life Sciences</string>
     <string name="author_info_label">Author info</string>
-    <string name="first_section_dynamic_value">First section dynamic value</string>
-    <string name="first_section_static_value">First section static value</string>
-    <string name="first_section_hydrostatic_value">First section hydrostatic value</string>
-    <string name="second_section_dynamic_value">Second section dynamic value</string>
-    <string name="second_section_static_value">Second section static value</string>
-    <string name="second_section_hydrostatic_value">Second section hydrostatic value</string>
-    <string name="static_values_difference">Static values difference</string>
+    <!-- Absolute Humidity calculator strings-->
+    <string name="saturated_air_pressure_hint">P.sat.</string>
+    <string name="saturated_air_pressure">Pressure Air Saturated (kPa) =</string>
+    <string name="relative_humidity">Relative Humidity (decimal) =</string>
+    <string name="air_pressure">Air Pressure (kPa) =</string>
+    <string name="absolute_humidity_unit" translatable="false">kgH2O/kgdryair</string>
+    <!-- Heat flow resistance calculator strings-->
     <string name="heat_flux">Heat Flux</string>
     <string name="area">Area</string>
     <string name="temperature_difference">Temperature difference</string>
@@ -71,6 +89,102 @@
     <string name="heat_flow_density">Heat flow density</string>
     <string name="conductivity_resistance">Conductivity Resistance</string>
     <string name="heat_transfer_resistance">Heat Transfer Resistance</string>
-
-
+    <string name="output_temperature">Output Temperature</string>
+    <string name="add_heat_flow_resistance">Add heat flow resistance</string>
+    <string name="heat_flux_denisty_check">Check if you have Heat flux density</string>
+    <string name="choose_calculation">Choose what you want to calculate</string>
+    <string name="heat_flux_density_hint" translatable="false">q/A (W/m²)</string>
+    <string name="heat_flux_hint" translatable="false">q (W)</string>
+    <string name="area_hint" translatable="false">A (m²)</string>
+    <string name="delta_temperature_hint" translatable="false">ΔT (°C)</string>
+    <string name="resistance_short_hint" translatable="false">R</string>
+    <string name="heat_flow_resistance_calculator_warning">First check or uncheck box, then choose calculation, to avoid problems with layout. If there is a problem with layout, set box in
+        correct way, choose other option than current one, and choose again appropriate option</string>
+    <string name="isolated_heat_flux_calculation_warning">You cannot calculate isolated heat flux, if you  have whole heat flux density, please check checkbox option</string>
+    <string name="isolated_area_calculation_warning">You cannot calculate isolated area, if you  have whole heat flux density, please check checkbox option</string>
+    <!--Add heat flow resistance calculator strings-->
+    <string name="insert_material_thickness_hint">Insert material thickness (d, in meters)</string>
+    <string name="insert_material_conductivity_hint">Insert material thermal conductivity (λ, W/(m·K))</string>
+    <string name="material_heat_transfer_coefficient_hint">Material heat transfer coefficient(h, W/(m2•K))</string>
+    <string name="insert_resistance">Insert resistance</string>
+    <!-- Perfect Fluids Bernoullis calculator Strings-->
+    <string name="first_section_mean_fluid_velocity">First section - Mean fluid velocity (m/s)</string>
+    <string name="first_section_elevation">First section - Elevation above a reference plane (m)</string>
+    <string name="second_section_mean_fluid_velocity">Second section - Mean fluid velocity (m/s)</string>
+    <string name="second_section_elevation">Second section - Elevation above a reference plane (m)</string>
+    <string name="density">Density (kg/m³)</string>
+    <string name="acceleration_of_gravity">Acceleration of gravity (m/s2)</string>
+    <string name="by_sum_of_pressure_calculator">Calculating by sum of pressure</string>
+    <string name="by_sum_of_work_calculator">Calculating by sum of work</string>
+    <string name="by_sum_of_height_calculator">Calculating by sum of height</string>
+    <string name="first_section_static_value">First section static value</string>
+    <string name="second_section_static_value">Second section static value</string>
+    <!-- perfect fluids bernoullis result build strings-->
+    <string name="first_section_dynamic_work">First section dynamic work</string>
+    <string name="first_section_dynamic_pressure">First section dynamic pressure</string>
+    <string name="first_section_dynamic_height">First section dynamic height</string>
+    <string name="first_section_static_work">First section static work</string>
+    <string name="first_section_static_pressure">First section static pressure</string>
+    <string name="first_section_static_height">First section static height</string>
+    <string name="first_section_hydrostatic_work">First section hydrostatic work</string>
+    <string name="first_section_hydrostatic_pressure">First section hydrostatic pressure</string>
+    <string name="first_section_hydrostatic_height">First section hydrostatic height</string>
+    <string name="second_section_dynamic_work">Second section dynamic work</string>
+    <string name="second_section_dynamic_pressure">Second section dynamic pressure</string>
+    <string name="second_section_dynamic_height">Second section dynamic height</string>
+    <string name="second_section_static_work">Second section static work</string>
+    <string name="second_section_static_pressure">Second section static pressure</string>
+    <string name="second_section_static_height">Second section static height</string>
+    <string name="second_section_hydrostatic_work">Second section hydrostatic work</string>
+    <string name="second_section_hydrostatic_pressure">Second section hydrostatic pressure</string>
+    <string name="second_section_hydrostatic_height">Second section hydrostatic height</string>
+    <!-- Local flow resistance calculator strings-->
+    <string name="resistance_coefficient">Resistance Coefficient</string>
+    <!-- Reynolds number calculator string-->
+    <string name="laminar_flow_annotation">It\'s laminar flow</string>
+    <string name="transition_flow_annotation">It\'s transition flow</string>
+    <string name="turbulent_flow_annotation">It\'s turbulent flow</string>
+    <!-- Darcy Friction Factor calculator strings-->
+    <string name="laminar_flow">Laminar Flow</string>
+    <string name="turbulent_flow">Turbulent Flow</string>
+    <string name="rough_pipe">Rough Pipe</string>
+    <string name="resistance_factor_click_to_expand">Resistance Factor (click to check common resistance factor values)</string>
+    <string name="click_to_calculate_reynolds">(Click to calculate Reynolds Number)</string>
+    <string name="choose_criteria">Choose Criteria</string>
+    <string name="blausius_criteria">Blausius Criteria</string>
+    <string name="generaux_criteria">Generaux Criteria</string>
+    <string name="koo_criteria">Koo Criteria</string>
+    <string name="high_reynolds_number_criteria">High-Reynolds-Number Value Criteria</string>
+    <string name="roughness_parameter">Roughness Parameter</string>
+    <string name="circular_section_resistance">Circular Section = 64</string>
+    <string name="square_section_resistance">Square Section = 57</string>
+    <string name="annular_section_resistance">Annular Section = 96</string>
+    <string name="rectangle_12_ratio_resistance">Rectangle with side ratio 1:2 = 59</string>
+    <!-- Toasts and warnings from data input issues-->
+    <string name="input_saturated_air_pressure_toast">You have to input Saturated Air Pressure value</string>
+    <string name="input_relative_humidity_toast">You have to input Relative Humidity value</string>
+    <string name="input_air_pressure_toast">You have to input Air Pressure value</string>
+    <string name="input_resistance_factor_toast">You have to input resistance factor value</string>
+    <string name="input_reynolds_number_toast">You have to input reynolds number value</string>
+    <string name="input_darcy_friction_factor_toast">You have to input Darcy friction factor value</string>
+    <string name="input_length_toast">You have to input length value</string>
+    <string name="input_hydraulic_diameter_toast">You have to input hydraulic diameter value</string>
+    <string name="input_mean_fluid_velocity_toast">You have to input mean fluid velocity value</string>
+    <string name="input_density_toast">You have to input density value</string>
+    <string name="input_heat_of_vaporization_toast">You have to input heat of vaporization</string>
+    <string name="input_specific_heat_of_humid_air_toast">You have to input specific heat of humid air</string>
+    <string name="input_temperature_toast">You have to input temperature</string>
+    <string name="input_specific_heat_of_dry_air_toast">You have to input specific heat of dry air</string>
+    <string name="input_moisture_toast">You have to input moisture content</string>
+    <string name="input_specific_heat_of_substance_toast">You have to input Specific Heat of Substance value</string>
+    <string name="input_mass_of_substance_toast">You have to input Mass of Substance value</string>
+    <string name="input_initial_temperature_toast">You have to input Initial Temperature value</string>
+    <string name="input_final_temperature_toast">You have to input Final Temperature value</string>
+    <string name="input_acceleration_of_gravity_toast">You have to input acceleration of gravity value</string>
+    <string name="input_resistance_coefficient_toast">You have to input resistance coefficient value</string>
+    <string name="implement_toast">This function was not implemented yet</string>
+    <string name="input_viscosity_toast">You have to input viscosity value</string>
+    <!-- Keys Strings-->
+    <string name="preferences_key" translatable="false">preferences</string>
+    <string name="add_resistance_key" translatable="false">addResistance</string>
 </resources>

@@ -3,21 +3,20 @@
     <string name="app_name">Przybornik Inżyniera</string>
     <string name="absolute_humidity_calculator">Kalkulator Wilgotności bezwzględnej</string>
     <string name="air_pressure">Ciśnienie powietrza (kPa) =</string>
-    <string name="air_pressure_hint">Ciśnienie</string>
     <string name="back">Cofnij</string>
     <string name="enthalpy_calculator">Kalkulator entalpii</string>
     <string name="heat_of_vaporization">Ciepło parowania (kJ/kg) =</string>
     <string name="heat_of_vaporization_hint">r0°C</string>
     <string name="main_menu">Menu Główne</string>
-    <string name="moisture_content">Wilgotność bezwzględna (kgH₂O/kgsuchegopowietrza) =</string>
+    <string name="moisture_content">Wilgotność bezwzględna (kgH₂O/kg suchego powietrza) =</string>
     <string name="moisture_content_hint">X</string>
     <string name="relative_humidity">Wilgotność względna (ułamek dzięsiętny) =</string>
     <string name="result">Wynik</string>
     <string name="saturated_air_pressure">Ciśnienie powietrza nasyconego (kPa) =</string>
     <string name="saturated_air_pressure_hint">Ciś. nasycone</string>
-    <string name="specific_heat_of_dry_air">Ciepło właściwe suchego powietrza (kJ/kg*°C) =</string>
+    <string name="specific_heat_of_dry_air">C. właśc. suchego powietrza (kJ/kg*°C) =</string>
     <string name="specific_heat_of_dry_air_hint">Cp(sp)</string>
-    <string name="specific_heat_of_humid_air">Ciepło właściwe powietrza wilgotnego (kJ/kg*°C) =</string>
+    <string name="specific_heat_of_humid_air">C. właśc. powietrza wilgotnego (kJ/kg*°C) =</string>
     <string name="specific_heat_of_humid_air_hint">Cp(pw)</string>
     <string name="submit">Oblicz</string>
     <string name="temperature">Temperatura (°C) =</string>
@@ -30,7 +29,6 @@
     <string name="by_sum_of_pressure_calculator">Kalkulowanie poprzez sumę ciśnień</string>
     <string name="by_sum_of_work_calculator">Kalkulowanie poprzez sumę pracy</string>
     <string name="celsius">Celsiujsze</string>
-    <string name="celsius_converter">Konwerter Celsiuszy</string>
     <string name="enginnering_theory">Teoria Inżynierska</string>
     <string name="fahrenheit">Fahrenheit</string>
     <string name="fahrenheit_converter">Konwerter Fahrenheitów</string>
@@ -50,5 +48,114 @@
     <string name="specific_heat_of_substance">Ciepło właściwe substancji (kJ/kg*°C)</string>
     <string name="temperature_converter">Konwerter Temperatury</string>
     <string name="temperature_menu">Menu Konwertera Temperatury</string>
-    <string name="title_activity_temperature">Temperatura</string>
+    <string name="area">Powierzchnia</string>
+    <string name="author_info_label">Informacje o autorze</string>
+    <string name="conductivity_resistance">Opór przewodzenia</string>
+    <string name="decimal_suffix">(ułamek dziesiętny)</string>
+    <string name="heat_flow_density">Strumień gęstości ciepła</string>
+    <string name="heat_flow_resistance">Opór przepływu ciepła</string>
+    <string name="heat_flow_resistance_calculator">Kalkulator oporu przepływu ciepła</string>
+    <string name="first_section_dynamic_value">Dynamiczna wartość pierwszego przekroju</string>
+    <string name="first_section_hydrostatic_value">Hydrostatyczna wartość pierwszego przekroju</string>
+    <string name="first_section_static_value">Statyczna wartość pierwszego przekroju</string>
+    <string name="heat_flux">Strumień ciepła</string>
+    <string name="heat_transfer_resistance">Opór wnikania coepła</string>
+    <string name="info_button">Informacje</string>
+    <string name="input_temperature_hint">Wpisz temperaturę</string>
+    <string name="linkedin_account_info">Konto LinkedIn:</string>
+    <string name="pressure_hint">Ciśnienie</string>
+    <string name="save">Zapisz</string>
+    <string name="temperature_difference">Różnica temperatur</string>
+    <string name="second_section_dynamic_value">Dynamiczna wartość drugiego przekroju</string>
+    <string name="second_section_hydrostatic_value">Hydrostatyczna wartość drugiego przekroju</string>
+    <string name="second_section_static_value">Statyczna wartość drugiego przekroju</string>
+    <string name="static_values_difference">Różnica wartości statycznych</string>
+    <string name="acceleration_of_gravity">Przyśpieszenie ziemskie (m/s2)</string>
+    <string name="add_heat_flow_resistance">Dodaj opór cieplny</string>
+    <string name="blausius_criteria">Kryterium Blausius\'a</string>
+    <string name="choose_calculation">Wybierz co chcesz obliczyć</string>
+    <string name="choose_criteria">Wybierz kryterium</string>
+    <string name="click_to_calculate_reynolds">(Kliknij by policzyć liczbę Reynoldsa)</string>
+    <string name="darcy_friction_factor">Współczynnik oporów hydraulicznych</string>
+    <string name="darcy_weisbach_equation">Równanie Darcy\'ego-Weisbacha</string>
+    <string name="density">Gęstość (kg/m³)</string>
+    <string name="first_section_elevation">Przekrój pierwszy - wysokość nad punktem odniesienia (m)</string>
+    <string name="first_section_mean_fluid_velocity">Przekrój pierwszy - średnia prędkość liniowa przepływu (m/s)</string>
+    <string name="generaux_criteria">Kryterium Generaux\'a</string>
+    <string name="heat_flux_denisty_check">Zaznacz, jeśli w obliczeniu występuje strumień gęstości ciepła</string>
+    <string name="high_reynolds_number_criteria">Kryterium dla dużych wartości liczby Reynoldsa</string>
+    <string name="hydraulic_diameter">średnica hydrauliczna (m)</string>
+    <string name="insert_material_conductivity_hint">Wprowadź przewodność materiału ((λ, W/(m·K))</string>
+    <string name="insert_material_thickness_hint">Wprowadź grubość materiału (d, w metrach)</string>
+    <string name="insert_resistance">Wprowadź opór</string>
+    <string name="koo_criteria">Kryterium Koo</string>
+    <string name="laminar_flow">Przepływ laminarny</string>
+    <string name="length">Długość (m)</string>
+    <string name="local_flow_resistance">Opór przepływu lokalnego</string>
+    <string name="material_heat_transfer_coefficient_hint">Współczynnik oporu wnikania (h, W/(m2•K))</string>
+    <string name="mean_fluid_velocity">średnia prędkość liniowa (m/s)</string>
+    <string name="output_temperature">Temperatura wyjściowa</string>
+    <string name="resistance_coefficient">Współczynnik oporu</string>
+    <string name="resistance_factor_click_to_expand">Współczynnik oporu (kliknij, by sprawdzić często używane współczynniki)</string>
+    <string name="reynolds_number">Liczba Reynoldsa</string>
+    <string name="reynolds_number_hint"></string>
+    <string name="rough_pipe">Chropowaty rurociąg</string>
+    <string name="roughness_parameter">Współczynnik chropowatości</string>
+    <string name="second_section_elevation">Drugi przekrój - wysokość nad punktem odniesienia (m)</string>
+    <string name="second_section_mean_fluid_velocity">Drugi przekrój - średnia prędkość liniowa (m/s)</string>
+    <string name="turbulent_flow">Przepływ turbulentny</string>
+    <string name="viscosity">Lepkość dynamiczna (Pa*s)</string>
+    <string name="heat_flow_resistance_calculator_warning">Najpierw zaznacz, lub odznacz checkbox gęstości ciepła, następnie wybierz odpowiednią kalkulację, by uniknąc problemów z układem kalkulatora. W przypadku problemów, ustaw checkbox w odpowiednej pozycji, wybierz inną opcję kalkulacji niż aktualna,a następnie ponownie wybierz odpowiednią opcję kalkulacji.</string>
+    <string name="value_is_suffix">wartość to</string>
+    <string name="is_suffix"> to </string>
+    <string name="turbulent_flow_annotation">Przepływ turbulentny</string>
+    <string name="transition_flow_annotation">Przpływ przejściowy</string>
+    <string name="laminar_flow_annotation">Przepływ laminarny</string>
+    <string name="implement_toast">Ta funkcja nie została jeszcze zaimplementowana</string>
+    <string name="annular_section_resistance">Przekrój pierścieniowy = 96</string>
+    <string name="square_section_resistance">Przekrój kwadratowy = 57</string>
+    <string name="second_section_static_work">Statyczna praca drugiego przekroju</string>
+    <string name="second_section_static_pressure">Statyczne ciśnienie drugiego przekroju</string>
+    <string name="second_section_static_height">Statyczna wysokość drugiego przekroju</string>
+    <string name="second_section_hydrostatic_work">Hydrostatyczna praca drugiego przekroju</string>
+    <string name="second_section_hydrostatic_pressure">Hydrostatyczne ciśnienie drugiego przekroju</string>
+    <string name="second_section_hydrostatic_height">Hydrostatyczna wysokość drugiego przekroju</string>
+    <string name="second_section_dynamic_work">Dynamiczna praca drugiego przekroju</string>
+    <string name="second_section_dynamic_pressure">Dynamiczne ciśnienie drugiego przekroju</string>
+    <string name="second_section_dynamic_height">Dynamiczna wysokość drugieo przekroju</string>
+    <string name="rectangle_12_ratio_resistance">Przekrój prostokąty o bokach w stosunku 1:2 = 59</string>
+    <string name="isolated_heat_flux_calculation_warning">Nie jest możliwe obliczenie wyizolowanego stumienia ciepła, jeśli dana jest całość strumienia gęstości ciepła. Sprawdź zaznaczenie checkboxu.</string>
+    <string name="isolated_area_calculation_warning">Nie jest możliwe obliczenie wyizolowanej powierzchni, jeśli dana jest całość strumienia gęstości ciepła. Sprawdź zaznaczenie checkboxu.</string>
+    <string name="input_viscosity_toast">Wprowadź wartość lepkości</string>
+    <string name="input_temperature_toast">Wprowadź wartość temperatury</string>
+    <string name="input_specific_heat_of_substance_toast">Wprowadź wartość ciepła właściwego substancji</string>
+    <string name="input_specific_heat_of_humid_air_toast">Wprowadź ciepło właściwe wilgotnego powietrza</string>
+    <string name="input_specific_heat_of_dry_air_toast">Wprowadź ciepło właściwe suchego powietrza</string>
+    <string name="input_saturated_air_pressure_toast">Wprowadź ciśnienie powietrza nasyconego</string>
+    <string name="input_reynolds_number_toast">Wprowadź wartość liczby Reynoldsa</string>
+    <string name="input_resistance_factor_toast">Wprowadź wartość współczynnika oporu</string>
+    <string name="input_resistance_coefficient_toast">Wprowadź wartość współczynnika oporu</string>
+    <string name="circular_section_resistance">Przekrój kołowy = 64</string>
+    <string name="first_section_dynamic_height">Dynamiczna wysokość pierwszego przekroju</string>
+    <string name="first_section_dynamic_pressure">Dynamiczne ciśnienie pierwszego przekroju</string>
+    <string name="first_section_dynamic_work">Dynamiczna praca pierwszego przekroju</string>
+    <string name="first_section_hydrostatic_height">Hydrostatyczna wysokość pierwszego przekroju</string>
+    <string name="first_section_hydrostatic_pressure">Hydrostatyczne ciśnienie pierwszego przekroju</string>
+    <string name="first_section_hydrostatic_work">Hydrostatyczna praca pierwszego przekroju</string>
+    <string name="first_section_static_height">Statyczna wysokość pierwszego przekroju</string>
+    <string name="first_section_static_pressure">Statyczne ciśnienie pierwszego przekroju</string>
+    <string name="first_section_static_work">Statyczna praca pierwszego przekroju</string>
+    <string name="input_acceleration_of_gravity_toast">Wprowadź wartość przyśpieszenia ziemskiego</string>
+    <string name="input_air_pressure_toast">Wprowadź wartość ciśnienia powietrza</string>
+    <string name="input_darcy_friction_factor_toast">Wprowadź wartość współczynnika oporu hydraulicznego</string>
+    <string name="input_density_toast">Wprowadź wartość gęstości</string>
+    <string name="input_final_temperature_toast">Wprowadź końcową temperaturę</string>
+    <string name="input_heat_of_vaporization_toast">Wprowadź wartość ciepła parowania</string>
+    <string name="input_hydraulic_diameter_toast">Wprrowadź wartość średnicy hydraulicznej</string>
+    <string name="input_initial_temperature_toast">Wprowadź początkową temepraturę</string>
+    <string name="input_length_toast">Wprowadź długość</string>
+    <string name="input_mass_of_substance_toast">Wprowadź masę substancji</string>
+    <string name="input_mean_fluid_velocity_toast">Wprowadź wartość średniej prędkości liniowej</string>
+    <string name="input_moisture_toast">Wprowadź wartość wilgotności</string>
+    <string name="input_relative_humidity_toast">Wprowadź wartość wilgotności względnej</string>
 </resources>

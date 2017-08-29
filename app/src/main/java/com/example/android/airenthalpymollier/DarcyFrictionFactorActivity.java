@@ -37,15 +37,15 @@ public class DarcyFrictionFactorActivity extends AppCompatActivity implements Vi
         super.onCreate(savedInstanceState);
         setContentView(R.layout.darcy_friction_factor);
         //setting fields
-        blausiusCriteria = (TextView) findViewById(R.id.blausius_criteria);
-        generauxCriteria = (TextView) findViewById(R.id.generaux_criteria);
-        kooCriteria = (TextView) findViewById(R.id.koo_criteria);
-        highReynoldsCriteria = (TextView) findViewById(R.id.high_reynolds_criteria);
-        darcyFrictionFactorTurbulentResult = (TextView) findViewById(R.id.darcy_friction_factor_equation_turbulent_result);
-        Button roughPipeFactorSubmit = (Button) findViewById(R.id.rough_pipe_factor_submit);
-        Button laminarFlowSubmit = (Button) findViewById(R.id.submit_darcy_friction_factor_laminar_flow);
-        Button turbulentFlowSubmit = (Button) findViewById(R.id.submit_darcy_friction_factor_turbulent_flow);
-        roughPipeFactorResult = (TextView) findViewById(R.id.darcy_friction_factor_equation_rough_pipe_result);
+        blausiusCriteria = findViewById(R.id.blausius_criteria);
+        generauxCriteria = findViewById(R.id.generaux_criteria);
+        kooCriteria = findViewById(R.id.koo_criteria);
+        highReynoldsCriteria = findViewById(R.id.high_reynolds_criteria);
+        darcyFrictionFactorTurbulentResult = findViewById(R.id.darcy_friction_factor_equation_turbulent_result);
+        Button roughPipeFactorSubmit = findViewById(R.id.rough_pipe_factor_submit);
+        Button laminarFlowSubmit = findViewById(R.id.submit_darcy_friction_factor_laminar_flow);
+        Button turbulentFlowSubmit = findViewById(R.id.submit_darcy_friction_factor_turbulent_flow);
+        roughPipeFactorResult = findViewById(R.id.darcy_friction_factor_equation_rough_pipe_result);
         //setting listeners
         blausiusCriteria.setOnClickListener(this);
         generauxCriteria.setOnClickListener(this);
@@ -57,10 +57,10 @@ public class DarcyFrictionFactorActivity extends AppCompatActivity implements Vi
         //creating list of factors
         createList();
         //this part of method is used to flip layouts, depending on selected radioButton
-        final ViewFlipper viewFlip = (ViewFlipper) findViewById(R.id.ViewFlipper);
-        final RadioButton laminarFlowRadioButton = (RadioButton) findViewById(R.id.laminar_flow_radio_button);
-        final RadioButton turbulentFlowRadioButton = (RadioButton) findViewById(R.id.turbulent_flow_radio_button);
-        final RadioButton roughPipeRadioButton = (RadioButton) findViewById(R.id.rough_pipe_radio_button);
+        final ViewFlipper viewFlip = findViewById(R.id.ViewFlipper);
+        final RadioButton laminarFlowRadioButton = findViewById(R.id.laminar_flow_radio_button);
+        final RadioButton turbulentFlowRadioButton = findViewById(R.id.turbulent_flow_radio_button);
+        final RadioButton roughPipeRadioButton = findViewById(R.id.rough_pipe_radio_button);
         turbulentFlowRadioButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -92,9 +92,9 @@ public class DarcyFrictionFactorActivity extends AppCompatActivity implements Vi
      **/
     private void createList() {
         //this part is used to construct list values
-        ListView resistanceFactorValues = (ListView) findViewById(R.id.resistance_factor_values);
+        ListView resistanceFactorValues = findViewById(R.id.resistance_factor_values);
         ArrayAdapter<String> adapter;
-        String resistanceValuesString[] = {"Circular Section = 64", "Square Section = 57", "Annular Section = 96", "Rectangle with side ratio 1:2 = 59"};
+        String resistanceValuesString[] = {getString(R.string.circular_section_resistance), getString(R.string.square_section_resistance), getString(R.string.annular_section_resistance), getString(R.string.rectangle_12_ratio_resistance)};
         ArrayList<String> resistanceValues = new ArrayList<>();
         resistanceValues.addAll(Arrays.asList(resistanceValuesString));
 
@@ -107,7 +107,7 @@ public class DarcyFrictionFactorActivity extends AppCompatActivity implements Vi
      * this method is used to expand list of factor values on click of corresponding textView
      */
     public void expandResistanceFactorValues(View view) {
-        ListView resistanceFactorValues = (ListView) findViewById(R.id.resistance_factor_values);
+        ListView resistanceFactorValues = findViewById(R.id.resistance_factor_values);
         if (resistanceFactorValues.getVisibility() == View.GONE) {
             resistanceFactorValues.setVisibility(View.VISIBLE);
         } else {
@@ -129,23 +129,23 @@ public class DarcyFrictionFactorActivity extends AppCompatActivity implements Vi
      **/
     public void submitDarcyFrictionLaminarFlow(View view) {
         //this part of method is used to take resistance factor value, and parse it to double
-        EditText resistanceFactorEditText = (EditText) findViewById(R.id.resistance_factor_darcy_friction_factor);
+        EditText resistanceFactorEditText = findViewById(R.id.resistance_factor_darcy_friction_factor);
         if (resistanceFactorEditText.getText().toString().trim().length() == 0) {
-            Toast.makeText(this, "You have to input resistance factor value ", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.input_resistance_factor_toast, Toast.LENGTH_SHORT).show();
         }
         Double resistanceFactor = Double.valueOf(resistanceFactorEditText.getText().toString().trim());
         //this part of method is used to take reynolds number value and parse it to double
-        EditText reynoldsNumberEditText = (EditText) findViewById(R.id.reynolds_number_darcy_friction_factor_laminar);
+        EditText reynoldsNumberEditText = findViewById(R.id.reynolds_number_darcy_friction_factor_laminar);
         if (reynoldsNumberEditText.getText().toString().trim().length() == 0) {
-            Toast.makeText(this, "You have to input resistance factor value ", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.input_reynolds_number_toast, Toast.LENGTH_SHORT).show();
         }
         Double reynoldsNumber = Double.valueOf(reynoldsNumberEditText.getText().toString().trim());
 
         Double darcyFrictionFactorLaminar = (resistanceFactor / reynoldsNumber);
         //this part of method is used to show the result of equation
 
-        String darcyFrictionFactorValueLaminar = "λ=" + darcyFrictionFactorLaminar.toString();
-        TextView darcyFrictionFactorResultLaminar = (TextView) findViewById(R.id.darcy_friction_factor_equation_laminar_result);
+        String darcyFrictionFactorValueLaminar = getString(R.string.lambda_suffix) + darcyFrictionFactorLaminar.toString();
+        TextView darcyFrictionFactorResultLaminar = findViewById(R.id.darcy_friction_factor_equation_laminar_result);
         darcyFrictionFactorResultLaminar.setText(darcyFrictionFactorValueLaminar);
     }
 
@@ -153,9 +153,9 @@ public class DarcyFrictionFactorActivity extends AppCompatActivity implements Vi
      * This method is used to get Double of reynolds number, when turbulent flow option is selected
      **/
     public double turbulentFlowReynoldsNumber() {
-        EditText turbulentFlowReynoldsNumberEditText = (EditText) findViewById(R.id.reynolds_number_darcy_friction_factor_turbulent);
+        EditText turbulentFlowReynoldsNumberEditText = findViewById(R.id.reynolds_number_darcy_friction_factor_turbulent);
         if (turbulentFlowReynoldsNumberEditText.getText().toString().trim().length() == 0) {
-            Toast.makeText(this, "You have to input Reynolds Number value", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.input_reynolds_number_toast, Toast.LENGTH_SHORT).show();
         }
         return Double.valueOf(turbulentFlowReynoldsNumberEditText.getText().toString().trim());
     }
@@ -192,10 +192,10 @@ public class DarcyFrictionFactorActivity extends AppCompatActivity implements Vi
      * This method is used to get Double of Reynolds number when pipe rough option is selected
      */
     public double roughPipeFlowReynoldsNumber() {
-        EditText roughPipeFlowReynoldsNumberEditText = (EditText) findViewById(R.id.reynolds_number_darcy_friction_factor_rough_pipe);
+        EditText roughPipeFlowReynoldsNumberEditText = findViewById(R.id.reynolds_number_darcy_friction_factor_rough_pipe);
         String roughPipeFlowReynoldsNumberString = roughPipeFlowReynoldsNumberEditText.getText().toString();
         if (roughPipeFlowReynoldsNumberString.isEmpty()) {
-            Toast.makeText(this, "You have to input Reynolds Number value", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.input_reynolds_number_toast, Toast.LENGTH_SHORT).show();
         }
         return Double.valueOf(roughPipeFlowReynoldsNumberString);
 
@@ -205,10 +205,10 @@ public class DarcyFrictionFactorActivity extends AppCompatActivity implements Vi
      * this method is used to get Double of pipe roughness parameter when pipe rough option is selected
      **/
     public double roughPipeFlowRoughnessParameterNumber() {
-        EditText roughPipeFlowRoughnessParameterEditText = (EditText) findViewById(R.id.roughness_parameter);
+        EditText roughPipeFlowRoughnessParameterEditText = findViewById(R.id.roughness_parameter);
         String roughPipeFlowRoughnessParameterString = roughPipeFlowRoughnessParameterEditText.getText().toString();
         if (roughPipeFlowRoughnessParameterString.isEmpty()) {
-            Toast.makeText(this, "You have to input Reynolds Number value", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.input_reynolds_number_toast, Toast.LENGTH_SHORT).show();
         }
         return Double.valueOf(roughPipeFlowRoughnessParameterString);
     }
@@ -219,25 +219,25 @@ public class DarcyFrictionFactorActivity extends AppCompatActivity implements Vi
             //This method is used to calculate turbulent friction factor, blausius formula on click of blausiusCriteria TextView
             case R.id.blausius_criteria:
                 double blausiusCriteria = (0.3164 / Math.pow(turbulentFlowReynoldsNumber(), 0.25));
-                String blausiusCriteriaString = "λ=" + Double.toString(blausiusCriteria);
+                String blausiusCriteriaString = getString(R.string.lambda_suffix) + Double.toString(blausiusCriteria);
                 darcyFrictionFactorTurbulentResult.setText(blausiusCriteriaString);
                 break;
             //This method is used to calculate turbulent friction factor, using generaux formula on click of generauxCriteria TextView
             case R.id.generaux_criteria:
                 double generauxCriteria = (0.16 / Math.pow(turbulentFlowReynoldsNumber(), 0.16));
-                String generauxCriteriaString = "λ=" + Double.toString(generauxCriteria);
+                String generauxCriteriaString = getString(R.string.lambda_suffix) + Double.toString(generauxCriteria);
                 darcyFrictionFactorTurbulentResult.setText(generauxCriteriaString);
                 break;
             //This method is used to calculate turbulent friction factor, using koo formula on click of kooCriteria TextView
             case R.id.koo_criteria:
                 double kooCriteria = (0.0052 + (0.5 / Math.pow(turbulentFlowReynoldsNumber(), 0.32)));
-                String kooCriteriaString = "λ=" + Double.toString(kooCriteria);
+                String kooCriteriaString = getString(R.string.lambda_suffix) + Double.toString(kooCriteria);
                 darcyFrictionFactorTurbulentResult.setText(kooCriteriaString);
                 break;
             //This method is used to calculate turbulent friction factor, using high reynolds number formula on click of highReynoldsCriteria TextView
             case R.id.high_reynolds_criteria:
                 double highReynoldsCriteria = (0.0032 + (0.221 / Math.pow(turbulentFlowReynoldsNumber(), 0.237)));
-                String highReynoldsCriteriaString = "λ=" + Double.toString(highReynoldsCriteria);
+                String highReynoldsCriteriaString = getString(R.string.lambda_suffix) + Double.toString(highReynoldsCriteria);
                 darcyFrictionFactorTurbulentResult.setText(highReynoldsCriteriaString);
                 break;
             //This method is used to calculate friction factor, when pipe is rough on click of submit button in rough pipe LinearLayout
@@ -246,7 +246,7 @@ public class DarcyFrictionFactorActivity extends AppCompatActivity implements Vi
                 double reynoldsCompound = Math.pow((6.81 / roughPipeFlowReynoldsNumber()), 0.9);
                 double denominator = -2 * Math.log(roughnessCompound + reynoldsCompound);
                 double roughPipeFlowFactor = Math.pow((1 / denominator), 0.5);
-                String roughPipeFlowFactorResult = "λ=" + Double.toString(roughPipeFlowFactor);
+                String roughPipeFlowFactorResult = getString(R.string.lambda_suffix) + Double.toString(roughPipeFlowFactor);
                 roughPipeFactorResult.setText(roughPipeFlowFactorResult);
                 break;
             //This method is used to calculate friction factor, when pipe is rough, on click of submit button in Laminar flow Linear layout

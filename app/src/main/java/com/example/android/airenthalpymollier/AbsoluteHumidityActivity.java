@@ -15,7 +15,7 @@ public class AbsoluteHumidityActivity extends AppCompatActivity implements View.
         super.onCreate(savedInstanceState);
         setContentView(R.layout.absolute_humidity_calculator);
 
-        Button submitAbsoluteHumidityButton = (Button) findViewById(R.id.submit_humidity_button);
+        Button submitAbsoluteHumidityButton = findViewById(R.id.submit_humidity_button);
         submitAbsoluteHumidityButton.setOnClickListener(this);
     }
 
@@ -34,33 +34,33 @@ public class AbsoluteHumidityActivity extends AppCompatActivity implements View.
     public void onClick(View v) {
 
         //This part of method is taking data from Saturated Air Pressure EditText field, get it to string, and then parse to integer
-        EditText saturatedAirPressureEditText = (EditText) findViewById(R.id.saturated_air_pressure);
+        EditText saturatedAirPressureEditText = findViewById(R.id.saturated_air_pressure);
         if (saturatedAirPressureEditText.getText().toString().trim().length() == 0) {
-            Toast.makeText(this, "You have to input Saturated Air Pressure value", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.input_saturated_air_pressure_toast, Toast.LENGTH_SHORT).show();
             return;
         }
         double saturatedAirPressure = Double.valueOf(saturatedAirPressureEditText.getText().toString().trim());
         //This part of method is taking data from Relative humidity EditText field, get it to string, and then parse to integer
-        EditText relativeHumidityEditText = (EditText) findViewById(R.id.relative_humidity);
+        EditText relativeHumidityEditText = findViewById(R.id.relative_humidity);
         if (relativeHumidityEditText.getText().toString().trim().length() == 0) {
-            Toast.makeText(this, "You have to input Relative Humidity value", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.input_relative_humidity_toast, Toast.LENGTH_SHORT).show();
             return;
         }
         double relativeHumidity = Double.valueOf(relativeHumidityEditText.getText().toString().trim());
 
         //This part of method is taking data from Air Pressure EditText field, get it to string, and then parse to integer
-        EditText airPressureEditText = (EditText) findViewById(R.id.air_pressure);
+        EditText airPressureEditText = findViewById(R.id.air_pressure);
         if (airPressureEditText.getText().toString().trim().length() == 0) {
-            Toast.makeText(this, "You have to input Air Pressure value", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.input_air_pressure_toast, Toast.LENGTH_SHORT).show();
             return;
         }
         double airPressure = Double.valueOf(airPressureEditText.getText().toString().trim());
 
         //calculating absoluteHumidity
-        String absoluteHumidity = Double.toString(calculateAbsoluteHumidity(saturatedAirPressure, relativeHumidity, airPressure)) + "kgH2O/kgdryair";
+        String absoluteHumidity = Double.toString(calculateAbsoluteHumidity(saturatedAirPressure, relativeHumidity, airPressure)) + getString(R.string.absolute_humidity_unit);
 
         //Displaying result
-        TextView absoluteHumidityResult = (TextView) findViewById(R.id.humidity_result);
+        TextView absoluteHumidityResult = findViewById(R.id.humidity_result);
         absoluteHumidityResult.setText(absoluteHumidity);
 
 

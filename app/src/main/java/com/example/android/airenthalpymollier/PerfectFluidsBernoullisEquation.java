@@ -30,11 +30,11 @@ public class PerfectFluidsBernoullisEquation extends AppCompatActivity {
         setContentView(R.layout.perfect_fluids_bernoullis_equation);
 
 //setting Fields
-        optionsSpinner = (Spinner) findViewById(R.id.perfect_fluids_spinner);
-        calculateBySumOfWork = (Button) findViewById(R.id.submit_perfect_fluids_bernoullis_equation_by_sum_of_work);
-        calculateBySumOfPressure = (Button) findViewById(R.id.submit_perfect_fluids_bernoullis_equation_by_sum_of_pressure);
-        calculateBySumOfHeights = (Button) findViewById(R.id.submit_perfect_fluids_bernoullis_equation_by_sum_of_heights);
-        resultTextView = (TextView) findViewById(R.id.perfect_fluids_bernoullis_equation_result);
+        optionsSpinner = findViewById(R.id.perfect_fluids_spinner);
+        calculateBySumOfWork = findViewById(R.id.submit_perfect_fluids_bernoullis_equation_by_sum_of_work);
+        calculateBySumOfPressure = findViewById(R.id.submit_perfect_fluids_bernoullis_equation_by_sum_of_pressure);
+        calculateBySumOfHeights = findViewById(R.id.submit_perfect_fluids_bernoullis_equation_by_sum_of_heights);
+        resultTextView = findViewById(R.id.perfect_fluids_bernoullis_equation_result);
 //setting option spinner
         setSpinner();
     }
@@ -64,14 +64,14 @@ public class PerfectFluidsBernoullisEquation extends AppCompatActivity {
                             @Override
                             public void onClick(View v) {
                                 String result = String.valueOf(calculateWork());
-                                resultTextView.setText("First section dynamic work is " + result + " kJ");
+                                resultTextView.setText(getString(R.string.first_section_dynamic_work) + getString(R.string.is_suffix) + result + getString(R.string.kilojoules_suffix));
                             }
                         });
                         calculateBySumOfPressure.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
                                 String result = String.valueOf(calculatePressure());
-                                resultTextView.setText("First section dynamic pressure is " + result + " Pa");
+                                resultTextView.setText(getString(R.string.first_section_dynamic_pressure) + getString(R.string.is_suffix) + result + getString(R.string.pascal_suffix));
 
                             }
                         });
@@ -79,7 +79,7 @@ public class PerfectFluidsBernoullisEquation extends AppCompatActivity {
                             @Override
                             public void onClick(View v) {
                                 String result = String.valueOf(calculateHeight());
-                                resultTextView.setText("First section dynamic height is " + result + " m");
+                                resultTextView.setText(getString(R.string.first_section_dynamic_height) + getString(R.string.is_suffix) + result + getString(R.string.metres_suffix));
                             }
                         });
                     }
@@ -94,14 +94,14 @@ public class PerfectFluidsBernoullisEquation extends AppCompatActivity {
                             @Override
                             public void onClick(View v) {
                                 String result = String.valueOf(calculateWork());
-                                resultTextView.setText("First section static work is " + result + " kJ");
+                                resultTextView.setText(getString(R.string.first_section_static_work) + getString(R.string.is_suffix) + result + getString(R.string.kilojoules_suffix));
                             }
                         });
                         calculateBySumOfPressure.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
                                 String result = String.valueOf(calculatePressure());
-                                resultTextView.setText("First section static pressure is " + result + " Pa");
+                                resultTextView.setText(getString(R.string.first_section_static_pressure) + getString(R.string.is_suffix) + result + getString(R.string.pascal_suffix));
 
                             }
                         });
@@ -109,7 +109,8 @@ public class PerfectFluidsBernoullisEquation extends AppCompatActivity {
                             @Override
                             public void onClick(View v) {
                                 String result = String.valueOf(calculateHeight());
-                                resultTextView.setText("First section static height is " + result + " m");
+                                resultTextView.setText(getString(R.string.first_section_static_height) + getString(R.string.is_suffix) + result + getString(R.string.metres_suffix));
+
                             }
                         });
                     }
@@ -124,14 +125,14 @@ public class PerfectFluidsBernoullisEquation extends AppCompatActivity {
                             @Override
                             public void onClick(View v) {
                                 String result = String.valueOf(calculateWork());
-                                resultTextView.setText("First section hydrostatic work is " + result + " kJ");
+                                resultTextView.setText(getString(R.string.first_section_hydrostatic_work) + getString(R.string.is_suffix) + result + getString(R.string.kilojoules_suffix));
                             }
                         });
                         calculateBySumOfPressure.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
                                 String result = String.valueOf(calculatePressure());
-                                resultTextView.setText("First section hydrostatic pressure is " + result + " Pa");
+                                resultTextView.setText(getString(R.string.first_section_hydrostatic_pressure) + getString(R.string.is_suffix) + result + getString(R.string.pascal_suffix));
 
                             }
                         });
@@ -139,7 +140,7 @@ public class PerfectFluidsBernoullisEquation extends AppCompatActivity {
                             @Override
                             public void onClick(View v) {
                                 String result = String.valueOf(calculateHeight());
-                                resultTextView.setText("First section hydrostatic height is " + result + " m");
+                                resultTextView.setText(getString(R.string.first_section_hydrostatic_height) + getString(R.string.is_suffix) + result + getString(R.string.metres_suffix));
                             }
                         });
                     }
@@ -155,14 +156,14 @@ public class PerfectFluidsBernoullisEquation extends AppCompatActivity {
                             @Override
                             public void onClick(View v) {
                                 String result = String.valueOf(calculateWork());
-                                resultTextView.setText("Second section dynamic work is " + result + " kJ");
+                                resultTextView.setText(getString(R.string.second_section_dynamic_work) + getString(R.string.is_suffix) + result + getString(R.string.kilojoules_suffix));
                             }
                         });
                         calculateBySumOfPressure.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
                                 String result = String.valueOf(calculatePressure());
-                                resultTextView.setText("Second section dynamic pressure is " + result + " Pa");
+                                resultTextView.setText(getString(R.string.second_section_dynamic_pressure) + getString(R.string.is_suffix) + result + getString(R.string.pascal_suffix));
 
                             }
                         });
@@ -170,7 +171,7 @@ public class PerfectFluidsBernoullisEquation extends AppCompatActivity {
                             @Override
                             public void onClick(View v) {
                                 String result = String.valueOf(calculateHeight());
-                                resultTextView.setText("Second section dynamic height is " + result + " m");
+                                resultTextView.setText(getString(R.string.second_section_dynamic_height) + getString(R.string.is_suffix) + result + getString(R.string.metres_suffix));
                             }
                         });
                     }
@@ -185,14 +186,14 @@ public class PerfectFluidsBernoullisEquation extends AppCompatActivity {
                             @Override
                             public void onClick(View v) {
                                 String result = String.valueOf(calculateWork());
-                                resultTextView.setText("Second section static work is " + result + " kJ");
+                                resultTextView.setText(getString(R.string.second_section_static_work) + getString(R.string.is_suffix) + result + getString(R.string.kilojoules_suffix));
                             }
                         });
                         calculateBySumOfPressure.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
                                 String result = String.valueOf(calculatePressure());
-                                resultTextView.setText("Second section static pressure is " + result + " Pa");
+                                resultTextView.setText(getString(R.string.second_section_static_pressure) + getString(R.string.is_suffix) + result + getString(R.string.pascal_suffix));
 
                             }
                         });
@@ -200,7 +201,7 @@ public class PerfectFluidsBernoullisEquation extends AppCompatActivity {
                             @Override
                             public void onClick(View v) {
                                 String result = String.valueOf(calculateHeight());
-                                resultTextView.setText("Second section static height is " + result + " m");
+                                resultTextView.setText(getString(R.string.second_section_static_height) + getString(R.string.is_suffix) + result + getString(R.string.metres_suffix));
                             }
                         });
                     }
@@ -215,14 +216,14 @@ public class PerfectFluidsBernoullisEquation extends AppCompatActivity {
                             @Override
                             public void onClick(View v) {
                                 String result = String.valueOf(calculateWork());
-                                resultTextView.setText("Second section hydrostatic work is " + result + " kJ");
+                                resultTextView.setText(getString(R.string.second_section_hydrostatic_work) + getString(R.string.is_suffix) + result + getString(R.string.kilojoules_suffix));
                             }
                         });
                         calculateBySumOfPressure.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
                                 String result = String.valueOf(calculatePressure());
-                                resultTextView.setText("Second section hydrostatic pressure is " + result + " Pa");
+                                resultTextView.setText(getString(R.string.second_section_hydrostatic_pressure) + getString(R.string.is_suffix) + result + getString(R.string.pascal_suffix));
 
                             }
                         });
@@ -230,7 +231,7 @@ public class PerfectFluidsBernoullisEquation extends AppCompatActivity {
                             @Override
                             public void onClick(View v) {
                                 String result = String.valueOf(calculateHeight());
-                                resultTextView.setText("Second section hydrostatic height is " + result + " m");
+                                resultTextView.setText(getString(R.string.second_section_hydrostatic_height) + getString(R.string.is_suffix) + result + getString(R.string.metres_suffix));
                             }
                         });
                     }
@@ -248,7 +249,7 @@ public class PerfectFluidsBernoullisEquation extends AppCompatActivity {
     }
 
     private void ReloadViews() {
-        LinearLayout linearLayout = (LinearLayout) findViewById(R.id.linear_layout);
+        LinearLayout linearLayout = findViewById(R.id.linear_layout);
         for (int i = 0; i < linearLayout.getChildCount(); i++) {
             View child = linearLayout.getChildAt(i);
             if (child.getVisibility() == GONE) {
@@ -287,7 +288,7 @@ public class PerfectFluidsBernoullisEquation extends AppCompatActivity {
      */
     private double meanFluidVelocityFirstSection() {
 
-        EditText meanFluidVelocityFirstEditText = (EditText) findViewById(R.id.mean_fluid_velocity_first_section_perfect_fluids);
+        EditText meanFluidVelocityFirstEditText = findViewById(R.id.mean_fluid_velocity_first_section_perfect_fluids);
         if (meanFluidVelocityFirstEditText.getText().toString().trim().length() == 0) {
             return 0;
         }
@@ -296,7 +297,7 @@ public class PerfectFluidsBernoullisEquation extends AppCompatActivity {
 
     private double firstSectionStaticValue() {
         //This part takes static Value value from EditText field, and parse it to double
-        EditText staticValueFirstEditText = (EditText) findViewById(R.id.static_value_first_section_perfect_fluids);
+        EditText staticValueFirstEditText = findViewById(R.id.static_value_first_section_perfect_fluids);
         if (staticValueFirstEditText.getText().toString().trim().length() == 0) {
             return 0;
         }
@@ -305,9 +306,9 @@ public class PerfectFluidsBernoullisEquation extends AppCompatActivity {
 
     private double density() {
         //This part, takes density value from EditText field and parse it to double
-        EditText densityEditText = (EditText) findViewById(R.id.density_perfect_fluids);
+        EditText densityEditText = findViewById(R.id.density_perfect_fluids);
         if (densityEditText.getText().toString().trim().length() == 0) {
-            Toast.makeText(this, "You have to input density value", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.input_density_toast, Toast.LENGTH_SHORT).show();
             return 0;
         }
         return Double.valueOf(densityEditText.getText().toString());
@@ -315,7 +316,7 @@ public class PerfectFluidsBernoullisEquation extends AppCompatActivity {
 
     private double elevationFirst() {
         //This part, takes elevation value from Edit Text field and parse it to double
-        final EditText elevationFirstEditText = (EditText) findViewById(R.id.elevation_first_section_perfect_fluids);
+        final EditText elevationFirstEditText = findViewById(R.id.elevation_first_section_perfect_fluids);
         if (elevationFirstEditText.getText().toString().trim().length() == 0) {
             return 0;
         }
@@ -325,16 +326,16 @@ public class PerfectFluidsBernoullisEquation extends AppCompatActivity {
     private double accelerationOfGravity() {
 
         //This part, takes Acceleration of gravity value, from Edit Text field and parse it to double
-        EditText accelerationOfGravityEditText = (EditText) findViewById(R.id.acceleration_of_gravity_perfect_fluids);
+        EditText accelerationOfGravityEditText = findViewById(R.id.acceleration_of_gravity_perfect_fluids);
         if (accelerationOfGravityEditText.getText().toString().trim().length() == 0) {
-            Toast.makeText(this, "You have to input acceleration of gravity value", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.input_acceleration_of_gravity_toast, Toast.LENGTH_SHORT).show();
         }
         return Double.valueOf(accelerationOfGravityEditText.getText().toString().trim());
     }
 
     private double meanFluidVelocitySecondSection() {
 //This method takes mean fluid velocity on second section value from EditText field and parse it to double
-        EditText meanFluidVelocitySecondEditText = (EditText) findViewById(R.id.mean_fluid_velocity_second_section_perfect_fluids);
+        EditText meanFluidVelocitySecondEditText = findViewById(R.id.mean_fluid_velocity_second_section_perfect_fluids);
         if (meanFluidVelocitySecondEditText.getText().toString().trim().length() == 0) {
             return 0;
         }
@@ -342,7 +343,7 @@ public class PerfectFluidsBernoullisEquation extends AppCompatActivity {
     }
 
     private double secondSectionStaticValue() {
-        EditText staticValueSecondEditText = (EditText) findViewById(R.id.static_value_second_section_perfect_fluids);
+        EditText staticValueSecondEditText = findViewById(R.id.static_value_second_section_perfect_fluids);
         //This part takes static Value value from EditText field, and parse it to double
         if (staticValueSecondEditText.getText().toString().trim().length() == 0) {
             return 0;
@@ -352,7 +353,7 @@ public class PerfectFluidsBernoullisEquation extends AppCompatActivity {
 
     private double elevationSecond() {
         //This part, takes elevation value from Edit Text field and parse it to double
-        EditText elevationSecondEditText = (EditText) findViewById(R.id.elevation_second_section_perfect_fluids);
+        EditText elevationSecondEditText = findViewById(R.id.elevation_second_section_perfect_fluids);
         if (elevationSecondEditText.getText().toString().trim().length() == 0) {
             return 0;
         }

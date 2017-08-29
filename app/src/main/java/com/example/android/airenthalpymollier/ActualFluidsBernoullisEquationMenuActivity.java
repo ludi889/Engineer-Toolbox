@@ -14,10 +14,10 @@ public class ActualFluidsBernoullisEquationMenuActivity extends AppCompatActivit
         setContentView(R.layout.actual_fluids_bernoullis_menu);
 
 //setting fields
-        Button setReynoldsNumberMenuButton = (Button) findViewById(R.id.set_reynolds_number_menu);
-        Button setDarcyFrictionFactorMenuButton = (Button) findViewById(R.id.set_darcy_friction_factor_menu);
-        Button setDarcyWeisbachEquationButton = (Button) findViewById(R.id.set_darcy_weisbach_equation_menu);
-        Button setLocalFlowResistance = (Button) findViewById(R.id.set_local_flow_resistance_menu);
+        Button setReynoldsNumberMenuButton = findViewById(R.id.set_reynolds_number_menu);
+        Button setDarcyFrictionFactorMenuButton = findViewById(R.id.set_darcy_friction_factor_menu);
+        Button setDarcyWeisbachEquationButton = findViewById(R.id.set_darcy_weisbach_equation_menu);
+        Button setLocalFlowResistance = findViewById(R.id.set_local_flow_resistance_menu);
         //setting listeners on buttons
         setReynoldsNumberMenuButton.setOnClickListener(this);
         setDarcyFrictionFactorMenuButton.setOnClickListener(this);

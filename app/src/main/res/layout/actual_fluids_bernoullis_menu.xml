@@ -5,13 +5,6 @@
               android:gravity="center_horizontal"
               android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/textView"
-        style="@android:style/TextAppearance.Large"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:text="@string/bernoullis_equation_menu"/>
 
     <Space
         android:layout_width="match_parent"
@@ -23,8 +16,7 @@
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:onClick="setReynoldsNumberMenu"
-        android:text="Reynolds number"
+        android:text="@string/reynolds_number"
         android:textAllCaps="true"/>
 
     <Space
@@ -37,8 +29,7 @@
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:onClick="setDarcyFrictionFactorEquationMenu"
-        android:text="Darcy friction factor"
+        android:text="@string/darcy_friction_factor"
         android:textAllCaps="true"/>
 
 
@@ -52,8 +43,7 @@
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:onClick="setDarcyWeisbachEquationMenu"
-        android:text="Darcy-Weisbach Equation"
+        android:text="@string/darcy_weisbach_equation"
         android:textAllCaps="true"/>
 
     <Space
@@ -66,8 +56,7 @@
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:onClick="setLocalFlowResistanceEquationMenu"
-        android:text="Local Flow Resistance"
+        android:text="@string/local_flow_resistance"
         android:textAllCaps="true"/>
 
     <Space

@@ -44,23 +44,23 @@ public class HeatFlowResistanceCalculatorActivity extends AppCompatActivity impl
         //set content view
         setContentView(R.layout.heat_flow_reistance_calculator_menu);
         //setting fields
-        heatFluxDensityCheckBox = (CheckBox) findViewById(R.id.heat_flux_density_check_box);
-        heatFluxEditText = (EditText) findViewById(R.id.heat_flux_edittext);
-        areaEditText = (EditText) findViewById(R.id.area_edittext);
-        heatFluxDensityEditText = (EditText) findViewById(R.id.heat_flux_density_edittext);
-        heatResistanceEditText = (EditText) findViewById(R.id.heat_resistance_edittext);
-        heatFlowResistanceOptionSpinner = (Spinner) findViewById(R.id.heat_flow_resistance_option_spinner);
-        temperatureDifference = (EditText) findViewById(R.id.temperature_difference_edittext);
-        Button submitHeatFlowResistance = (Button) findViewById(R.id.heat_flow_resistance_submit_button);
+        heatFluxDensityCheckBox = findViewById(R.id.heat_flux_density_check_box);
+        heatFluxEditText = findViewById(R.id.heat_flux_edittext);
+        areaEditText = findViewById(R.id.area_edittext);
+        heatFluxDensityEditText = findViewById(R.id.heat_flux_density_edittext);
+        heatResistanceEditText = findViewById(R.id.heat_resistance_edittext);
+        heatFlowResistanceOptionSpinner = findViewById(R.id.heat_flow_resistance_option_spinner);
+        temperatureDifference = findViewById(R.id.temperature_difference_edittext);
+        Button submitHeatFlowResistance = findViewById(R.id.heat_flow_resistance_submit_button);
         //setting listener on submit button
         submitHeatFlowResistance.setOnClickListener(this);
         //Setting preferences
-        SharedPreferences settings = getSharedPreferences("preferences", 0);
+        SharedPreferences settings = getSharedPreferences(getString(R.string.preferences_key), 0);
         //getting bundle data from add resistance menu
         Bundle bundle = getIntent().getExtras();
         if (bundle != null) {
-            addResistance = bundle.getDouble("addResistance");
-            String resistanceString = settings.getString("resistance", String.valueOf(0.0));
+            addResistance = bundle.getDouble(getString(R.string.add_resistance_key));
+            String resistanceString = settings.getString(getString(R.string.preferences_key), String.valueOf(0.0));
             if (resistanceString.isEmpty()) {
                 resistanceString = "0.0";
             }
@@ -95,7 +95,7 @@ public class HeatFlowResistanceCalculatorActivity extends AppCompatActivity impl
             }
         });
         //setting click listener on add heat flow resistance button to show special menu for that possibility
-        Button addResistanceButton = (Button) findViewById(R.id.add_heat_resistance);
+        Button addResistanceButton = findViewById(R.id.add_heat_resistance);
         addResistanceButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -114,9 +114,9 @@ public class HeatFlowResistanceCalculatorActivity extends AppCompatActivity impl
         super.onStop();
         // Making preference changes to save resistance value, for further resistance addition
         // All objects are from android.context.Context
-        SharedPreferences settings = getSharedPreferences("preferences", 0);
+        SharedPreferences settings = getSharedPreferences(getString(R.string.preferences_key), 0);
         SharedPreferences.Editor editor = settings.edit();
-        editor.putString("resistance", heatResistanceEditText.getText().toString().trim());
+        editor.putString(getString(R.string.add_resistance_key), heatResistanceEditText.getText().toString().trim());
         // Commit the edits!
         editor.apply();
     }
@@ -143,8 +143,8 @@ public class HeatFlowResistanceCalculatorActivity extends AppCompatActivity impl
                         ReloadViews();
                         ReloadCheckBox();
                         if (heatFluxDensityCheckBox.isChecked()) {
-                            Toast.makeText(HeatFlowResistanceCalculatorActivity.this, "You cannot calculate isolated heat flux, if you" +
-                                    " have whole heat flux density, please check checkbox option", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(HeatFlowResistanceCalculatorActivity.this, getString(R.string.isolated_heat_flux_calculation_warning),
+                                    Toast.LENGTH_LONG).show();
                             return;
                         }
                         optionSelected = HEAT_FLUX;
@@ -157,8 +157,7 @@ public class HeatFlowResistanceCalculatorActivity extends AppCompatActivity impl
                         ReloadViews();
                         ReloadCheckBox();
                         if (heatFluxDensityCheckBox.isChecked()) {
-                            Toast.makeText(HeatFlowResistanceCalculatorActivity.this, "You cannot calculate isolated area, if you" +
-                                    " have whole heat flux density, please check checkbox option", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(HeatFlowResistanceCalculatorActivity.this, getString(R.string.isolated_area_calculation_warning), Toast.LENGTH_LONG).show();
                             return;
                         }
                         optionSelected = AREA;
@@ -249,7 +248,7 @@ public class HeatFlowResistanceCalculatorActivity extends AppCompatActivity impl
      * This method is used to get Temperature Difference value from EditText and parse it to double for further calculations
      */
     private double TemperatureDifference() {
-        EditText temperatureDifferenceEditText = (EditText) findViewById(R.id.temperature_difference_edittext);
+        EditText temperatureDifferenceEditText = findViewById(R.id.temperature_difference_edittext);
         if (temperatureDifferenceEditText.getText().toString().trim().length() == 0) {
             return 0;
         }
@@ -273,7 +272,7 @@ public class HeatFlowResistanceCalculatorActivity extends AppCompatActivity impl
      */
 
     private void ReloadViews() {
-        LinearLayout linearLayout = (LinearLayout) findViewById(R.id.heat_flow_resistance_hidelinearlayout);
+        LinearLayout linearLayout = findViewById(R.id.heat_flow_resistance_hidelinearlayout);
         for (int i = 0; i < linearLayout.getChildCount(); i++) {
             View child = linearLayout.getChildAt(i);
             if (child instanceof LinearLayout) {
@@ -329,7 +328,7 @@ public class HeatFlowResistanceCalculatorActivity extends AppCompatActivity impl
             result = TemperatureDifference() / HeatResistance();
         }
          /*This part of method is used, to show result of calculation*/
-        TextView resultTextView = (TextView) findViewById(R.id.heat_flow_resistance_result_textview);
-        resultTextView.setText(selection + " value is " + String.valueOf(result));
+        TextView resultTextView = findViewById(R.id.heat_flow_resistance_result_textview);
+        resultTextView.setText(selection + getString(R.string.value_is_suffix) + String.valueOf(result));
     }
 }

@@ -17,20 +17,20 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="12dp"
-                android:text="Laminar FLow"/>
+                android:text="@string/laminar_flow"/>
 
             <RadioButton
                 android:id="@+id/turbulent_flow_radio_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="12dp"
-                android:text="Turbulent Flow"/>
+                android:text="@string/turbulent_flow"/>
 
             <RadioButton
                 android:id="@+id/rough_pipe_radio_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Rough Pipe"/>
+                android:text="@string/rough_pipe"/>
         </RadioGroup>
 
 
@@ -56,7 +56,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:onClick="expandResistanceFactorValues"
-                    android:text="Resistance Factor (click to check popular resistance factor values)"
+                    android:text="@string/resistance_factor_click_to_expand"
                     android:textColor="@android:color/black"/>
 
                 <EditText
@@ -78,7 +78,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:text="Reynolds Number"
+                    android:text="@string/reynolds_number"
                     android:textColor="@android:color/black"/>
 
                 <TextView
@@ -88,13 +88,13 @@
                     android:layout_marginBottom="16dp"
                     android:layout_marginTop="6dp"
                     android:onClick="setReynoldsNumberMenu"
-                    android:text="(Click to calculate Reynolds Number)"/>
+                    android:text="@string/click_to_calculate_reynolds"/>
 
                 <EditText
                     android:id="@+id/reynolds_number_darcy_friction_factor_laminar"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Re"
+                    android:hint="@string/reynolds_number_hint"
                     android:inputType="numberDecimal"
                     android:textSize="12sp"/>
 
@@ -112,7 +112,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="40dp"
                     android:layout_marginTop="40dp"
-                    android:text="@string/result"
                     android:textAppearance="@android:style/TextAppearance.Large"/>
             </LinearLayout>
 
@@ -127,7 +126,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:text="Reynolds Number"
+                    android:text="@string/reynolds_number"
                     android:textColor="@android:color/black"/>
 
                 <TextView
@@ -137,13 +136,13 @@
                     android:layout_marginBottom="16dp"
                     android:layout_marginTop="6dp"
                     android:onClick="setReynoldsNumberMenu"
-                    android:text="(Click to calculate Reynolds Number)"/>
+                    android:text="@string/click_to_calculate_reynolds"/>
 
                 <EditText
                     android:id="@+id/reynolds_number_darcy_friction_factor_turbulent"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Re"
+                    android:hint="@string/reynolds_number_hint"
                     android:inputType="numberDecimal"
                     android:textSize="12sp"/>
 
@@ -159,34 +158,34 @@
                     style="@android:style/TextAppearance.Medium"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Choose Criteria"/>
+                    android:text="@string/choose_criteria"/>
 
                 <TextView
                     android:id="@+id/blausius_criteria"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Blausius Criteria"
+                    android:text="@string/blausius_criteria"
                     android:visibility="gone"/>
 
                 <TextView
                     android:id="@+id/generaux_criteria"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Generaux Criteria"
+                    android:text="@string/generaux_criteria"
                     android:visibility="gone"/>
 
                 <TextView
                     android:id="@+id/koo_criteria"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Koo Criteria"
+                    android:text="@string/koo_criteria"
                     android:visibility="gone"/>
 
                 <TextView
                     android:id="@+id/high_reynolds_criteria"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="High-Reynolds-Number Value Criteria"
+                    android:text="@string/high_reynolds_number_criteria"
                     android:visibility="gone"/>
 
                 <TextView
@@ -195,7 +194,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="40dp"
                     android:layout_marginTop="40dp"
-                    android:text="@string/result"
                     android:textAppearance="@android:style/TextAppearance.Large"/>
 
             </LinearLayout>
@@ -211,7 +209,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:text="Reynolds Number"
+                    android:text="@string/reynolds_number"
                     android:textColor="@android:color/black"/>
 
                 <TextView
@@ -221,20 +219,20 @@
                     android:layout_marginBottom="16dp"
                     android:layout_marginTop="6dp"
                     android:onClick="setReynoldsNumberMenu"
-                    android:text="(Click to calculate Reynolds Number)"/>
+                    android:text="@string/click_to_calculate_reynolds"/>
 
                 <EditText
                     android:id="@+id/reynolds_number_darcy_friction_factor_rough_pipe"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Re"
+                    android:hint="@string/reynolds_number_hint"
                     android:inputType="numberDecimal"
                     android:textSize="12sp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Roughness Parametr"/>
+                    android:text="@string/roughness_parameter"/>
 
                 <EditText
                     android:id="@+id/roughness_parameter"
@@ -258,7 +256,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="40dp"
                     android:layout_marginTop="40dp"
-                    android:text="@string/result"
                     android:textAppearance="@android:style/TextAppearance.Large"/>
 
             </LinearLayout>

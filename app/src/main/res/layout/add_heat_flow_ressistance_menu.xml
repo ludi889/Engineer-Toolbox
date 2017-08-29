@@ -13,21 +13,21 @@
         android:id="@+id/material_thickness"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Insert material thickness (d, in meters)"
+        android:hint="@string/insert_material_thickness_hint"
         android:inputType="numberDecimal"/>
 
     <EditText
         android:id="@+id/material_thermal_conductivity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Insert material thermal conductivity (λ, W/(m·K))"
+        android:hint="@string/insert_material_conductivity_hint"
         android:inputType="numberDecimal"/>
 
     <EditText
         android:id="@+id/material_heat_transfer_coefficient"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Material heat transfer coefficient(h, W/(m2•K))"
+        android:hint="@string/material_heat_transfer_coefficient_hint"
         android:inputType="numberDecimal"
         android:visibility="gone"/>
 
@@ -35,7 +35,7 @@
         android:id="@+id/insert_thermal_resistance_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Insert resistance"/>
+        android:text="@string/insert_resistance"/>
 
 
 </LinearLayout>
