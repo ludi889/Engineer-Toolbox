@@ -2,7 +2,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
       xmlns:app="http://schemas.android.com/apk/res-auto"
       xmlns:tools="http://schemas.android.com/tools"
-      tools:context=".MainActivity">
+      tools:context="com.github.engineer.toolbox.MainActivity">
     <item
         android:id="@+id/info_button"
         android:icon="@android:drawable/ic_dialog_info"

@@ -1,4 +1,4 @@
-package com.example.android.airenthalpymollier;
+package com.github.engineer.toolbox;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -17,9 +17,9 @@ import android.widget.ViewFlipper;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-import static com.example.android.airenthalpymollier.R.id.laminar;
-import static com.example.android.airenthalpymollier.R.id.rough_pipe;
-import static com.example.android.airenthalpymollier.R.id.turbulent;
+import static com.github.engineer.toolbox.R.id.laminar;
+import static com.github.engineer.toolbox.R.id.rough_pipe;
+import static com.github.engineer.toolbox.R.id.turbulent;
 
 public class DarcyFrictionFactorActivity extends AppCompatActivity implements View.OnClickListener {
 

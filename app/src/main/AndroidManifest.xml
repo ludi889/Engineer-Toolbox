@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           xmlns:tools="http://schemas.android.com/tools"
-          package="com.example.android.airenthalpymollier">
+          package="com.github.engineer.toolbox">
 
     <application
         android:allowBackup="true"
@@ -9,7 +9,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name="com.github.engineer.toolbox.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -17,49 +17,49 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".EnthalpyMenuActivity"
+            android:name="com.github.engineer.toolbox.EnthalpyMenuActivity"
             android:label="@string/enthalpy_calculator"/>
         <activity
-            android:name=".AbsoluteHumidityActivity"
+            android:name="com.github.engineer.toolbox.AbsoluteHumidityActivity"
             android:label="@string/absolute_humidity_calculator"/>
         <activity
-            android:name=".HeatOfProcessActivity"
+            android:name="com.github.engineer.toolbox.HeatOfProcessActivity"
             android:label="@string/heat_of_process_calculator"/>
         <activity
-            android:name=".TemperatureConverterMenuActivity"
+            android:name="com.github.engineer.toolbox.TemperatureConverterMenuActivity"
             android:label="@string/temperature_menu"/>
         <activity
-            android:name=".BernoulieEquationMenuActivity"
+            android:name="com.github.engineer.toolbox.BernoulieEquationMenuActivity"
             android:label="@string/bernoullis_equation_menu"/>
         <activity
-            android:name=".PerfectFluidsBernoullisEquation"
+            android:name="com.github.engineer.toolbox.PerfectFluidsBernoullisEquation"
             android:label="@string/perfect_fluids_bernoullis_equation_menu"/>
         <activity
-            android:name=".ReynoldsNumberActivity"
+            android:name="com.github.engineer.toolbox.ReynoldsNumberActivity"
             android:label="@string/reynolds_number"/>
         <activity
-            android:name=".ActualFluidsBernoullisEquationMenuActivity"
+            android:name="com.github.engineer.toolbox.ActualFluidsBernoullisEquationMenuActivity"
             android:label="@string/actual_fluids"/>
         <activity
-            android:name=".DarcyWeisbachEquationActivity"
+            android:name="com.github.engineer.toolbox.DarcyWeisbachEquationActivity"
             android:label="@string/darcy_weisbach_equation"/>
         <activity
-            android:name=".LocalFlowResistanceActivity"
+            android:name="com.github.engineer.toolbox.LocalFlowResistanceActivity"
             android:label="@string/local_flow_resistance"/>
         <activity
-            android:name=".DarcyFrictionFactorActivity"
+            android:name="com.github.engineer.toolbox.DarcyFrictionFactorActivity"
             android:label="@string/darcy_friction_factor"/>
         <activity
-            android:name=".HeatFlowResistanceCalculatorActivity"
+            android:name="com.github.engineer.toolbox.HeatFlowResistanceCalculatorActivity"
             android:label="@string/heat_flow_resistance_calculator"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName="com.github.engineer.toolbox.MainActivity"
             tools:targetApi="jelly_bean"/>
 
         <activity
-            android:name=".InfoMenuActivity"
+            android:name="com.github.engineer.toolbox.InfoMenuActivity"
             android:label="@string/info_button"/>
         <activity
-            android:name=".AddHeatFlowResistanceMenuActivity"
+            android:name="com.github.engineer.toolbox.AddHeatFlowResistanceMenuActivity"
             android:label="@string/add_heat_flow_resistance"/>
 
     </application>

@@ -31,19 +31,16 @@
     <string name="celsius">Celsiujsze</string>
     <string name="enginnering_theory">Teoria Inżynierska</string>
     <string name="fahrenheit">Fahrenheit</string>
-    <string name="fahrenheit_converter">Konwerter Fahrenheitów</string>
     <string name="final_temperature">Końcowa temperatura (°C)</string>
     <string name="heat_of_process_calculator">Kalkulator ciepła procesu</string>
     <string name="initial_temperature">Początkowa temperatura (°C)</string>
     <string name="input_temperature">Wprowadź temperaturę</string>
     <string name="kelvin">Kelviny</string>
-    <string name="kelvin_converter">Konwerter Kelwinów</string>
     <string name="mass_of_substance">Masa substancji (kg)</string>
     <string name="mass_of_substance_hint">M</string>
     <string name="perfect_fluids">Płyny doskonałe</string>
     <string name="perfect_fluids_bernoullis_equation_menu">Menu równania Bernoulliego dla płynów doskonałych</string>
     <string name="rankine">Rankine\'y</string>
-    <string name="rankine_converter">Konwerter Rankine\'ów</string>
     <string name="specific_heat_hint">Sp</string>
     <string name="specific_heat_of_substance">Ciepło właściwe substancji (kJ/kg*°C)</string>
     <string name="temperature_converter">Konwerter Temperatury</string>
@@ -56,8 +53,6 @@
     <string name="heat_flow_resistance">Opór przepływu ciepła</string>
     <string name="heat_flow_resistance_calculator">Kalkulator oporu przepływu ciepła</string>
     <string name="first_section_dynamic_value">Dynamiczna wartość pierwszego przekroju</string>
-    <string name="first_section_hydrostatic_value">Hydrostatyczna wartość pierwszego przekroju</string>
-    <string name="first_section_static_value">Statyczna wartość pierwszego przekroju</string>
     <string name="heat_flux">Strumień ciepła</string>
     <string name="heat_transfer_resistance">Opór wnikania ciepła</string>
     <string name="info_button">Informacje</string>
@@ -66,10 +61,7 @@
     <string name="pressure_hint">Ciśnienie</string>
     <string name="save">Zapisz</string>
     <string name="temperature_difference">Różnica temperatur</string>
-    <string name="second_section_dynamic_value">Dynamiczna wartość drugiego przekroju</string>
-    <string name="second_section_hydrostatic_value">Hydrostatyczna wartość drugiego przekroju</string>
     <string name="second_section_static_value">Statyczna wartość drugiego przekroju</string>
-    <string name="static_values_difference">Różnica wartości statycznych</string>
     <string name="acceleration_of_gravity">Przyśpieszenie ziemskie (m/s2)</string>
     <string name="add_heat_flow_resistance">Dodaj opór cieplny</string>
     <string name="blausius_criteria">Kryterium Blausius\'a</string>
@@ -98,7 +90,6 @@
     <string name="resistance_coefficient">Współczynnik oporu</string>
     <string name="resistance_factor_click_to_expand">Współczynnik oporu (kliknij, by sprawdzić często używane współczynniki)</string>
     <string name="reynolds_number">Liczba Reynoldsa</string>
-    <string name="reynolds_number_hint"></string>
     <string name="rough_pipe">Chropowaty rurociąg</string>
     <string name="roughness_parameter">Współczynnik chropowatości</string>
     <string name="second_section_elevation">Drugi przekrój - wysokość nad punktem odniesienia (m)</string>
@@ -158,4 +149,8 @@
     <string name="input_mean_fluid_velocity_toast">Wprowadź wartość średniej prędkości liniowej</string>
     <string name="input_moisture_toast">Wprowadź wartość wilgotności</string>
     <string name="input_relative_humidity_toast">Wprowadź wartość wilgotności względnej</string>
+    <string name="first_section_static_value">Statyczna wartość pierwszego przekroju</string>
+    <string name="second_section_dynamic_value">second section dynamic value</string>
+    <string name="second_section_hydrostatic_value">Hydrostatyczna wartość drugiego przekroju</string>
+    <string name="first_section_hydrostatic_value">Hydrostatyczna wartość pierwszego przekroju</string>
 </resources>

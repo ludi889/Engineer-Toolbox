@@ -1,11 +1,11 @@
-package com.example.android.airenthalpymollier;
+package com.github.engineer.toolbox;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-import static com.example.android.airenthalpymollier.R.layout.bernoulie_equation_menu;
+import static com.github.engineer.toolbox.R.layout.bernoulie_equation_menu;
 
 public class BernoulieEquationMenuActivity extends AppCompatActivity {
 

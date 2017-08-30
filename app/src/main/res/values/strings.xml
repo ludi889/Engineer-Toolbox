@@ -20,6 +20,10 @@
     <string name="kilojoules_suffix" translatable="false">kJ</string>
     <string name="metres_suffix" translatable="false">m</string>
     <string name="is_suffix"> is </string>
+    <string name="watt_suffix" translatable="false"> W</string>
+    <string name="square_meter_suffix" translatable="false"> m2</string>
+    <string name="heat_flux_density_suffix" translatable="false"> W/m2</string>
+    <string name="heat_flow_reistance_suffix" translatable="false"> °C/W</string>
     <!-- in calculator menu units-->
     <string name="temperature">Temperature (°C) =</string>
     <string name="celsius">Celsius</string>
@@ -127,8 +131,12 @@
     <string name="first_section_static_pressure">First section static pressure</string>
     <string name="first_section_static_height">First section static height</string>
     <string name="first_section_hydrostatic_work">First section hydrostatic work</string>
+    <string name="first_section_hydrostatic_value">First section hydrostatic value</string>
+    <string name="second_section_dynamic_value">Second section dynamic value</string>
+    <string name="second_section_hydrostatic_value">Second section hydrostatic value</string>
     <string name="first_section_hydrostatic_pressure">First section hydrostatic pressure</string>
     <string name="first_section_hydrostatic_height">First section hydrostatic height</string>
+    <string name="first_section_dynamic_value">First section dynamic value</string>
     <string name="second_section_dynamic_work">Second section dynamic work</string>
     <string name="second_section_dynamic_pressure">Second section dynamic pressure</string>
     <string name="second_section_dynamic_height">Second section dynamic height</string>
@@ -187,8 +195,5 @@
     <!-- Keys Strings-->
     <string name="preferences_key" translatable="false">preferences</string>
     <string name="add_resistance_key" translatable="false">addResistance</string>
-    <string name="watt_suffix" translatable="false"> W</string>
-    <string name="square_meter_suffix" translatable="false"> m2</string>
-    <string name="heat_flux_density_suffix" translatable="false"> W/m2</string>
-    <string name="heat_flow_reistance_suffix" translatable="false"> °C/W</string>
+    <string name="input_temperature">Input temperature</string>
 </resources>
