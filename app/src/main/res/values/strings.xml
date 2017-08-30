@@ -14,7 +14,7 @@
     <string name="pressure_kilopascal_suffix" translatable="false">(kPa)</string>
     <string name="decimal_suffix">(decimal)</string>
     <string name="kilojoules_kilograms_suffix" translatable="false">kJ/kg</string>
-    <string name="value_is_suffix"> value is </string>
+    <string name="value_is_suffix">\u0020 value is \u0020</string>
     <string name="lambda_suffix" translatable="false">λ=</string>
     <string name="pascal_suffix" translatable="false">Pa</string>
     <string name="kilojoules_suffix" translatable="false">kJ</string>
@@ -187,4 +187,8 @@
     <!-- Keys Strings-->
     <string name="preferences_key" translatable="false">preferences</string>
     <string name="add_resistance_key" translatable="false">addResistance</string>
+    <string name="watt_suffix" translatable="false"> W</string>
+    <string name="square_meter_suffix" translatable="false"> m2</string>
+    <string name="heat_flux_density_suffix" translatable="false"> W/m2</string>
+    <string name="heat_flow_reistance_suffix" translatable="false"> °C/W</string>
 </resources>

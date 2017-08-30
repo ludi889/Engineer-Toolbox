@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
           package="com.example.android.airenthalpymollier">
 
     <application
@@ -32,31 +33,34 @@
             android:label="@string/bernoullis_equation_menu"/>
         <activity
             android:name=".PerfectFluidsBernoullisEquation"
-            android:label="Perfect Fluids Bernoullis Equation"/>
+            android:label="@string/perfect_fluids_bernoullis_equation_menu"/>
         <activity
             android:name=".ReynoldsNumberActivity"
-            android:label="Reynolds Number Calculator"/>
+            android:label="@string/reynolds_number"/>
         <activity
             android:name=".ActualFluidsBernoullisEquationMenuActivity"
-            android:label="Actual Fluids"/>
+            android:label="@string/actual_fluids"/>
         <activity
             android:name=".DarcyWeisbachEquationActivity"
-            android:label="Darcy Weisbach Equation"/>
+            android:label="@string/darcy_weisbach_equation"/>
         <activity
             android:name=".LocalFlowResistanceActivity"
-            android:label="Local Flow Resistance Calculator"/>
+            android:label="@string/local_flow_resistance"/>
         <activity
             android:name=".DarcyFrictionFactorActivity"
-            android:label="Darcy Friction Factor Calculator"/>
+            android:label="@string/darcy_friction_factor"/>
         <activity
             android:name=".HeatFlowResistanceCalculatorActivity"
-            android:label="Heat Flow Resistance Calculator"/>
+            android:label="@string/heat_flow_resistance_calculator"
+            android:parentActivityName=".MainActivity"
+            tools:targetApi="jelly_bean"/>
+
         <activity
             android:name=".InfoMenuActivity"
-            android:label="Info"/>
+            android:label="@string/info_button"/>
         <activity
             android:name=".AddHeatFlowResistanceMenuActivity"
-            android:label="Add Heat Flow Resistance"/>
+            android:label="@string/add_heat_flow_resistance"/>
 
     </application>
 

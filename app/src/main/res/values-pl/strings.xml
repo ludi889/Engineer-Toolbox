@@ -59,7 +59,7 @@
     <string name="first_section_hydrostatic_value">Hydrostatyczna wartość pierwszego przekroju</string>
     <string name="first_section_static_value">Statyczna wartość pierwszego przekroju</string>
     <string name="heat_flux">Strumień ciepła</string>
-    <string name="heat_transfer_resistance">Opór wnikania coepła</string>
+    <string name="heat_transfer_resistance">Opór wnikania ciepła</string>
     <string name="info_button">Informacje</string>
     <string name="input_temperature_hint">Wpisz temperaturę</string>
     <string name="linkedin_account_info">Konto LinkedIn:</string>
@@ -106,7 +106,7 @@
     <string name="turbulent_flow">Przepływ turbulentny</string>
     <string name="viscosity">Lepkość dynamiczna (Pa*s)</string>
     <string name="heat_flow_resistance_calculator_warning">Najpierw zaznacz, lub odznacz checkbox gęstości ciepła, następnie wybierz odpowiednią kalkulację, by uniknąc problemów z układem kalkulatora. W przypadku problemów, ustaw checkbox w odpowiednej pozycji, wybierz inną opcję kalkulacji niż aktualna,a następnie ponownie wybierz odpowiednią opcję kalkulacji.</string>
-    <string name="value_is_suffix">wartość to</string>
+    <string name="value_is_suffix">\u0020 wartość to \u0020</string>
     <string name="is_suffix"> to </string>
     <string name="turbulent_flow_annotation">Przepływ turbulentny</string>
     <string name="transition_flow_annotation">Przpływ przejściowy</string>

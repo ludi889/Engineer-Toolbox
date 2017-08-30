@@ -204,7 +204,7 @@ public class TemperatureConverterMenuActivity extends AppCompatActivity implemen
             // TODO: KELVIN0-FAHRENHEIT7-08-02 after implementing hide second spinner same option, this can be deleted
         }
         if (outputTemperature == null) {
-            return;
+            outputTemperature = 0.0;
         }
         mOutputTemperatureTextView.setText(String.valueOf(outputTemperature));
     }

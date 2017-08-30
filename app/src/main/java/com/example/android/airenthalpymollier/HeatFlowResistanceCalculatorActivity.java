@@ -60,7 +60,7 @@ public class HeatFlowResistanceCalculatorActivity extends AppCompatActivity impl
         Bundle bundle = getIntent().getExtras();
         if (bundle != null) {
             addResistance = bundle.getDouble(getString(R.string.add_resistance_key));
-            String resistanceString = settings.getString(getString(R.string.preferences_key), String.valueOf(0.0));
+            String resistanceString = settings.getString(getString(R.string.add_resistance_key), String.valueOf(0.0));
             if (resistanceString.isEmpty()) {
                 resistanceString = "0.0";
             }
@@ -100,6 +100,7 @@ public class HeatFlowResistanceCalculatorActivity extends AppCompatActivity impl
             @Override
             public void onClick(View v) {
                 Intent setAddHeatFlowResistanceMenu = new Intent(HeatFlowResistanceCalculatorActivity.this, AddHeatFlowResistanceMenuActivity.class);
+                finish();
                 startActivity(setAddHeatFlowResistanceMenu);
             }
         });
@@ -290,20 +291,24 @@ public class HeatFlowResistanceCalculatorActivity extends AppCompatActivity impl
         }
     }
 
+
     /**
      * This method is used on Click of submit calculation button
      */
     @Override
     public void onClick(View v) {
 
-        Double result = null;
+        Double result;
+        String resultString = null;
         if (optionSelected == HEAT_FLUX) {
             /*This part of method is used, when user wants to calculate Heat Flux*/
             result = TemperatureDifference() * Area() / HeatResistance();
+            resultString = selection + getString(R.string.value_is_suffix) + String.valueOf(result) + getString(R.string.watt_suffix);
         }
         if (optionSelected == AREA) {
             /*This part of method is used, when user wants to calculate Area*/
             result = HeatFlux() * HeatResistance() / TemperatureDifference();
+            resultString = selection + getString(R.string.value_is_suffix) + String.valueOf(result) + getString(R.string.square_meter_suffix);
         }
         if (optionSelected == TEMPERATURE_DIFFERENCE) {
             /*This part of method is used, when user wants to calculate Temperature Difference (way of doing it
@@ -313,6 +318,9 @@ public class HeatFlowResistanceCalculatorActivity extends AppCompatActivity impl
             } else {
                 result = HeatFlux() * HeatResistance() / Area();
             }
+            resultString = selection + getString(R.string.value_is_suffix) + String.valueOf(result) + getString(R.string.temperature_celsius_suffix);
+
+
         }
         if (optionSelected == HEAT_FLOW_RESISTANCE) {
              /*This part of method is used, when user wants to calculate Heat Flox Resistance (way of doing it
@@ -322,13 +330,18 @@ public class HeatFlowResistanceCalculatorActivity extends AppCompatActivity impl
             } else {
                 result = TemperatureDifference() * Area() / HeatFlux();
             }
+            resultString = selection + getString(R.string.value_is_suffix) + String.valueOf(result) + getString(R.string.heat_flow_reistance_suffix);
+
         }
         if (optionSelected == HEAT_FLUX_DENSITY) {
              /*This part of method is used, when user wants to calculate Heat Flux Density*/
             result = TemperatureDifference() / HeatResistance();
+            resultString = selection + getString(R.string.value_is_suffix) + String.valueOf(result) + getString(R.string.heat_flux_density_suffix);
+
         }
+
          /*This part of method is used, to show result of calculation*/
         TextView resultTextView = findViewById(R.id.heat_flow_resistance_result_textview);
-        resultTextView.setText(selection + getString(R.string.value_is_suffix) + String.valueOf(result));
+        resultTextView.setText(resultString);
     }
 }

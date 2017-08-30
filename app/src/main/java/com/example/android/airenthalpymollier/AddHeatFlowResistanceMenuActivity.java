@@ -136,6 +136,7 @@ public class AddHeatFlowResistanceMenuActivity extends AppCompatActivity impleme
         bundle.putDouble(getString(R.string.add_resistance_key), addResistance);
         i.putExtras(bundle);
         if (bundle.containsKey(getString(R.string.add_resistance_key))) {
+            finish();
             startActivity(i);
         }
 
