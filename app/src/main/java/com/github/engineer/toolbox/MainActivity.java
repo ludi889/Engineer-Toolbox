@@ -9,27 +9,39 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+    //Binding views
+    @BindView(R.id.engineering_theory_button)
+    Button setEngineeringTheoryButton;
+    @BindView(R.id.temperature_converter_button)
+    Button setTemperatureConverterButton;
+    @BindView(R.id.enthalpy_calculator_button)
+    Button setEnthalpyCalculatorButton;
+    @BindView(R.id.heat_of_process_calculator_button)
+    Button setHeatOfProcessCalculatorButton;
+    @BindView(R.id.heat_flow_resistance_calculator_button)
+    Button setHeatFlowResistanceCalculatorButton;
+    @BindView(R.id.bernoullis_equation_calculator_button)
+    Button setBernoullisEquationButton;
+    @BindView(R.id.absolute_humidity_calculator_button)
+    Button setAbsoluteHumidityCalculatorButton;
+
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-//setting buttons
-        final Button setEngineeringTheoryButton = findViewById(R.id.engineering_theory_button);
-        final Button setTemperatureConverterButton = findViewById(R.id.temperature_converter_button);
-        final Button setEnthalpyCalculatorButton = findViewById(R.id.enthalpy_calculator_button);
-        final Button setHeatOfProcessCalculatorButton = findViewById(R.id.heat_of_process_calculator_button);
-        final Button setHeatFlowRessistanceCalculatorButton = findViewById(R.id.heat_flow_resistance_calculator_button);
-        final Button setBernoullisEquationButton = findViewById(R.id.bernoullis_equation_calculator_button);
-        final Button setAbsoluteHumidityCalculatorButton = findViewById(R.id.absolute_humidity_calculator_button);
+        //Executing binding
+        ButterKnife.bind(this);
 
         //setting listeners on buttons
         setEngineeringTheoryButton.setOnClickListener(this);
         setTemperatureConverterButton.setOnClickListener(this);
         setEnthalpyCalculatorButton.setOnClickListener(this);
         setHeatOfProcessCalculatorButton.setOnClickListener(this);
-        setHeatFlowRessistanceCalculatorButton.setOnClickListener(this);
+        setHeatFlowResistanceCalculatorButton.setOnClickListener(this);
         setBernoullisEquationButton.setOnClickListener(this);
         setAbsoluteHumidityCalculatorButton.setOnClickListener(this);
 
@@ -59,7 +71,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     /**
-     * This method is used, when user want to acces option, which wasn't implemented yet
+     * This method is used, when user want to access option, which wasn't implemented yet
      */
     public void uploadReturnMessage(View view) {
         Toast.makeText(this, R.string.implement_toast, Toast.LENGTH_SHORT).show();
@@ -72,7 +84,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.engineering_theory_button:
-                uploadReturnMessage(v);
+                Intent setEngineeringTheoryMenuIntent = new Intent(this, EngineerTheoryActivity.class);
+                startActivity(setEngineeringTheoryMenuIntent);
                 break;
             case R.id.temperature_converter_button:
                 /*

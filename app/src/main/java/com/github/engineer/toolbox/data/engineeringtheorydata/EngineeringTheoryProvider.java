@@ -1,4 +1,4 @@
-package com.github.engineer.toolbox.data.EngineeringTheoryData;
+package com.github.engineer.toolbox.data.engineeringtheorydata;
 
 import android.content.ContentProvider;
 import android.content.ContentUris;
@@ -9,17 +9,18 @@ import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.util.Log;
 
-import com.github.engineer.toolbox.data.EngineeringTheoryData.EngineeringTheoryContract.EngineeringTheoryEntry;
+import com.github.engineer.toolbox.data.engineeringtheorydata.EngineeringTheoryContract.EngineeringTheoryEntry;
 
 /**
- * Created by Damian on 2017-09-03. At this date I don't see a reasonable way to use insert, delete and edit method
+ * Created by Damian on 2017-09-03. At this date I don't see a reasonable way to use insert, delete and edit method other than development state, so it can be done in not efficent way
  */
 
 public class EngineeringTheoryProvider extends ContentProvider {
     //Setting ints for uriMatcher
-    private static final int SUBJECTS = 0;
-    private static final int SUBJECT_ID = 1;
+    private static final int SUBJECTS = 100;
+    private static final int SUBJECT_ID = 101;
     //Setting uriMatcher
     private static final UriMatcher sUriMatcher = new UriMatcher(UriMatcher.NO_MATCH);
 
@@ -86,8 +87,42 @@ public class EngineeringTheoryProvider extends ContentProvider {
     @Nullable
     @Override
     public Uri insert(@NonNull Uri uri, @Nullable ContentValues contentValues) {
-        //As in template
-        return null;
+        int match = sUriMatcher.match(uri);
+        switch (match) {
+            case SUBJECTS:
+                return insertItem(uri, contentValues);
+            default:
+                throw new IllegalArgumentException("Problem with insert" + uri);
+        }
+    }
+
+    private Uri insertItem(Uri uri, ContentValues contentValues) {
+        //name insert
+        String subjectName = contentValues.getAsString(EngineeringTheoryEntry.COLUMN_SUBJECT_NAME);
+        if (subjectName == null) {
+            throw new IllegalArgumentException("Subject need to have name");
+        }
+        //description insert
+        String subjectDescription = contentValues.getAsString(EngineeringTheoryEntry.COLUMN_SUBJECT_DESCRIPTION);
+        if (subjectDescription == null) {
+            throw new IllegalArgumentException("Subject need to have description");
+        }
+        //image as byte array insert
+        byte[] bitmap = contentValues.getAsByteArray(EngineeringTheoryEntry.COLUMN_SUBJECT_IMAGE);
+        //getting writeable database
+        SQLiteDatabase database = mDbHelper.getWritableDatabase();
+        //creating long for new id
+        long newRowId = database.insert(EngineeringTheoryEntry.TABLE_NAME, null, contentValues);
+
+        if (newRowId == -1) {
+            Log.e("Engineering Theory Prov", "Failed to insert data" + uri);
+        }
+        //change notify
+        getContext().getContentResolver().notifyChange(uri, null);
+        //returning uri with appended id
+        return ContentUris.withAppendedId(uri, newRowId);
+
+
     }
 
     @Override

@@ -5,10 +5,10 @@
               android:orientation="vertical">
 
     <ImageView
+        android:id="@+id/author_image_icon"
         android:layout_width="64dp"
         android:layout_height="64dp"
-        android:layout_gravity="center"
-        android:background="@drawable/authorimageicon"/>
+        android:layout_gravity="center"/>
 
     <TextView
         style="@android:style/TextAppearance.Large"

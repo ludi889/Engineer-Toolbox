@@ -61,7 +61,17 @@
         <activity
             android:name="com.github.engineer.toolbox.AddHeatFlowResistanceMenuActivity"
             android:label="@string/add_heat_flow_resistance"/>
+        <activity
+            android:name="com.github.engineer.toolbox.EngineerTheoryActivity"
+            android:label="Engineer Theory"/>
 
+        <provider
+            android:name=".data.engineeringtheorydata.EngineeringTheoryProvider"
+            android:authorities="com.github.engineer.toolbox"
+            android:exported="false"/>
+        <activity
+            android:name="com.github.engineer.toolbox.DetailSubjectActivity"
+            android:label="Details"/>
     </application>
 
 </manifest>

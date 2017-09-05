@@ -1,4 +1,4 @@
-package com.github.engineer.toolbox.data.EngineeringTheoryData;
+package com.github.engineer.toolbox.data.engineeringtheorydata;
 
 import android.content.ContentResolver;
 import android.net.Uri;
