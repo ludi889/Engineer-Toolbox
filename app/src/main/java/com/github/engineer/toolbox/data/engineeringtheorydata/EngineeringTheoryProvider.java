@@ -33,12 +33,12 @@ public class EngineeringTheoryProvider extends ContentProvider {
     }
 
     //Setting DbHelper object
-    EngineeringTheoryDbHelper mDbHelper;
+    EngineeringTheoryDbAssetHelper mDbHelper;
 
     @Override
     public boolean onCreate() {
         //Setting Db helper method to create/open Db
-        mDbHelper = new EngineeringTheoryDbHelper(getContext());
+        mDbHelper = new EngineeringTheoryDbAssetHelper(getContext());
         return true;
     }
 
@@ -57,7 +57,7 @@ public class EngineeringTheoryProvider extends ContentProvider {
             case SUBJECTS: // here we get whole table, don't need any projection/selection
                 cursor = database.query(EngineeringTheoryEntry.TABLE_NAME, projection, selection, selectionArgs, null, null, sortOrder);
                 break;
-            case SUBJECT_ID: //here we get exact row, so we need to get proper selection
+            case SUBJECT_ID: //here we get exact row, so     we need to get proper selection
                 selection = EngineeringTheoryEntry._ID + "=?";
                 selectionArgs = new String[]{String.valueOf(ContentUris.parseId(uri))};
                 cursor = database.query(EngineeringTheoryEntry.TABLE_NAME, projection, selection, selectionArgs, null, null, sortOrder);
@@ -109,7 +109,7 @@ public class EngineeringTheoryProvider extends ContentProvider {
         }
         //image as byte array insert
         byte[] bitmap = contentValues.getAsByteArray(EngineeringTheoryEntry.COLUMN_SUBJECT_IMAGE);
-        //getting writeable database
+        //getting writable database
         SQLiteDatabase database = mDbHelper.getWritableDatabase();
         //creating long for new id
         long newRowId = database.insert(EngineeringTheoryEntry.TABLE_NAME, null, contentValues);

@@ -196,4 +196,6 @@
     <string name="preferences_key" translatable="false">preferences</string>
     <string name="add_resistance_key" translatable="false">addResistance</string>
     <string name="input_temperature">Input temperature</string>
+    <!-- SPECIAL NOTE FOR TABLE NAME STRING - It need to correspond to database table name-->
+    <string name="table_name">subjects_eng</string>
 </resources>

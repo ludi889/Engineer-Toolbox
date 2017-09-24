@@ -153,4 +153,5 @@
     <string name="second_section_dynamic_value">second section dynamic value</string>
     <string name="second_section_hydrostatic_value">Hydrostatyczna wartość drugiego przekroju</string>
     <string name="first_section_hydrostatic_value">Hydrostatyczna wartość pierwszego przekroju</string>
+    <string name="table_name">subjects_pol</string>
 </resources>

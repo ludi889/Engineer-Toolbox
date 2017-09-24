@@ -28,7 +28,8 @@
             android:id="@+id/subject_description_item_view"
             style="@android:style/TextAppearance.DeviceDefault.Medium"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:maxLines="2"/>
 
     </LinearLayout>
 

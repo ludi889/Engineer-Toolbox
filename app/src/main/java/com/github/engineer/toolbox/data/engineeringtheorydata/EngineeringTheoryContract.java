@@ -4,6 +4,9 @@ import android.content.ContentResolver;
 import android.net.Uri;
 import android.provider.BaseColumns;
 
+import com.github.engineer.toolbox.App;
+import com.github.engineer.toolbox.R;
+
 /**
  * Created by Damian on 2017-09-03.
  */
@@ -31,7 +34,7 @@ public final class EngineeringTheoryContract {
         //String for complete URI
         public static final Uri CONTENT_URI = Uri.withAppendedPath(BASE_CONTENT_URI, PATH_SUBJECTS);
         //String for table name
-        public static final String TABLE_NAME = "subjects";
+        public static final String TABLE_NAME = App.getContext().getResources().getString(R.string.table_name);
         //String for unique ID (int)
         public static final String _ID = BaseColumns._ID;
         //String for name of subject of entry (String)
