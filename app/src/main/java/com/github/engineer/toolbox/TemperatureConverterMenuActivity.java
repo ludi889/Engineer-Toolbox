@@ -1,8 +1,13 @@
 package com.github.engineer.toolbox;
 
+import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -10,6 +15,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
 public class TemperatureConverterMenuActivity extends AppCompatActivity implements View.OnClickListener {
     /**
@@ -23,10 +31,18 @@ public class TemperatureConverterMenuActivity extends AppCompatActivity implemen
     private static int FAHRENHEIT = 1;
     private static int KELVIN = 2;
     private static int RANKINE = 3;
-    private Spinner mInputSpinner;
-    private Spinner mOutputSpinner;
-    private EditText mInputTemperatureEditText;
-    private TextView mOutputTemperatureTextView;
+    //Bindging views
+    @BindView(R.id.temperature_converter_input_temperature_spinner)
+    Spinner mInputSpinner;
+    //setting fields
+    @BindView(R.id.temperature_converter_output_temperature_spinner)
+    Spinner mOutputSpinner;
+    @BindView(R.id.temperature_converter_input_temperature_edit_text)
+    EditText mInputTemperatureEditText;
+    @BindView(R.id.temperature_converter_output_temperature_text_view)
+    TextView mOutputTemperatureTextView;
+    @BindView(R.id.temperature_converter_submit_temperature_conversion)
+    Button mSubmitTemperatureConvert;
     private int mInputTemperatureKind;
     private int mOutputTemperatureKind;
 
@@ -34,17 +50,13 @@ public class TemperatureConverterMenuActivity extends AppCompatActivity implemen
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.temperature_converter_menu);
+        //Executing binding
+        ButterKnife.bind(this);
 
-        //Setting fields
-        mInputSpinner = findViewById(R.id.input_temperature_spinner_converter);
-        mOutputSpinner = findViewById(R.id.output_temperature_spinner_converter);
-        mInputTemperatureEditText = findViewById(R.id.input_temperature_converter_Et);
-        mOutputTemperatureTextView = findViewById(R.id.output_temperature_converter_tV);
-        Button submitTemperatureConvert = findViewById(R.id.submit_temperature_conversion);
         //Initialization of spinners
         setupSpinners();
         //Setting listener
-        submitTemperatureConvert.setOnClickListener(this);
+        mSubmitTemperatureConvert.setOnClickListener(this);
     }
 
     /**
@@ -208,4 +220,33 @@ public class TemperatureConverterMenuActivity extends AppCompatActivity implemen
         }
         mOutputTemperatureTextView.setText(String.valueOf(outputTemperature));
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu options from the res/menu/menu_editor.xml file.
+        // This adds menu items to the app bar.
+        getMenuInflater().inflate(R.menu.info_menu, menu);
+        return true;
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // User clicked on a menu option in the app bar overflow menu
+        switch (item.getItemId()) {
+            case R.id.info_button:
+                Intent intent = null;
+                try {
+                    Utils utils = new Utils();
+                    intent = utils.engineeringTheoryIntent(this, getString(R.string.temperature_converter_engineering_theory_key));
+                } catch (ClassNotFoundException e) {
+                    e.printStackTrace();
+                }
+
+                startActivity(intent);
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
 }

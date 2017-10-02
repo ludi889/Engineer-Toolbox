@@ -42,29 +42,18 @@
 
 
             <Button
-                android:id="@+id/submit_humidity_button"
+                android:id="@+id/absolute_humidity_calculator_submit_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/submit"/>
 
             <TextView
-                android:id="@+id/humidity_result"
+                android:id="@+id/absolute_humidity_calculator_result_text_view"
                 style="@android:style/TextAppearance.Large"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="40dp"
                 android:layout_marginTop="40dp"/>
-
-            <TextView
-                style="@android:style/TextAppearance.Medium"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/used_formula"/>
-
-            <ImageView
-                android:layout_width="179dp"
-                android:layout_height="60dp"
-                android:background="@drawable/humidity_formula"/>
 
 
         </LinearLayout>
@@ -75,7 +64,7 @@
             android:orientation="vertical">
 
             <EditText
-                android:id="@+id/saturated_air_pressure"
+                android:id="@+id/absolute_humidity_calculator_saturated_air_pressure_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="32dp"
                 android:hint="@string/saturated_air_pressure_hint"
@@ -83,7 +72,7 @@
                 android:textSize="12sp"/>
 
             <EditText
-                android:id="@+id/relative_humidity"
+                android:id="@+id/absolute_humidity_calculator_relative_humidity_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="32dp"
                 android:hint="φ"
@@ -91,7 +80,7 @@
                 android:textSize="12sp"/>
 
             <EditText
-                android:id="@+id/air_pressure"
+                android:id="@+id/absolute_humidity_calculator_air_pressure_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="32dp"
                 android:hint="@string/pressure_hint"

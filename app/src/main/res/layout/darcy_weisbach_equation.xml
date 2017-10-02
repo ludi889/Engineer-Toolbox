@@ -6,7 +6,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <LinearLayout
             android:id="@+id/left_column"
@@ -61,13 +61,13 @@
                 android:textColor="@android:color/black"/>
 
             <Button
-                android:id="@+id/submit_darcy_weisbach_equation"
+                android:id="@+id/darcy_weisbach_equation_submit_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/submit"/>
 
             <TextView
-                android:id="@+id/darcy_weisbach_equation_result"
+                android:id="@+id/darcy_weisbach_equation_result_text_view"
                 style="@android:style/TextAppearance.Large"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -84,7 +84,7 @@
             android:orientation="vertical">
 
             <EditText
-                android:id="@+id/darcy_friction_factor_darcy_weisbach_equation"
+                android:id="@+id/darcy_weisbach_equation_darcy_friction_factor_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="33dp"
                 android:hint="λ"
@@ -92,7 +92,7 @@
                 android:textSize="12sp"/>
 
             <EditText
-                android:id="@+id/length_darcy_weisbach_equation"
+                android:id="@+id/darcy_weisbach_equation_length_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="33dp"
                 android:hint="L"
@@ -100,7 +100,7 @@
                 android:textSize="12sp"/>
 
             <EditText
-                android:id="@+id/hydraulic_diameter_darcy_weisbach_equation"
+                android:id="@+id/darcy_weisbach_equation_hydraulic_diameter_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="33dp"
                 android:hint="D"
@@ -109,7 +109,7 @@
 
 
             <EditText
-                android:id="@+id/mean_fluid_velocity_darcy_weisbach_equation"
+                android:id="@+id/darcy_weisbach_equation_mean_fluid_velocity_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/temperature_hint"
@@ -117,7 +117,7 @@
                 android:textSize="12sp"/>
 
             <EditText
-                android:id="@+id/density_darcy_weisbach_equation"
+                android:id="@+id/darcy_weisbach_equation_density_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="32dp"
                 android:hint="ρ"

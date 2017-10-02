@@ -10,21 +10,21 @@
         android:layout_height="wrap_content"/>
 
     <EditText
-        android:id="@+id/material_thickness"
+        android:id="@+id/add_heat_resistance_material_thickness"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/insert_material_thickness_hint"
         android:inputType="numberDecimal"/>
 
     <EditText
-        android:id="@+id/material_thermal_conductivity"
+        android:id="@+id/add_heat_resistance_material_thermal_conductivity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/insert_material_conductivity_hint"
         android:inputType="numberDecimal"/>
 
     <EditText
-        android:id="@+id/material_heat_transfer_coefficient"
+        android:id="@+id/add_heat_resistance_material_heat_transfer_coefficient"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/material_heat_transfer_coefficient_hint"
@@ -32,7 +32,7 @@
         android:visibility="gone"/>
 
     <Button
-        android:id="@+id/insert_thermal_resistance_button"
+        android:id="@+id/add_heat_resistance_insert_thermal_resistance_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/insert_resistance"/>

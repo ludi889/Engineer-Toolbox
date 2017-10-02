@@ -47,7 +47,7 @@
     <string name="darcy_friction_factor">Darcy friction factor</string>
     <!-- End of general purpose Strings-->
     <!-- Menu Strings -->
-    <string name="enthalpy_calculator">Enthalpy Calculator</string>
+    <string name="enthalpy_calculator">Molier\'s Enthalpy Calculator</string>
     <string name="absolute_humidity_calculator">Absolute Humidity Calculator</string>
     <string name="enginnering_theory">Enginnering Theory</string>
     <string name="heat_of_process_calculator">Heat of Process Calculator</string>
@@ -74,6 +74,7 @@
     <string name="fahrenheit">Fahrenheit</string>
     <string name="kelvin">Kelvin</string>
     <string name="rankine">Rankine</string>
+    <string name="input_temperature">Input temperature</string>
     <!--Info menu strings-->
     <string name="motto_info" translatable="false">Each one, teach one</string>
     <string name="linkedin_account_info">LinkedIn account:</string>
@@ -169,6 +170,8 @@
     <string name="annular_section_resistance">Annular Section = 96</string>
     <string name="rectangle_12_ratio_resistance">Rectangle with side ratio 1:2 = 59</string>
     <!-- Toasts and warnings from data input issues-->
+    <string name="you_have_to_input">You have to input</string>
+    <string name="value">value</string>
     <string name="input_saturated_air_pressure_toast">You have to input Saturated Air Pressure value</string>
     <string name="input_relative_humidity_toast">You have to input Relative Humidity value</string>
     <string name="input_air_pressure_toast">You have to input Air Pressure value</string>
@@ -195,7 +198,23 @@
     <!-- Keys Strings-->
     <string name="preferences_key" translatable="false">preferences</string>
     <string name="add_resistance_key" translatable="false">addResistance</string>
-    <string name="input_temperature">Input temperature</string>
+    <string name="name_key">name_key</string>
+    <string name="description_key">description_key</string>
+    <string name="bitmap_key">bitmap_key</string>
+    <string name="absolute_humidity_engineering_theory_key">absoluteHumidity</string>
+    <string name="actual_fluids_menu_engineering_theory_key">actualFluidsMenu</string>
+    <string name="bernoullis_equation_menu_engineering_theory_key">bernoullisEquationMenu</string>
+    <string name="darcy_friction_factor_engineering_theory_key">darcyFrictionFactor</string>
+    <string name="darcy_weisbach_equation_engineering_theory_key">darcyWeisbachEquation</string>
+    <string name="molier_graph_enthalpy_calculator_engineering_theory_key">molierGraphEnthalpy</string>
+    <string name="heat_flow_resistance_calculator_engineering_theory_key">heatFlowResistanceCalculator</string>
+    <string name="heat_of_process_calculator_engineering_theory_key">heatOfProcessCalculator</string>
+    <string name="local_flow_resistance_engineering_theory_key">localFlowResistance</string>
+    <string name="perfect_fluids_bernoullis_equation_engineering_theory_key">perfectFluidsMenu</string>
+    <string name="reynolds_number_engineering_theory_key">reynoldsNumber</string>
+    <string name="temperature_converter_engineering_theory_key">temperatureConverter</string>
+    <string name="item_position_key_engineering_theory">item_position_key</string>
     <!-- SPECIAL NOTE FOR TABLE NAME STRING - It need to correspond to database table name-->
     <string name="table_name">subjects_eng</string>
+    <string name="roughness_parameter_input_warning">You have to input roughness parameter value</string>
 </resources>

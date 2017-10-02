@@ -59,23 +59,12 @@
                 android:text="@string/submit"/>
 
             <TextView
-                android:id="@+id/heat_of_process_result"
+                android:id="@+id/heat_of_process_result_text_view"
                 style="@android:style/TextAppearance.Large"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="40dp"
                 android:layout_marginTop="40dp"/>
-
-            <TextView
-                style="@android:style/TextAppearance.Medium"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/used_formula"/>
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/heat_of_process_formula"/>
 
 
         </LinearLayout>
@@ -87,7 +76,7 @@
             android:orientation="vertical">
 
             <EditText
-                android:id="@+id/specific_heat_of_substance_heat_of_process"
+                android:id="@+id/heat_of_process_specific_heat_of_substance_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="33dp"
                 android:hint="@string/specific_heat_hint"
@@ -95,7 +84,7 @@
                 android:textSize="12sp"/>
 
             <EditText
-                android:id="@+id/mass_of_substance_heat_of_process"
+                android:id="@+id/heat_of_process_mass_of_substance_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="33dp"
                 android:hint="@string/mass_of_substance_hint"
@@ -103,7 +92,7 @@
                 android:textSize="12sp"/>
 
             <EditText
-                android:id="@+id/initial_temperature_heat_of_process"
+                android:id="@+id/heat_of_process_initial_temperature_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="33dp"
                 android:hint="@string/temperature_hint"
@@ -112,7 +101,7 @@
 
 
             <EditText
-                android:id="@+id/final_temperature_heat_of_process"
+                android:id="@+id/heat_of_process_final_temperature_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/temperature_hint"

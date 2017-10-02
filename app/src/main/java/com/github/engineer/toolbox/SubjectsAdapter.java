@@ -11,7 +11,6 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
@@ -21,17 +20,16 @@ import butterknife.ButterKnife;
  * Created by Damian on 2017-09-24.
  */
 
-public class SubjectsAdapter extends ArrayAdapter<Subject> {
+class SubjectsAdapter extends ArrayAdapter<Subject> {
     //Binding views
     @BindView(R.id.subject_image_item_view)
-    ImageView subjectImageView;
+    ImageView mSubjectImageView;
     @BindView(R.id.subject_name_item_view)
-    TextView subjectNameView;
+    TextView mSubjectNameView;
     @BindView(R.id.subject_description_item_view)
-    TextView subjectDescription;
-    private ArrayList<Subject> subjects;
+    TextView mSubjectDescription;
 
-    public SubjectsAdapter(@NonNull Context context, @LayoutRes int resource, @NonNull List<Subject> subjects) {
+    SubjectsAdapter(@NonNull Context context, @LayoutRes int resource, @NonNull List<Subject> subjects) {
         super(context, resource, subjects);
     }
 
@@ -45,9 +43,9 @@ public class SubjectsAdapter extends ArrayAdapter<Subject> {
         }
         ButterKnife.bind(this, listItemView);
         Subject subject = getItem(position);
-        subjectNameView.setText(subject.getmName());
-        subjectDescription.setText(subject.getmDescription());
-        subjectImageView.setImageBitmap(subject.getmImage());
+        mSubjectNameView.setText(subject != null ? subject.getmName() : null);
+        mSubjectDescription.setText(subject != null ? subject.getmDescription() : null);
+        mSubjectImageView.setImageBitmap(subject != null ? subject.getmImage() : null);
         return listItemView;
     }
 }

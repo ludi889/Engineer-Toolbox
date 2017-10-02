@@ -24,7 +24,7 @@
             android:id="@+id/subject_image_detail_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="36dp"
-            android:layout_marginRight="36dp"/>
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"/>
     </LinearLayout>
 </ScrollView>

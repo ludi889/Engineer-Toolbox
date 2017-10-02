@@ -13,21 +13,21 @@
             android:layout_height="wrap_content">
 
             <RadioButton
-                android:id="@+id/laminar_flow_radio_button"
+                android:id="@+id/darcy_friction_factor_laminar_flow_radio_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="12dp"
                 android:text="@string/laminar_flow"/>
 
             <RadioButton
-                android:id="@+id/turbulent_flow_radio_button"
+                android:id="@+id/darcy_friction_factor_turbulent_flow_radio_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="12dp"
                 android:text="@string/turbulent_flow"/>
 
             <RadioButton
-                android:id="@+id/rough_pipe_radio_button"
+                android:id="@+id/darcy_friction_factor_rough_pipe_flow_radio_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/rough_pipe"/>
@@ -35,7 +35,7 @@
 
 
         <ViewFlipper
-            android:id="@+id/ViewFlipper"
+            android:id="@+id/darcy_friction_factor_view_flipper"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
@@ -45,7 +45,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/laminar"
+                android:id="@+id/darcy_friction_factor_laminar_linear_layout"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
@@ -60,7 +60,7 @@
                     android:textColor="@android:color/black"/>
 
                 <EditText
-                    android:id="@+id/resistance_factor_darcy_friction_factor"
+                    android:id="@+id/darcy_friction_factor_laminar_flow_resistance_factor"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="a"
@@ -68,7 +68,7 @@
                     android:textSize="12sp"/>
 
                 <ListView
-                    android:id="@+id/resistance_factor_values"
+                    android:id="@+id/darcy_friction_factor_resistance_values_list_view"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:visibility="gone"/>
@@ -91,7 +91,7 @@
                     android:text="@string/click_to_calculate_reynolds"/>
 
                 <EditText
-                    android:id="@+id/reynolds_number_darcy_friction_factor_laminar"
+                    android:id="@+id/darcy_friction_factor_reynolds_number_laminar_flow_edit_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/reynolds_number_hint"
@@ -99,7 +99,7 @@
                     android:textSize="12sp"/>
 
                 <Button
-                    android:id="@+id/submit_darcy_friction_factor_laminar_flow"
+                    android:id="@+id/darcy_friction_factor_laminar_flow_submit_button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
@@ -107,7 +107,7 @@
                     android:textAllCaps="true"/>
 
                 <TextView
-                    android:id="@+id/darcy_friction_factor_equation_laminar_result"
+                    android:id="@+id/darcy_friction_factor_equation_laminar_result_text_view"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="40dp"
@@ -116,7 +116,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/turbulent"
+                android:id="@+id/darcy_friction_factor_turbulent_linear_layout"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
@@ -139,7 +139,7 @@
                     android:text="@string/click_to_calculate_reynolds"/>
 
                 <EditText
-                    android:id="@+id/reynolds_number_darcy_friction_factor_turbulent"
+                    android:id="@+id/darcy_friction_factor_reynolds_number_turbulent_flow_edit_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/reynolds_number_hint"
@@ -147,7 +147,7 @@
                     android:textSize="12sp"/>
 
                 <Button
-                    android:id="@+id/submit_darcy_friction_factor_turbulent_flow"
+                    android:id="@+id/darcy_friction_factor_turbulent_flow_submit_button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
@@ -161,35 +161,35 @@
                     android:text="@string/choose_criteria"/>
 
                 <TextView
-                    android:id="@+id/blausius_criteria"
+                    android:id="@+id/darcy_friction_factor_blausius_criteria_text_view"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/blausius_criteria"
                     android:visibility="gone"/>
 
                 <TextView
-                    android:id="@+id/generaux_criteria"
+                    android:id="@+id/darcy_friction_factor_generaux_criteria_text_view"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/generaux_criteria"
                     android:visibility="gone"/>
 
                 <TextView
-                    android:id="@+id/koo_criteria"
+                    android:id="@+id/darcy_friction_factor_koo_criteria_text_view"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/koo_criteria"
                     android:visibility="gone"/>
 
                 <TextView
-                    android:id="@+id/high_reynolds_criteria"
+                    android:id="@+id/darcy_friction_factor_high_reynolds_number_criteria_text_view"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/high_reynolds_number_criteria"
                     android:visibility="gone"/>
 
                 <TextView
-                    android:id="@+id/darcy_friction_factor_equation_turbulent_result"
+                    android:id="@+id/darcy_friction_factor_equation_turbulent_result_text_view"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="40dp"
@@ -199,7 +199,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/rough_pipe"
+                android:id="@+id/darcy_friction_rough_pipe_linear_layout"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
@@ -222,7 +222,7 @@
                     android:text="@string/click_to_calculate_reynolds"/>
 
                 <EditText
-                    android:id="@+id/reynolds_number_darcy_friction_factor_rough_pipe"
+                    android:id="@+id/darcy_friction_factor_reynolds_number_rough_pipe_edit_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/reynolds_number_hint"
@@ -235,7 +235,7 @@
                     android:text="@string/roughness_parameter"/>
 
                 <EditText
-                    android:id="@+id/roughness_parameter"
+                    android:id="@+id/darcy_friction_factor_roughness_parameter_edit_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="R"
@@ -243,7 +243,7 @@
                     android:textSize="12sp"/>
 
                 <Button
-                    android:id="@+id/rough_pipe_factor_submit"
+                    android:id="@+id/darcy_friction_factor_rough_pipe_submit_button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
@@ -251,7 +251,7 @@
                     android:textAllCaps="true"/>
 
                 <TextView
-                    android:id="@+id/darcy_friction_factor_equation_rough_pipe_result"
+                    android:id="@+id/darcy_friction_factor_equation_rough_pipe_result_text_view"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="40dp"

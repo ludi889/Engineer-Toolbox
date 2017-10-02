@@ -67,7 +67,7 @@
             android:orientation="vertical">
 
             <EditText
-                android:id="@+id/resistance_coefficent_local_flow_resistance"
+                android:id="@+id/local_flow_resistance_resistance_coefficient"
                 android:layout_width="match_parent"
                 android:layout_height="33dp"
                 android:hint="ξ"
@@ -75,7 +75,7 @@
                 android:textSize="12sp"/>
 
             <EditText
-                android:id="@+id/mean_fluid_velocity_local_flow_reistance"
+                android:id="@+id/local_flow_resistance_mean_fluid_velocity"
                 android:layout_width="match_parent"
                 android:layout_height="33dp"
                 android:hint="Û"
@@ -84,7 +84,7 @@
 
 
             <EditText
-                android:id="@+id/density_local_flow_resistance"
+                android:id="@+id/local_flow_resistance_density"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="ρ"

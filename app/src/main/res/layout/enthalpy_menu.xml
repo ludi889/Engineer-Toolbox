@@ -63,29 +63,18 @@
                 android:textColor="@android:color/black"/>
 
             <Button
-                android:id="@+id/submit_enthalpy_calculation_button"
+                android:id="@+id/enthalpy_menu_submit_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/submit"/>
 
             <TextView
-                android:id="@+id/enthalpy_result"
+                android:id="@+id/enthalpy_menu_result_text_view"
                 style="@android:style/TextAppearance.Large"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="40dp"
                 android:layout_marginTop="40dp"/>
-
-            <TextView
-                style="@android:style/TextAppearance.Medium"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/used_formula"/>
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/enthalpy_formula"/>
 
 
         </LinearLayout>
@@ -97,7 +86,7 @@
             android:orientation="vertical">
 
             <EditText
-                android:id="@+id/Specific_Heat_Dry_Air"
+                android:id="@+id/enthalpy_menu_specific_heat_dry_air"
                 android:layout_width="match_parent"
                 android:layout_height="33dp"
                 android:hint="@string/specific_heat_of_dry_air_hint"
@@ -105,7 +94,7 @@
                 android:textSize="12sp"/>
 
             <EditText
-                android:id="@+id/Heat_of_Vaporization"
+                android:id="@+id/enthalpy_menu_heat_of_vaporization"
                 android:layout_width="match_parent"
                 android:layout_height="33dp"
                 android:hint="@string/heat_of_vaporization_hint"
@@ -113,7 +102,7 @@
                 android:textSize="12sp"/>
 
             <EditText
-                android:id="@+id/Specific_Heat_Humid_Air"
+                android:id="@+id/enthalpy_menu_specific_heat_humid_air"
                 android:layout_width="match_parent"
                 android:layout_height="33dp"
                 android:hint="@string/specific_heat_of_humid_air_hint"
@@ -122,7 +111,7 @@
 
 
             <EditText
-                android:id="@+id/Enthalpy_Temperature"
+                android:id="@+id/enthalpy_menu_temperature"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/temperature_hint"
@@ -130,7 +119,7 @@
                 android:textSize="12sp"/>
 
             <EditText
-                android:id="@+id/Moisture_Content"
+                android:id="@+id/enthalpy_menu_moisture_content"
                 android:layout_width="match_parent"
                 android:layout_height="32dp"
                 android:hint="@string/moisture_content_hint"

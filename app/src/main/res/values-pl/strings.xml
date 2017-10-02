@@ -4,7 +4,7 @@
     <string name="absolute_humidity_calculator">Kalkulator Wilgotności bezwzględnej</string>
     <string name="air_pressure">Ciśnienie powietrza (kPa) =</string>
     <string name="back">Cofnij</string>
-    <string name="enthalpy_calculator">Kalkulator entalpii</string>
+    <string name="enthalpy_calculator">Kalkulator entalpii (wykres Moliera)</string>
     <string name="heat_of_vaporization">Ciepło parowania (kJ/kg) =</string>
     <string name="heat_of_vaporization_hint">r0°C</string>
     <string name="main_menu">Menu Główne</string>

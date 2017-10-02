@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -22,25 +21,24 @@ public class InfoMenuActivity extends AppCompatActivity implements View.OnClickL
     private static final String HTTPS_LINKEDIN = "https://www.linkedin.com/in/damian-zi%C3%B3%C5%82kowski-41ab38141/";
     //Binding views
     @BindView(R.id.author_image_icon)
-    ImageView authorImageIconView;
+    ImageView mAuthorImageIconView;
     @BindView(R.id.linkedin_account_link)
-    TextView linkedinUrl;
+    TextView mLinkedinUrl;
     @BindView(R.id.github_account_link)
-    TextView githubUrl;
+    TextView mGithubUrl;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.info_menu);
         ButterKnife.bind(this);
         //setting listeners
-        linkedinUrl.setOnClickListener(this);
-        githubUrl.setOnClickListener(this);
+        mLinkedinUrl.setOnClickListener(this);
+        mGithubUrl.setOnClickListener(this);
         //setting image and catching runtime exception
         try {
-            authorImageIconView.setImageResource(R.drawable.authorimageicon);
+            mAuthorImageIconView.setImageResource(R.drawable.authorimageicon);
         } catch (RuntimeException e) {
-            Log.v("Info menu", "Problem with setting author icon drawable" + e);
-            authorImageIconView.setImageResource(android.R.color.transparent);
+            mAuthorImageIconView.setImageResource(android.R.color.transparent);
         }
     }
 

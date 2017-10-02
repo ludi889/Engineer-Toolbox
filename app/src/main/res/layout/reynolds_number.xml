@@ -53,7 +53,7 @@
                 android:textColor="@android:color/black"/>
 
             <Button
-                android:id="@+id/submit_reynolds_number_button"
+                android:id="@+id/reynolds_number_submit_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/submit"/>
@@ -76,7 +76,7 @@
             android:orientation="vertical">
 
             <EditText
-                android:id="@+id/density_reynolds_number"
+                android:id="@+id/reynolds_number_density"
                 android:layout_width="match_parent"
                 android:layout_height="33dp"
                 android:hint="ρ"
@@ -84,7 +84,7 @@
                 android:textSize="12sp"/>
 
             <EditText
-                android:id="@+id/mean_fluid_velocity_reynolds_number"
+                android:id="@+id/reynolds_number_mean_fluid_velocity"
                 android:layout_width="match_parent"
                 android:layout_height="33dp"
                 android:hint="Û"
@@ -92,7 +92,7 @@
                 android:textSize="12sp"/>
 
             <EditText
-                android:id="@+id/diameter_reynolds_number"
+                android:id="@+id/reynolds_number_hydraulic_diameter"
                 android:layout_width="match_parent"
                 android:layout_height="33dp"
                 android:hint="D"
@@ -101,7 +101,7 @@
 
 
             <EditText
-                android:id="@+id/viscosity_reynolds_number"
+                android:id="@+id/reynolds_number_viscosity"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="μ"

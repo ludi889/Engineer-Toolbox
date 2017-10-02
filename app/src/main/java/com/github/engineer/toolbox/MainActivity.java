@@ -15,19 +15,19 @@ import butterknife.ButterKnife;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     //Binding views
     @BindView(R.id.engineering_theory_button)
-    Button setEngineeringTheoryButton;
+    Button mSetEngineeringTheory;
     @BindView(R.id.temperature_converter_button)
-    Button setTemperatureConverterButton;
+    Button mSetTemperatureConverterMenu;
     @BindView(R.id.enthalpy_calculator_button)
-    Button setEnthalpyCalculatorButton;
+    Button mSetEnthalpyCalculator;
     @BindView(R.id.heat_of_process_calculator_button)
-    Button setHeatOfProcessCalculatorButton;
+    Button mSetHeatOfProcessCalculator;
     @BindView(R.id.heat_flow_resistance_calculator_button)
-    Button setHeatFlowResistanceCalculatorButton;
+    Button mSetHeatFlowResistanceCalculator;
     @BindView(R.id.bernoullis_equation_calculator_button)
-    Button setBernoullisEquationButton;
+    Button mSetBernoullisEquation;
     @BindView(R.id.absolute_humidity_calculator_button)
-    Button setAbsoluteHumidityCalculatorButton;
+    Button mSetAbsoluteHumidityCalculator;
 
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,13 +37,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         ButterKnife.bind(this);
 
         //setting listeners on buttons
-        setEngineeringTheoryButton.setOnClickListener(this);
-        setTemperatureConverterButton.setOnClickListener(this);
-        setEnthalpyCalculatorButton.setOnClickListener(this);
-        setHeatOfProcessCalculatorButton.setOnClickListener(this);
-        setHeatFlowResistanceCalculatorButton.setOnClickListener(this);
-        setBernoullisEquationButton.setOnClickListener(this);
-        setAbsoluteHumidityCalculatorButton.setOnClickListener(this);
+        mSetEngineeringTheory.setOnClickListener(this);
+        mSetTemperatureConverterMenu.setOnClickListener(this);
+        mSetEnthalpyCalculator.setOnClickListener(this);
+        mSetHeatOfProcessCalculator.setOnClickListener(this);
+        mSetHeatFlowResistanceCalculator.setOnClickListener(this);
+        mSetBernoullisEquation.setOnClickListener(this);
+        mSetAbsoluteHumidityCalculator.setOnClickListener(this);
 
     }
 
@@ -82,6 +82,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
      */
     @Override
     public void onClick(View v) {
+        Button clickedButton = (Button) v;
         switch (v.getId()) {
             case R.id.engineering_theory_button:
                 Intent setEngineeringTheoryMenuIntent = new Intent(this, EngineerTheoryActivity.class);
@@ -98,7 +99,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 /*
                   This method is used to start EnthalpyMenu Activity
                  */
-                Intent setEnthalpyMenuIntent = new Intent(this, EnthalpyMenuActivity.class);
+                Intent setEnthalpyMenuIntent = new Intent(this, MolierGraphEnthalpyMenuActivity.class);
                 startActivity(setEnthalpyMenuIntent);
                 break;
             case R.id.heat_of_process_calculator_button: /*

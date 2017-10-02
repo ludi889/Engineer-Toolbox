@@ -8,34 +8,34 @@
               android:orientation="vertical">
 
     <Spinner
-        android:id="@+id/input_temperature_spinner_converter"
+        android:id="@+id/temperature_converter_input_temperature_spinner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
     </Spinner>
 
     <EditText
-        android:id="@+id/input_temperature_converter_Et"
+        android:id="@+id/temperature_converter_input_temperature_edit_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="@string/input_temperature_hint"
         android:inputType="numberDecimal"/>
 
     <Spinner
-        android:id="@+id/output_temperature_spinner_converter"
+        android:id="@+id/temperature_converter_output_temperature_spinner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp">
     </Spinner>
 
     <TextView
-        android:id="@+id/output_temperature_converter_tV"
+        android:id="@+id/temperature_converter_output_temperature_text_view"
         style="@android:style/TextAppearance.Medium"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="@string/output_temperature"/>
 
     <Button
-        android:id="@+id/submit_temperature_conversion"
+        android:id="@+id/temperature_converter_submit_temperature_conversion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/submit"/>

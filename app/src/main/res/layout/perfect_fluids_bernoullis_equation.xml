@@ -5,7 +5,7 @@
             android:layout_height="match_parent">
 
     <LinearLayout
-        android:id="@+id/linear_layout"
+        android:id="@+id/perfect_fluid_beroullis_linear_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
@@ -16,12 +16,12 @@
             android:text="@string/choose_calculation"/>
 
         <Spinner
-            android:id="@+id/perfect_fluids_spinner"
+            android:id="@+id/perfect_fluids_bernoullis_spinner"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
         <TextView
-            android:id="@+id/first_section_velocity"
+            android:id="@+id/perfect_fluids_bernoullis_mean_fluid_velocity_first_section_text_view"
             style="@android:style/TextAppearance.DeviceDefault.Small"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -29,7 +29,7 @@
             android:textColor="@android:color/black"/>
 
         <EditText
-            android:id="@+id/mean_fluid_velocity_first_section_perfect_fluids"
+            android:id="@+id/perfect_fluids_bernoullis_mean_fluid_velocity_first_section_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Û"
@@ -37,7 +37,7 @@
             android:textSize="12sp"/>
 
         <TextView
-            android:id="@+id/first_section_elevation"
+            android:id="@+id/perfect_fluids_bernoullis_elevation_first_section_text_view"
             style="@android:style/TextAppearance.Small"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -45,7 +45,7 @@
             android:textColor="@android:color/black"/>
 
         <EditText
-            android:id="@+id/elevation_first_section_perfect_fluids"
+            android:id="@+id/perfect_fluids_bernoullis_elevation_first_section_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="z"
@@ -53,7 +53,7 @@
             android:textSize="12sp"/>
 
         <TextView
-            android:id="@+id/first_section_static_value"
+            android:id="@+id/perfect_fluids_bernoullis_static_value_first_section_text_view"
             style="@android:style/TextAppearance.Small"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -62,7 +62,7 @@
             android:visibility="visible"/>
 
         <EditText
-            android:id="@+id/static_value_first_section_perfect_fluids"
+            android:id="@+id/perfect_fluids_bernoullis_static_value_first_section_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Ps"
@@ -71,7 +71,7 @@
             android:visibility="visible"/>
 
         <TextView
-            android:id="@+id/second_section_velocity"
+            android:id="@+id/perfect_fluids_bernoullis_mean_fluid_velocity_second_section_text_view"
             style="@android:style/TextAppearance.DeviceDefault.Small"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -79,7 +79,7 @@
             android:textColor="@android:color/black"/>
 
         <EditText
-            android:id="@+id/mean_fluid_velocity_second_section_perfect_fluids"
+            android:id="@+id/perfect_fluids_bernoullis_mean_fluid_velocity_second_section_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Û"
@@ -87,7 +87,7 @@
             android:textSize="12sp"/>
 
         <TextView
-            android:id="@+id/second_section_elevation"
+            android:id="@+id/perfect_fluids_bernoullis_elevation_second_section_text_view"
             style="@android:style/TextAppearance.Small"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -95,7 +95,7 @@
             android:textColor="@android:color/black"/>
 
         <EditText
-            android:id="@+id/elevation_second_section_perfect_fluids"
+            android:id="@+id/perfect_fluids_bernoullis_elevation_second_section_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="z"
@@ -104,7 +104,7 @@
 
 
         <TextView
-            android:id="@+id/second_section_static_value"
+            android:id="@+id/perfect_fluids_bernoullis_static_value_second_section_text_view"
             style="@android:style/TextAppearance.Small"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -113,7 +113,7 @@
             android:visibility="visible"/>
 
         <EditText
-            android:id="@+id/static_value_second_section_perfect_fluids"
+            android:id="@+id/perfect_fluids_bernoullis_static_value_second_section_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Ps"
@@ -129,7 +129,7 @@
             android:textColor="@android:color/black"/>
 
         <EditText
-            android:id="@+id/density_perfect_fluids"
+            android:id="@+id/perfect_fluids_bernoullis_density_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="ρ"
@@ -145,7 +145,7 @@
             android:textColor="@android:color/black"/>
 
         <EditText
-            android:id="@+id/acceleration_of_gravity_perfect_fluids"
+            android:id="@+id/perfect_fluids_bernoullis_acceleration_of_gravity_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="g"
@@ -154,21 +154,21 @@
             android:textSize="12sp"/>
 
         <Button
-            android:id="@+id/submit_perfect_fluids_bernoullis_equation_by_sum_of_work"
+            android:id="@+id/perfect_fluids_bernoullis_equation_by_sum_of_work_submit_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="@string/by_sum_of_work_calculator"/>
 
         <Button
-            android:id="@+id/submit_perfect_fluids_bernoullis_equation_by_sum_of_pressure"
+            android:id="@+id/perfect_fluids_bernoullis_equation_by_sum_of_pressure_submit_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="@string/by_sum_of_pressure_calculator"/>
 
         <Button
-            android:id="@+id/submit_perfect_fluids_bernoullis_equation_by_sum_of_heights"
+            android:id="@+id/perfect_fluids_bernoullis_equation_by_sum_of_height_submit_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"

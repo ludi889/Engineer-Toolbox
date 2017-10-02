@@ -11,6 +11,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 import static android.view.View.GONE;
 import static android.view.View.VISIBLE;
 
@@ -19,24 +22,25 @@ import static android.view.View.VISIBLE;
  */
 
 public class AddHeatFlowResistanceMenuActivity extends AppCompatActivity implements View.OnClickListener {
-    EditText materialThicknessEditText;
-    EditText materialThermalConductivityEditText;
-    EditText materialHeatTransferCoefficientEditText;
-    Button insertResistanceButton;
-    private Spinner addHeatResistanceOptionSpinner;
+    @BindView(R.id.add_resistance_option_spinner)
+    Spinner mAddHeatResistanceOptionSpinner;
+    @BindView(R.id.add_heat_resistance_insert_thermal_resistance_button)
+    Button mInsertResistanceButton;
+    @BindView(R.id.add_heat_resistance_material_thickness)
+    EditText mMaterialThickness;
+    @BindView(R.id.add_heat_resistance_material_thermal_conductivity)
+    EditText mMaterialThermalConductivity;
+    @BindView(R.id.add_heat_resistance_material_heat_transfer_coefficient)
+    EditText mMaterialHeatTransferCoefficient;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.add_heat_flow_ressistance_menu);
-        //setting fields
-        addHeatResistanceOptionSpinner = findViewById(R.id.add_resistance_option_spinner);
-        insertResistanceButton = findViewById(R.id.insert_thermal_resistance_button);
-        materialThicknessEditText = findViewById(R.id.material_thickness);
-        materialThermalConductivityEditText = findViewById(R.id.material_thermal_conductivity);
-        materialHeatTransferCoefficientEditText = findViewById(R.id.material_heat_transfer_coefficient);
+        //Binding views
+        ButterKnife.bind(this);
         //setting listeners
-        insertResistanceButton.setOnClickListener(this);
+        mInsertResistanceButton.setOnClickListener(this);
 //setting spinner
         setSpinner();
     }
@@ -51,22 +55,22 @@ public class AddHeatFlowResistanceMenuActivity extends AppCompatActivity impleme
         //setting dropdown option
         addHeatFlowResistanceOptionAdapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
         //setting adapter
-        addHeatResistanceOptionSpinner.setAdapter(addHeatFlowResistanceOptionAdapter);
+        mAddHeatResistanceOptionSpinner.setAdapter(addHeatFlowResistanceOptionAdapter);
 
-        addHeatResistanceOptionSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        mAddHeatResistanceOptionSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 String selection = (String) parent.getItemAtPosition(position);
                 if (!TextUtils.isEmpty(selection)) {
                     if (selection.equals(getString(R.string.conductivity_resistance))) {
-                        materialThicknessEditText.setVisibility(VISIBLE);
-                        materialThermalConductivityEditText.setVisibility(VISIBLE);
-                        materialHeatTransferCoefficientEditText.setVisibility(GONE);
+                        mMaterialThickness.setVisibility(VISIBLE);
+                        mMaterialThermalConductivity.setVisibility(VISIBLE);
+                        mMaterialHeatTransferCoefficient.setVisibility(GONE);
                     }
                     if (selection.equals(getString(R.string.heat_transfer_resistance))) {
-                        materialThicknessEditText.setVisibility(GONE);
-                        materialThermalConductivityEditText.setVisibility(GONE);
-                        materialHeatTransferCoefficientEditText.setVisibility(VISIBLE);
+                        mMaterialThickness.setVisibility(GONE);
+                        mMaterialThermalConductivity.setVisibility(GONE);
+                        mMaterialHeatTransferCoefficient.setVisibility(VISIBLE);
                     }
                 }
             }
@@ -82,10 +86,10 @@ public class AddHeatFlowResistanceMenuActivity extends AppCompatActivity impleme
      * This method is used to get material thickness value from EditText and parse it to double (asserting it's visibility and null)
      */
     private double materialThickness() {
-        if (materialThicknessEditText.getText().toString().trim().length() == 0) {
+        if (mMaterialThickness.getText().toString().trim().length() == 0) {
             return 0;
         }
-        return Double.valueOf(materialThicknessEditText.getText().toString().trim());
+        return Double.valueOf(mMaterialThickness.getText().toString().trim());
     }
 
     /**
@@ -93,10 +97,10 @@ public class AddHeatFlowResistanceMenuActivity extends AppCompatActivity impleme
      * from EditText and parse it to double (asserting it's visibility and null)
      */
     private double materialThermalConductivity() {
-        if (materialThermalConductivityEditText.getText().toString().trim().length() == 0) {
+        if (mMaterialThermalConductivity.getText().toString().trim().length() == 0) {
             return 0;
         }
-        return Double.valueOf(materialThermalConductivityEditText.getText().toString().trim());
+        return Double.valueOf(mMaterialThermalConductivity.getText().toString().trim());
     }
 
     /**
@@ -104,10 +108,10 @@ public class AddHeatFlowResistanceMenuActivity extends AppCompatActivity impleme
      * value from EditText and parse it to double (asserting it's visibility and null)
      */
     private double materialHeatTransferCoefficient() {
-        if (materialHeatTransferCoefficientEditText.getText().toString().trim().length() == 0) {
+        if (mMaterialHeatTransferCoefficient.getText().toString().trim().length() == 0) {
             return 0;
         }
-        return Double.valueOf(materialHeatTransferCoefficientEditText.getText().toString().trim());
+        return Double.valueOf(mMaterialHeatTransferCoefficient.getText().toString().trim());
     }
 
     /**
@@ -119,15 +123,15 @@ public class AddHeatFlowResistanceMenuActivity extends AppCompatActivity impleme
         double addResistance = 0;
         Intent i = new Intent(AddHeatFlowResistanceMenuActivity.this, HeatFlowResistanceCalculatorActivity.class);
         Bundle bundle = new Bundle();
-        addHeatResistanceOptionSpinner.getCount();
-        if (addHeatResistanceOptionSpinner.getSelectedItemPosition() == 0) {
+        mAddHeatResistanceOptionSpinner.getCount();
+        if (mAddHeatResistanceOptionSpinner.getSelectedItemPosition() == 0) {
             if (materialThermalConductivity() == 0 || materialThickness() == 0) {
                 addResistance = 0;
             } else
                 addResistance = materialThickness() / materialThermalConductivity();
 
         }
-        if (addHeatResistanceOptionSpinner.getSelectedItemPosition() == 1) {
+        if (mAddHeatResistanceOptionSpinner.getSelectedItemPosition() == 1) {
             if (materialHeatTransferCoefficient() == 0) {
                 addResistance = 0;
             } else
