@@ -150,8 +150,11 @@
     <string name="input_moisture_toast">Wprowadź wartość wilgotności</string>
     <string name="input_relative_humidity_toast">Wprowadź wartość wilgotności względnej</string>
     <string name="first_section_static_value">Statyczna wartość pierwszego przekroju</string>
-    <string name="second_section_dynamic_value">second section dynamic value</string>
+    <string name="second_section_dynamic_value">Dynamiczna wartość drugiego przekroju</string>
     <string name="second_section_hydrostatic_value">Hydrostatyczna wartość drugiego przekroju</string>
     <string name="first_section_hydrostatic_value">Hydrostatyczna wartość pierwszego przekroju</string>
     <string name="table_name">subjects_pol</string>
+    <string name="roughness_parameter_input_warning">Proszę wprowadzić parametr chropowatości</string>
+    <string name="value">wartość</string>
+    <string name="you_have_to_input">Proszę wprowadzić</string>
 </resources>

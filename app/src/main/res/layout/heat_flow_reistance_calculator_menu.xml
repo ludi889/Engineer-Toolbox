@@ -26,12 +26,6 @@
                 android:text="@string/add_heat_flow_resistance"/>
         </LinearLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/heat_flow_resistance_calculator_warning"
-            android:textColor="@android:color/holo_red_dark"/>
-
         <CheckBox
             android:id="@+id/heat_flow_resistance_heat_flux_density_check_box"
             android:layout_width="wrap_content"

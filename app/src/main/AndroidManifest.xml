@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
           package="com.github.engineer.toolbox">
 
     <application
@@ -61,7 +62,10 @@
         <activity
             android:name="com.github.engineer.toolbox.AddHeatFlowResistanceMenuActivity"
             android:label="@string/add_heat_flow_resistance"
-            android:launchMode="singleTop"/>
+            android:launchMode="singleTop"
+            android:parentActivityName=".HeatFlowResistanceCalculatorActivity"
+            tools:targetApi="jelly_bean">
+        </activity>
         <activity
             android:name="com.github.engineer.toolbox.EngineerTheoryActivity"
             android:label="Engineer Theory">

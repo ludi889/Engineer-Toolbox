@@ -1,7 +1,8 @@
 package com.github.engineer.toolbox;
 
-import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.View;
@@ -39,6 +40,8 @@ public class AddHeatFlowResistanceMenuActivity extends AppCompatActivity impleme
         setContentView(R.layout.add_heat_flow_ressistance_menu);
         //Binding views
         ButterKnife.bind(this);
+        //getting action bar
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         //setting listeners
         mInsertResistanceButton.setOnClickListener(this);
 //setting spinner
@@ -121,8 +124,6 @@ public class AddHeatFlowResistanceMenuActivity extends AppCompatActivity impleme
     @Override
     public void onClick(View v) {
         double addResistance = 0;
-        Intent i = new Intent(AddHeatFlowResistanceMenuActivity.this, HeatFlowResistanceCalculatorActivity.class);
-        Bundle bundle = new Bundle();
         mAddHeatResistanceOptionSpinner.getCount();
         if (mAddHeatResistanceOptionSpinner.getSelectedItemPosition() == 0) {
             if (materialThermalConductivity() == 0 || materialThickness() == 0) {
@@ -137,12 +138,16 @@ public class AddHeatFlowResistanceMenuActivity extends AppCompatActivity impleme
             } else
                 addResistance = 1 / materialHeatTransferCoefficient();
         }
-        bundle.putDouble(getString(R.string.add_resistance_key), addResistance);
-        i.putExtras(bundle);
-        if (bundle.containsKey(getString(R.string.add_resistance_key))) {
-            finish();
-            startActivity(i);
-        }
+        //saving data in shared preferences
+        SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
+        SharedPreferences.Editor editor = sharedPref.edit();
+        putDouble(editor, getString(R.string.add_resistance_key), addResistance);
+        editor.apply();
+        finish();
 
+    }
+
+    SharedPreferences.Editor putDouble(final SharedPreferences.Editor edit, final String key, final double value) {
+        return edit.putLong(key, Double.doubleToRawLongBits(value));
     }
 }

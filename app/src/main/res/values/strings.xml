@@ -198,23 +198,30 @@
     <!-- Keys Strings-->
     <string name="preferences_key" translatable="false">preferences</string>
     <string name="add_resistance_key" translatable="false">addResistance</string>
-    <string name="name_key">name_key</string>
-    <string name="description_key">description_key</string>
-    <string name="bitmap_key">bitmap_key</string>
-    <string name="absolute_humidity_engineering_theory_key">absoluteHumidity</string>
-    <string name="actual_fluids_menu_engineering_theory_key">actualFluidsMenu</string>
-    <string name="bernoullis_equation_menu_engineering_theory_key">bernoullisEquationMenu</string>
-    <string name="darcy_friction_factor_engineering_theory_key">darcyFrictionFactor</string>
-    <string name="darcy_weisbach_equation_engineering_theory_key">darcyWeisbachEquation</string>
-    <string name="molier_graph_enthalpy_calculator_engineering_theory_key">molierGraphEnthalpy</string>
-    <string name="heat_flow_resistance_calculator_engineering_theory_key">heatFlowResistanceCalculator</string>
-    <string name="heat_of_process_calculator_engineering_theory_key">heatOfProcessCalculator</string>
-    <string name="local_flow_resistance_engineering_theory_key">localFlowResistance</string>
-    <string name="perfect_fluids_bernoullis_equation_engineering_theory_key">perfectFluidsMenu</string>
-    <string name="reynolds_number_engineering_theory_key">reynoldsNumber</string>
-    <string name="temperature_converter_engineering_theory_key">temperatureConverter</string>
-    <string name="item_position_key_engineering_theory">item_position_key</string>
+    <string name="name_key" translatable="false">name_key</string>
+    <string name="description_key" translatable="false">description_key</string>
+    <string name="bitmap_key" translatable="false">bitmap_key</string>
+    <string name="absolute_humidity_engineering_theory_key" translatable="false">absoluteHumidity</string>
+    <string name="actual_fluids_menu_engineering_theory_key" translatable="false">actualFluidsMenu</string>
+    <string name="bernoullis_equation_menu_engineering_theory_key" translatable="false">bernoullisEquationMenu</string>
+    <string name="darcy_friction_factor_engineering_theory_key" translatable="false">darcyFrictionFactor</string>
+    <string name="darcy_weisbach_equation_engineering_theory_key" translatable="false">darcyWeisbachEquation</string>
+    <string name="molier_graph_enthalpy_calculator_engineering_theory_key" translatable="false">molierGraphEnthalpy</string>
+    <string name="heat_flow_resistance_calculator_engineering_theory_key" translatable="false">heatFlowResistanceCalculator</string>
+    <string name="heat_of_process_calculator_engineering_theory_key" translatable="false">heatOfProcessCalculator</string>
+    <string name="local_flow_resistance_engineering_theory_key" translatable="false">localFlowResistance</string>
+    <string name="perfect_fluids_bernoullis_equation_engineering_theory_key" translatable="false">perfectFluidsMenu</string>
+    <string name="reynolds_number_engineering_theory_key" translatable="false">reynoldsNumber</string>
+    <string name="temperature_converter_engineering_theory_key" translatable="false">temperatureConverter</string>
+    <string name="item_position_key_engineering_theory" translatable="false">item_position_key</string>
+    <string name="heat_flux_key" translatable="false">heat_flux_key</string>
+    <string name="area_key" translatable="false">area_key</string>
+    <string name="temperature_difference_key" translatable="false">temperature_difference_key</string>
+    <string name="heat_flux_density_key" translatable="false">heat_flux_density_key</string>
+    <string name="value_key" translatable="false">value_</string>
+    <string name="key_key" translatable="false">_key</string>
     <!-- SPECIAL NOTE FOR TABLE NAME STRING - It need to correspond to database table name-->
     <string name="table_name">subjects_eng</string>
     <string name="roughness_parameter_input_warning">You have to input roughness parameter value</string>
+
 </resources>

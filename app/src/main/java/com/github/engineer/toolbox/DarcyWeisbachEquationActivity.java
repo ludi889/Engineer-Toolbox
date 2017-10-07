@@ -46,7 +46,7 @@ public class DarcyWeisbachEquationActivity extends AppCompatActivity implements 
      * This method is used to calculate Darcy weisbach equation, and return result of it
      */
     private double calculateDarcyWeisbach(double darcyFrictionFactor, double length, double hydraulicDiameter, double meanFluidVelocity, double density) {
-        return darcyFrictionFactor * (length / hydraulicDiameter) * (meanFluidVelocity * meanFluidVelocity * density / 2);
+        return darcyFrictionFactor * (length / hydraulicDiameter) * (Math.pow(meanFluidVelocity, 2) * density / 2);
     }
 
     /**
