@@ -127,10 +127,7 @@ public class EngineerTheoryActivity extends AppCompatActivity implements LoaderM
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @Override
     public boolean onQueryTextSubmit(String query) {
-        if (query != null & !query.isEmpty()) {
-            updateAdapter(mEngineeringTheoryDbAssetHelper.getQueryData(query));
-        }
-
+        updateAdapter(mEngineeringTheoryDbAssetHelper.getQueryData(query));
         return false;
 
     }
@@ -138,10 +135,7 @@ public class EngineerTheoryActivity extends AppCompatActivity implements LoaderM
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @Override
     public boolean onQueryTextChange(String newText) {
-        if (newText != null & !newText.isEmpty()) {
             updateAdapter(mEngineeringTheoryDbAssetHelper.getQueryData(newText));
-        }
-
         return false;
     }
 
